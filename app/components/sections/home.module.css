@@ -1,0 +1,288 @@
+.home {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  column-gap: clamp(32px, 5vw, 88px);
+  align-items: stretch;
+  min-height: calc(100svh - 78px);
+  overflow: hidden;
+  padding: clamp(38px, 6vh, 64px) var(--content-inset) 0;
+  background: #f4ff00;
+  color: #000;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  min-width: 0;
+  padding-block: 20px 72px;
+}
+
+.eyebrow,
+.intro,
+.index {
+  font-family: var(--font-archivo-narrow), "Arial Narrow", sans-serif;
+}
+
+.eyebrow {
+  margin: 0 0 clamp(16px, 2.5vh, 24px) 2px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.02em;
+  margin: 0;
+  font-family: var(--font-lexend), sans-serif;
+  font-size: clamp(48px, 6vw, 92px);
+  font-weight: 700;
+  letter-spacing: -0.065em;
+  line-height: 1.02;
+}
+
+.heading span {
+  display: block;
+  max-width: 100%;
+  color: #000;
+  white-space: nowrap;
+}
+
+.heading .roleBlock {
+  padding: 0.025em 0.12em 0.055em;
+  background: #000;
+  color: #f4ff00;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.intro {
+  max-width: 600px;
+  margin: clamp(18px, 2.6vh, 26px) 0 0 2px;
+  font-size: clamp(17px, 1.5vw, 22px);
+  line-height: 1.45;
+  letter-spacing: 0.005em;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: clamp(22px, 3vh, 30px) 0 0 2px;
+}
+
+.button {
+  display: inline-flex;
+  min-width: 142px;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #000;
+  padding: 12px 20px;
+  background: #fff;
+  box-shadow: 8px 8px 0 #000;
+  color: #000;
+  font-family: var(--font-archivo-narrow), "Arial Narrow", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.button:first-child {
+  background: #111;
+  color: #fff;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0 #000;
+}
+
+.button:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 5px;
+}
+
+.portrait {
+  position: relative;
+  align-self: stretch;
+  min-width: 0;
+  min-height: 480px;
+  margin: -16px 0 0;
+}
+
+.image {
+  position: absolute;
+  right: -5%;
+  bottom: -5%;
+  width: 110%;
+  height: 110%;
+  max-width: none;
+  max-height: calc(100svh - 78px);
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+.index {
+  position: absolute;
+  right: var(--content-inset);
+  bottom: 18px;
+  z-index: 2;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 701px) {
+  .home {
+    column-gap: clamp(24px, 3vw, 48px);
+    min-height: max(650px, calc(100svh - 76px));
+    padding-top: 40px;
+  }
+
+  .content {
+    padding-block: 12px 56px;
+  }
+
+  .eyebrow {
+    margin-bottom: 17px;
+    font-size: 12px;
+  }
+
+  .heading {
+    font-size: clamp(42px, 6.1vw, 64px);
+  }
+
+  .intro {
+    max-width: 460px;
+    font-size: clamp(17px, 2vw, 20px);
+  }
+
+  .actions {
+    gap: 14px;
+  }
+
+  .button {
+    min-width: 128px;
+    min-height: 48px;
+    padding-inline: 16px;
+  }
+
+  .portrait {
+    min-height: 430px;
+    margin-top: -10px;
+  }
+
+  .image {
+    right: -3%;
+    bottom: -3%;
+    width: 106%;
+    height: 106%;
+    max-height: calc(100svh - 76px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .home {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-content: start;
+    min-height: calc(100svh - 70px);
+    padding-top: 34px;
+  }
+
+  .content {
+    align-self: start;
+    padding-bottom: 22px;
+  }
+
+  .eyebrow {
+    margin: 0 0 15px 1px;
+    font-size: 11px;
+  }
+
+  .heading {
+    gap: 2px;
+    font-size: clamp(38px, 10vw, 62px);
+  }
+
+  .intro {
+    max-width: 560px;
+    margin: 17px 0 0 1px;
+    font-size: 17px;
+    line-height: 1.42;
+  }
+
+  .actions {
+    gap: 14px;
+    margin: 22px 0 0 1px;
+  }
+
+  .button {
+    min-width: 126px;
+    min-height: 46px;
+    padding: 10px 16px;
+  }
+
+  .portrait {
+    justify-self: end;
+    width: min(100%, 420px);
+    min-height: 0;
+    height: clamp(270px, 82vw, 400px);
+    margin: 0;
+  }
+
+  .image {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-position: center bottom;
+  }
+
+  .index {
+    bottom: 12px;
+    font-size: 11px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 380px) {
+  .home {
+    padding-top: 28px;
+  }
+
+  .heading {
+    font-size: clamp(35px, 9.7vw, 38px);
+  }
+
+  .intro {
+    font-size: 16px;
+  }
+
+  .actions {
+    gap: 12px;
+  }
+
+  .button {
+    min-width: 116px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}
