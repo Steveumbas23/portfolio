@@ -1,0 +1,191 @@
+.overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  padding: clamp(14px, 4vw, 42px);
+  background: rgb(0 0 0 / 74%);
+  animation: overlay-in 160ms ease both;
+}
+
+.dialog {
+  position: relative;
+  width: min(100%, 920px);
+  max-height: min(90dvh, 940px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  border-radius: 16px;
+  background: #fff;
+  color: #171717;
+  box-shadow: 0 18px 56px rgb(0 0 0 / 24%);
+  animation: dialog-in 180ms ease both;
+}
+
+.projectHeader {
+  padding: clamp(28px, 4vw, 42px) clamp(24px, 5vw, 54px) 26px;
+}
+
+.eyebrow,
+.category,
+.summary,
+.copy,
+.list,
+.tag {
+  font-family: var(--font-archivo-narrow), "Arial Narrow", sans-serif;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: #bd0000;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.category {
+  margin: 0 0 9px;
+  color: #bd0000;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  max-width: 780px;
+  margin: 0;
+  color: #111;
+  font-family: var(--font-lexend), sans-serif;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.14;
+}
+
+.summary {
+  max-width: 740px;
+  margin: 13px 0 0;
+  color: #454545;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.visual {
+  position: relative;
+  width: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin: 0 clamp(24px, 5vw, 54px);
+  background: #f0efed;
+}
+
+.modalImage { object-fit: cover; }
+
+.content {
+  padding: 6px clamp(24px, 5vw, 54px) 38px;
+}
+
+.section {
+  margin-top: 25px;
+  border-top: 1px solid #e8e5e1;
+  padding-top: 20px;
+}
+
+.sectionTitle {
+  margin: 0 0 10px;
+  color: #171717;
+  font-family: var(--font-lexend), sans-serif;
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+.copy,
+.list {
+  margin: 0;
+  color: #454545;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.list {
+  display: grid;
+  gap: 7px;
+  padding-left: 21px;
+}
+
+.list li { padding-left: 3px; }
+.list li::marker { color: #bd0000; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  border: 1px solid #dedbd6;
+  border-radius: 3px;
+  padding: 6px 10px;
+  color: #292929;
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.closeButton {
+  position: sticky;
+  z-index: 2;
+  top: 13px;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  margin: 13px 13px -53px auto;
+  border: 1px solid #dedbd6;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  font: inherit;
+  font-size: 25px;
+  line-height: 1;
+  transition: background-color 140ms ease;
+}
+
+.closeButton:hover { background: #f4e5e2; }
+.closeButton:focus-visible { outline: 2px solid #bd0000; outline-offset: 3px; }
+
+.closing { animation: overlay-out 150ms ease both; }
+.closing .dialog { animation: dialog-out 150ms ease both; }
+
+@keyframes overlay-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes overlay-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes dialog-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes dialog-out { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(5px); } }
+
+@media (max-width: 760px) {
+  .overlay { padding: 12px; }
+  .dialog { max-height: 94dvh; border-radius: 13px; }
+  .projectHeader { padding: 25px 22px 20px; }
+  .eyebrow { margin-bottom: 14px; }
+  .title { max-width: calc(100% - 28px); font-size: clamp(28px, 7.2vw, 36px); }
+  .summary { margin-top: 10px; font-size: 18px; }
+  .visual { aspect-ratio: 16 / 10; margin-inline: 22px; }
+  .content { padding: 1px 22px 28px; }
+  .section { margin-top: 21px; padding-top: 17px; }
+  .sectionTitle { font-size: 17px; }
+  .copy, .list { font-size: 17px; }
+  .closeButton { top: 10px; width: 36px; height: 36px; margin: 10px 9px -46px auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay, .dialog, .closing, .closing .dialog, .closeButton {
+    animation-duration: 0.01ms;
+    transition-duration: 0.01ms;
+  }
+}

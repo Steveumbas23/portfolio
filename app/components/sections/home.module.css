@@ -122,10 +122,10 @@
 
 .image {
   position: absolute;
-  right: -5%;
-  bottom: -5%;
-  width: 110%;
-  height: 110%;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   max-width: none;
   max-height: calc(100svh - 78px);
   object-fit: contain;
@@ -183,10 +183,10 @@
   }
 
   .image {
-    right: -3%;
-    bottom: -3%;
-    width: 106%;
-    height: 106%;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
     max-height: calc(100svh - 76px);
   }
 }
@@ -195,15 +195,15 @@
 @media (max-width: 700px) {
   .home {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    align-content: start;
+    grid-template-rows: 1fr auto;
+    align-content: stretch;
     min-height: calc(100svh - 70px);
     padding-top: 34px;
   }
 
   .content {
     align-self: start;
-    padding-bottom: 22px;
+    padding-bottom: 0;
   }
 
   .eyebrow {
@@ -238,7 +238,7 @@
     justify-self: end;
     width: min(100%, 420px);
     min-height: 0;
-    height: clamp(270px, 82vw, 400px);
+    height: clamp(340px, 100vw, 480px);
     margin: 0;
   }
 
@@ -277,6 +277,10 @@
 
   .button {
     min-width: 116px;
+  }
+
+  .portrait {
+    height: clamp(320px, 105vw, 400px);
   }
 }
 

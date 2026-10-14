@@ -116,7 +116,7 @@ export default function AboutSection() {
   return (
     <section id="about" className={styles.about} aria-labelledby="about-heading">
       <div className={styles.sectionInner}>
-        <div className={styles.aboutInner}>
+        <div className={styles.aboutInner} data-reveal>
           <div className={styles.copy}>
             <p className={styles.eyebrow}>WHO AM I?</p>
             <h2 className={styles.name} id="about-heading">
@@ -156,7 +156,7 @@ export default function AboutSection() {
         </div>
 
         <div className={styles.capabilities} aria-labelledby="capabilities-heading">
-          <div className={styles.capabilitiesHeading}>
+          <div className={styles.capabilitiesHeading} data-reveal>
             <p className={styles.capabilitiesEyebrow}>WHAT I WORK WITH</p>
             <h2 className={styles.capabilitiesTitle} id="capabilities-heading">
               SYSTEM CAPABILITIES
@@ -167,7 +167,7 @@ export default function AboutSection() {
             {technologyLayers.map((layer) => (
               <div className={styles.subLayer} key={layer.label}>
                 <h4 className={styles.subLayerTitle}>{layer.label}</h4>
-                <ul className={styles.technologyGrid} aria-label={layer.label}>
+                <ul className={styles.technologyGrid} aria-label={layer.label} data-reveal-stagger>
                   {layer.technologies.map((technology) => (
                     <li className={styles.technologyCard} key={technology.name}>
                       <div className={styles.cardTop}>
@@ -200,7 +200,7 @@ export default function AboutSection() {
                 <h3 className={styles.layerTitle} id={`capability-${group.number}`}>
                   <span>{group.number}</span> — {group.title}
                 </h3>
-                <ul className={styles.continuationGrid} aria-label={group.title}>
+                <ul className={styles.continuationGrid} aria-label={group.title} data-reveal-stagger>
                   {group.technologies.map((technology) => (
                     <li className={styles.technologyCard} key={technology.name}>
                       <div className={styles.cardTop}>

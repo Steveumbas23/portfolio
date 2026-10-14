@@ -18,7 +18,7 @@ export default function HomeSection() {
       className={`${styles.home} ${lexend.variable} ${archivoNarrow.variable}`}
       aria-labelledby="home-heading"
     >
-      <div className={styles.content}>
+      <div className={`${styles.content} home-content-enter`}>
         <p className={styles.eyebrow}>PORTFOLIO&nbsp; / &nbsp;UI/UX DESIGN</p>
         <h1 className={styles.heading} id="home-heading">
           <span>I’M STEVE,</span>
@@ -37,10 +37,10 @@ export default function HomeSection() {
         </div>
       </div>
 
-      <div className={styles.portrait}>
+      <div className={`${styles.portrait} home-portrait-enter`}>
         <Image
           className={styles.image}
-          src="/images/Steve.png"
+          src="/images/steve.png"
           alt="Steve Umbas"
           width={1590}
           height={1578}
