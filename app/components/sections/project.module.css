@@ -243,8 +243,8 @@
   .headerMark { right: 2px; bottom: 22px; font-size: 34px; }
 
   .columns {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px 12px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
   }
 
   .projectBody { min-height: 0; padding: clamp(14px, 4vw, 22px); }
@@ -289,11 +289,11 @@
 }
 
 @media (max-width: 380px) {
-  .columns { gap: 16px 10px; }
+  .columns { gap: 16px; }
   .projectBody { padding: 13px; }
   .projectTitle { font-size: 18px; }
   .projectLink,
-  .externalProjectLink { padding-inline: 6px; font-size: 12px; }
+  .externalProjectLink { padding-inline: 12px; font-size: 13px; }
 }
 
 @media (min-width: 761px) {
