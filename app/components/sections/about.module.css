@@ -329,10 +329,6 @@
   .technologyGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .aiGroup .continuationGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 700px) {
@@ -412,6 +408,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .aiGroup .continuationGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .technologyCard {
     min-height: 190px;
     padding: clamp(14px, 4vw, 18px);
@@ -431,6 +431,15 @@
   .technologyDescription {
     font-size: clamp(13px, 3.5vw, 14px);
   }
+
+  .aiGroup .technologyCard { padding: clamp(10px, 3vw, 14px); }
+  .aiGroup .technologyIcon { width: 36px; height: 36px; flex-basis: 36px; }
+  .aiGroup .technologyName { padding-top: 20px; font-size: clamp(14px, 3.4vw, 16px); }
+  .aiGroup .technologyDescription { font-size: clamp(12px, 2.8vw, 13px); }
+}
+
+@media (max-width: 380px) {
+  .aiGroup .continuationGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (prefers-reduced-motion: reduce) {

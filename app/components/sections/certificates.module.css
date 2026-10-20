@@ -278,6 +278,11 @@
 
 @media (max-width: 1100px) {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc((100% - clamp(20px, 2.8vw, 38px)) / 2);
+    justify-self: center;
+  }
 }
 
 @media (max-width: 680px) {
@@ -287,6 +292,7 @@
   .heading { font-size: clamp(38px, 10vw, 54px); }
   .description { margin-top: 14px; font-size: 18px; }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 12px; }
+  .item:last-child:nth-child(odd) { width: calc((100% - 12px) / 2); }
   .certificateTitle { font-size: 20px; }
   .overlay { padding: 12px; }
   .dialog { max-height: 96dvh; }
@@ -297,6 +303,7 @@
 
 @media (max-width: 380px) {
   .grid { gap: 16px 10px; }
+  .item:last-child:nth-child(odd) { width: calc((100% - 10px) / 2); }
   .certificateTitle { font-size: 17px; }
   .itemDetails { padding-top: 14px; }
   .issuer,
