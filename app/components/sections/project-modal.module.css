@@ -100,7 +100,7 @@
   transform: translateY(-50%);
   border: 1px solid rgb(255 255 255 / 80%);
   border-radius: 50%;
-  background: #bd0000;
+  background: #171717;
   color: #fff;
   box-shadow: 0 2px 12px rgb(0 0 0 / 22%);
   cursor: pointer;
@@ -110,7 +110,7 @@
   transition: background-color 140ms ease, transform 140ms ease;
 }
 
-.carouselArrow:hover { background: #171717; }
+.carouselArrow:hover { background: #bd0000; }
 .carouselArrow:focus-visible { outline: 2px solid #171717; outline-offset: 3px; }
 .previousArrow { left: 12px; }
 .nextArrow { right: 12px; }
