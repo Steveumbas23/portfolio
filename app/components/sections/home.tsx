@@ -58,7 +58,7 @@ export default function HomeSection() {
       <div className={`${styles.portrait} home-portrait-enter`}>
         <Image
           className={styles.image}
-          src="/images/steve.png"
+          src="/images/Steve.png"
           alt="Steve Umbas"
           width={1590}
           height={1578}
