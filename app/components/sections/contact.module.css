@@ -104,7 +104,7 @@
 
 .mapMarker span { width: 10px; height: 10px; border-radius: 50%; background: #fff; }
 
-@media (max-width: 760px) {
+@media (max-width: 840px) {
   .contact { padding-block: 58px 76px; }
   .columns { grid-template-columns: minmax(0, 1fr); gap: 58px; }
   .heading { margin-bottom: 23px; font-size: clamp(46px, 10vw, 66px); }

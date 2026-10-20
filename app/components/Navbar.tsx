@@ -50,6 +50,15 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setMenuOpen(false);
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   function closeMenu() {
     setMenuOpen(false);
   }
@@ -78,7 +87,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <Link className={styles.cta} href="/#contact">LET’S TALK</Link>
+        <Link className={styles.cta} href="/#contact" onClick={closeMenu}>LET’S TALK</Link>
         <button
           className={styles.menuToggle}
           type="button"
