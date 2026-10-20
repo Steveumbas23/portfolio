@@ -38,6 +38,7 @@
 }
 
 .link {
+  position: relative;
   color: #161616;
   font-family: var(--font-archivo-narrow), Arial, sans-serif;
   font-size: 16px;
@@ -45,6 +46,23 @@
   letter-spacing: 0.035em;
   text-decoration: none;
   transition: opacity 160ms ease;
+}
+
+.link::after {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  background: #111;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 160ms ease;
+}
+
+.linkActive::after {
+  transform: scaleX(1);
 }
 
 .link:hover,
@@ -147,6 +165,12 @@
     padding: 13px 0;
   }
 
+  .link::after {
+    right: auto;
+    bottom: 8px;
+    width: 28px;
+  }
+
   .cta {
     grid-column: 2;
   }
@@ -182,6 +206,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .link,
+  .link::after,
   .cta,
   .menuToggle {
     transition: none;

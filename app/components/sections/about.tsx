@@ -123,9 +123,10 @@ export default function AboutSection() {
               I’m Steve
             </h2>
             <p className={styles.bio}>
-              I&apos;m an Informatics graduate passionate about UI/UX design and
-              web development. I enjoy creating clean, structured, and visually
-              engaging interfaces that balance aesthetics with functionality.
+              I&apos;m an Informatics graduate passionate about software
+              development, AI, and UI/UX design. I enjoy turning ideas into
+              functional digital solutions by combining technical skills,
+              creative thinking, and user-centered design.
             </p>
 
             <ul className={styles.skills} aria-label="Skills">
@@ -136,7 +137,7 @@ export default function AboutSection() {
               ))}
             </ul>
 
-            <a className={styles.resume} href="/resume.pdf" download>
+            <a id="resume" className={styles.resume} href="/resume.pdf" download>
               DOWNLOAD RESUME <span>[PDF]</span>
               <span className={styles.arrow} aria-hidden="true">↗</span>
             </a>

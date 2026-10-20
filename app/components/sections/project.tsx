@@ -9,9 +9,11 @@ export type Project = {
   description: string;
   image: string;
   imageAlt: string;
+  galleryImages?: { src: string; alt: string }[];
   externalUrl?: string;
   externalLinkLabel?: string;
   technologies: string[];
+  focusAreas?: string[];
   category?: string;
   details: {
     category: string;
@@ -138,6 +140,66 @@ const projects: Project[] = [
         "Health progress overview concept",
       ],
       technicalDetails: [],
+    },
+  },
+  {
+    id: "poster",
+    name: "Poster Design",
+    category: "Graphic Design",
+    description:
+      "A collection of creative poster designs exploring typography, colors, and visual composition.",
+    image: "/images/poster.jpg",
+    imageAlt: "A collection of graphic poster designs",
+    galleryImages: [
+      { src: "/images/Sprite.jpg", alt: "Sprite poster design" },
+      { src: "/images/Frappuccino.jpg", alt: "Frappuccino poster design" },
+      { src: "/images/Three Sips.jpg", alt: "Three Sips poster design" },
+      { src: "/images/Oreo Milkshake.jpg", alt: "Oreo Milkshake poster design" },
+      { src: "/images/mie goreng matcha.jpg", alt: "Mie Goreng poster design" },
+      { src: "/images/Nasi Goreng.jpg", alt: "Nasi Goreng poster design" },
+      { src: "/images/Hot Dog.jpg", alt: "Hot Dog poster design" },
+      { src: "/images/Dumplings Momos.jpg", alt: "Dumplings Momos poster design" },
+    ],
+    externalUrl: "https://www.figma.com/design/EMajMGGOoecfhFHx6z6az4/Poster?node-id=0-1&t=8IJasUVQ4maUORFz-1",
+    externalLinkLabel: "Open Figma Project",
+    technologies: ["Figma"],
+    details: {
+      category: "Graphic Design",
+      summary: "A collection of creative poster designs.",
+      overview:
+        "A collection of poster designs exploring typography, color, and visual composition through bold graphic layouts.",
+      features: [
+        "Explores expressive typography and color palettes.",
+        "Uses visual composition to create distinct poster layouts.",
+      ],
+      technicalDetails: [],
+      technologies: ["Figma"],
+    },
+  },
+  {
+    id: "courtline",
+    name: "COURTLINE — Basketball Shoe E-Commerce UI/UX",
+    category: "UI/UX Design",
+    description:
+      "A premium basketball shoe shopping experience designed with a bold dark interface, lime green accents, and intuitive product browsing.",
+    image: "/images/courtline.jpg",
+    imageAlt: "COURTLINE basketball shoe e-commerce interface design",
+    externalUrl: "https://www.figma.com/design/pcYu2eNAFluHyCA0JxxVhU/Untitled?node-id=0-1&t=L9XTPYlotvHZhnjj-1",
+    externalLinkLabel: "Open Figma Project",
+    technologies: ["Figma", "UI/UX", "Auto Layout", "Components"],
+    focusAreas: ["UI Design", "UX Design", "Design Systems", "Component Design", "Interactive Prototyping"],
+    details: {
+      category: "UI/UX Design",
+      summary: "A modern, intuitive, and premium online shopping experience for basketball shoes.",
+      overview:
+        "COURTLINE is a basketball shoe e-commerce UI/UX design project focused on creating a modern, intuitive, and premium online shopping experience. It features a bold dark interface, lime green accents, consistent typography, and structured product browsing. The project includes a homepage, shop page, basketball category page, and product detail page, with product cards, filters, pagination, color and size selection, wishlist, and shopping cart interactions.",
+      features: [
+        "Homepage, shop page, basketball category page, and product detail page.",
+        "Product cards, filters, and pagination support product discovery.",
+        "Color and size selection, wishlist, and shopping cart interactions.",
+      ],
+      technicalDetails: [],
+      technologies: ["Figma", "UI/UX", "Auto Layout", "Components"],
     },
   },
 ];

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, type KeyboardEvent } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import type { Project } from "./project";
 import styles from "./project-modal.module.css";
 
@@ -14,9 +14,11 @@ type ProjectModalProps = {
 
 export default function ProjectModal({ project, fontClassName, isClosing, onClose }: ProjectModalProps) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const [galleryIndex, setGalleryIndex] = useState(0);
   const titleId = `project-dialog-title-${project.id}`;
   const descriptionId = `project-dialog-description-${project.id}`;
   const modalTitle = project.modalTitle ?? project.name;
+  const galleryImages = project.galleryImages;
 
   useEffect(() => {
     closeButtonRef.current?.focus();
@@ -78,15 +80,47 @@ export default function ProjectModal({ project, fontClassName, isClosing, onClos
           <p className={styles.summary} id={descriptionId}>{project.details.summary}</p>
         </header>
 
-        <figure className={styles.visual}>
-          <Image
-            className={styles.modalImage}
-            src={project.image}
-            alt={project.imageAlt}
-            fill
-            sizes="(max-width: 760px) 92vw, 860px"
-            priority
-          />
+        <figure className={`${styles.visual} ${galleryImages ? styles.carousel : ""}`}>
+          {galleryImages ? (
+            <>
+              <Image
+                className={styles.carouselImage}
+                src={galleryImages[galleryIndex].src}
+                alt={galleryImages[galleryIndex].alt}
+                fill
+                sizes="(max-width: 760px) 92vw, 860px"
+                priority
+              />
+              <button
+                className={`${styles.carouselArrow} ${styles.previousArrow}`}
+                type="button"
+                aria-label="Show previous poster"
+                onClick={() => setGalleryIndex((index) => (index - 1 + galleryImages.length) % galleryImages.length)}
+              >
+                <span aria-hidden="true">‹</span>
+              </button>
+              <button
+                className={`${styles.carouselArrow} ${styles.nextArrow}`}
+                type="button"
+                aria-label="Show next poster"
+                onClick={() => setGalleryIndex((index) => (index + 1) % galleryImages.length)}
+              >
+                <span aria-hidden="true">›</span>
+              </button>
+              <figcaption className={styles.carouselCounter} aria-live="polite">
+                {galleryIndex + 1} / {galleryImages.length}
+              </figcaption>
+            </>
+          ) : (
+            <Image
+              className={styles.modalImage}
+              src={project.image}
+              alt={project.imageAlt}
+              fill
+              sizes="(max-width: 760px) 92vw, 860px"
+              priority
+            />
+          )}
         </figure>
 
         <div className={styles.content}>
@@ -123,6 +157,17 @@ export default function ProjectModal({ project, fontClassName, isClosing, onClos
               <p className={styles.copy}>No technologies are listed in the available project information.</p>
             )}
           </section>
+
+          {project.focusAreas && project.focusAreas.length > 0 && (
+            <section className={styles.section} aria-labelledby={`${titleId}-focus-areas`}>
+              <h3 className={styles.sectionTitle} id={`${titleId}-focus-areas`}>Focus Areas</h3>
+              <ul className={styles.tags}>
+                {project.focusAreas.map((focusArea) => (
+                  <li className={styles.tag} key={focusArea}>{focusArea}</li>
+                ))}
+              </ul>
+            </section>
+          )}
         </div>
 
       </section>

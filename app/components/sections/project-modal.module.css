@@ -81,7 +81,54 @@
   background: #f0efed;
 }
 
+.visual.carousel {
+  aspect-ratio: 1 / 1;
+}
+
 .modalImage { object-fit: cover; }
+
+.carouselImage { object-fit: contain; }
+
+.carouselArrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 1px solid rgb(255 255 255 / 80%);
+  border-radius: 50%;
+  background: #bd0000;
+  color: #fff;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 22%);
+  cursor: pointer;
+  font: inherit;
+  font-size: 32px;
+  line-height: 1;
+  transition: background-color 140ms ease, transform 140ms ease;
+}
+
+.carouselArrow:hover { background: #171717; }
+.carouselArrow:focus-visible { outline: 2px solid #171717; outline-offset: 3px; }
+.previousArrow { left: 12px; }
+.nextArrow { right: 12px; }
+
+.carouselCounter {
+  position: absolute;
+  right: 13px;
+  bottom: 12px;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: rgb(23 23 23 / 82%);
+  color: #fff;
+  font-family: var(--font-archivo-narrow), "Arial Narrow", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
 
 .content {
   padding: 6px clamp(24px, 5vw, 54px) 38px;
@@ -176,6 +223,10 @@
   .title { max-width: calc(100% - 28px); font-size: clamp(28px, 7.2vw, 36px); }
   .summary { margin-top: 10px; font-size: 18px; }
   .visual { aspect-ratio: 16 / 10; margin-inline: 22px; }
+  .carouselArrow { width: 38px; height: 38px; font-size: 29px; }
+  .previousArrow { left: 8px; }
+  .nextArrow { right: 8px; }
+  .carouselCounter { right: 9px; bottom: 8px; font-size: 13px; }
   .content { padding: 1px 22px 28px; }
   .section { margin-top: 21px; padding-top: 17px; }
   .sectionTitle { font-size: 17px; }
@@ -184,7 +235,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .overlay, .dialog, .closing, .closing .dialog, .closeButton {
+  .overlay, .dialog, .closing, .closing .dialog, .closeButton, .carouselArrow {
     animation-duration: 0.01ms;
     transition-duration: 0.01ms;
   }

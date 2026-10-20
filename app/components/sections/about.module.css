@@ -88,6 +88,31 @@
   transition: background-color 160ms ease, color 160ms ease;
 }
 
+.resume:global(.resume-highlight) {
+  animation: resume-highlight 1.8s ease-out;
+}
+
+@keyframes resume-highlight {
+  0%, 35% {
+    outline: 3px solid #fff;
+    outline-offset: 7px;
+    box-shadow: 0 0 0 8px rgb(255 255 255 / 20%);
+  }
+  100% {
+    outline-color: transparent;
+    outline-offset: 13px;
+    box-shadow: 0 0 0 18px rgb(255 255 255 / 0%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume:global(.resume-highlight) {
+    animation: none;
+    outline: 2px solid #fff;
+    outline-offset: 5px;
+  }
+}
+
 .resume:hover {
   background: transparent;
   color: #fff;

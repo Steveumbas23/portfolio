@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Archivo_Narrow, Lexend } from "next/font/google";
 import styles from "./home.module.css";
@@ -13,8 +15,22 @@ const archivoNarrow = Archivo_Narrow({
 });
 
 export default function HomeSection() {
+  function handleResumeClick(event: React.MouseEvent<HTMLAnchorElement>) {
+    event.preventDefault();
+
+    const resumeButton = document.getElementById("resume");
+    if (!resumeButton) return;
+
+    resumeButton.classList.remove("resume-highlight");
+    void resumeButton.offsetWidth;
+    resumeButton.classList.add("resume-highlight");
+    resumeButton.scrollIntoView({ behavior: "smooth", block: "center" });
+    window.history.replaceState(null, "", "#resume");
+  }
+
   return (
     <section
+      id="home"
       className={`${styles.home} ${lexend.variable} ${archivoNarrow.variable}`}
       aria-labelledby="home-heading"
     >
@@ -22,18 +38,20 @@ export default function HomeSection() {
         <p className={styles.eyebrow}>PORTFOLIO&nbsp; / &nbsp;UI/UX DESIGN</p>
         <h1 className={styles.heading} id="home-heading">
           <span>I’M STEVE,</span>
-          <span className={styles.roleBlock}>A UI/UX</span>
-          <span className={styles.roleBlock}>DESIGNER</span>
+          <span className={styles.roleBlock}>A DEVELOPER</span>
+          <span className={styles.roleBlock}>&amp; CREATIVE</span>
+          <span className={styles.roleBlock}>THINKER</span>
         </h1>
         <p className={styles.intro}>
-          I&apos;m a UI/UX designer with a background in Informatics, passionate
-          about creating clean, structured, and visually engaging digital
-          experiences. I combine design thinking with technical knowledge to
-          build interfaces that look great and work intuitively.
+          I&apos;m an Informatics graduate passionate about building meaningful
+          digital experiences through software development, AI, and UI/UX
+          design. I combine technical knowledge with creative problem-solving
+          to develop applications and systems that are functional, intuitive,
+          and visually engaging.
         </p>
         <div className={styles.actions}>
           <a className={styles.button} href="#projects">VIEW WORK</a>
-          <a className={styles.button} href="#resume">RESUME</a>
+          <a className={styles.button} href="#resume" onClick={handleResumeClick}>RESUME</a>
         </div>
       </div>
 

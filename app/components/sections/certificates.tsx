@@ -6,6 +6,14 @@ const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" });
 
 const certificates: Certificate[] = [
   {
+    id: "excel-and-copilot-fundamentals",
+    title: "Excel and Copilot Fundamentals",
+    issuer: "Microsoft / Coursera",
+    year: "2026",
+    image: "/images/excel&copilot.png",
+    verifiedUrl: "https://www.coursera.org/account/accomplishments/verify/RE1U7QA4VTJO",
+  },
+  {
     id: "web-development-bootcamp",
     title: "The Complete Full-Stack Web Development Bootcamp",
     issuer: "Udemy",
