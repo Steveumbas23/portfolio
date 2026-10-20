@@ -394,7 +394,7 @@
   }
 
   .technologyGrid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-auto-rows: auto;
     gap: 12px;
   }
@@ -409,16 +409,27 @@
 
   .continuationGrid,
   .aiGroup .continuationGrid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .technologyCard {
-    min-height: 220px;
-    padding: 22px;
+    min-height: 190px;
+    padding: clamp(14px, 4vw, 18px);
+  }
+
+  .technologyIcon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
   }
 
   .technologyName {
-    font-size: 21px;
+    padding-top: 24px;
+    font-size: clamp(17px, 4.6vw, 20px);
+  }
+
+  .technologyDescription {
+    font-size: clamp(13px, 3.5vw, 14px);
   }
 }
 
