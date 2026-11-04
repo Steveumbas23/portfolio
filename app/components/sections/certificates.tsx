@@ -14,6 +14,14 @@ const certificates: Certificate[] = [
     verifiedUrl: "https://www.coursera.org/account/accomplishments/verify/RE1U7QA4VTJO",
   },
   {
+    id: "excel-everyday",
+    title: "Excel Everyday",
+    issuer: "Coursera",
+    year: "2026",
+    image: "/images/excelEveryDay.png",
+    verifiedUrl: "https://www.coursera.org/account/accomplishments/verify/K0ZQKFMO05ZV",
+  },
+  {
     id: "web-development-bootcamp",
     title: "The Complete Full-Stack Web Development Bootcamp",
     issuer: "Udemy",
