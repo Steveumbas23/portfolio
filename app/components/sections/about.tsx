@@ -189,9 +189,10 @@ export default function AboutSection() {
             <a
               id="resume"
               className={styles.resume}
-              href="mailto:umbasteve10@gmail.com?subject=Request%20for%20Resume"
+              href="/CV_Steve_Umbas.pdf"
+              download="CV_Steve_Umbas.pdf"
             >
-              REQUEST RESUME <span>[EMAIL]</span>
+              DOWNLOAD CV
               <span className={styles.arrow} aria-hidden="true">
                 ↗
               </span>
