@@ -81,7 +81,10 @@ const technologies = [
 const technologyLayers = [
   { label: "SUB LAYER — FRONTEND", technologies: technologies.slice(0, 4) },
   { label: "SUB LAYER — BACKEND", technologies: technologies.slice(4, 8) },
-  { label: "SUB LAYER — DATABASE & TOOLS", technologies: technologies.slice(8, 12) },
+  {
+    label: "SUB LAYER — DATABASE & TOOLS",
+    technologies: technologies.slice(8, 12),
+  },
 ];
 
 const capabilityGroups = [
@@ -89,32 +92,71 @@ const capabilityGroups = [
     number: "02",
     title: "AI & MACHINE LEARNING",
     technologies: [
-      { name: "TensorFlow", category: "AI & ML", icon: "/images/logo-tensorflow.png", description: "Building and training machine learning models." },
-      { name: "Keras", category: "AI & ML", icon: "/images/logo-keras.png", description: "Developing deep learning models with a high-level API." },
-      { name: "Gemini", category: "GENERATIVE AI", icon: "/images/logo-gemini.png", description: "Exploring ideas and workflows with generative AI." },
+      {
+        name: "TensorFlow",
+        category: "AI & ML",
+        icon: "/images/logo-tensorflow.png",
+        description: "Building and training machine learning models.",
+      },
+      {
+        name: "Keras",
+        category: "AI & ML",
+        icon: "/images/logo-keras.png",
+        description: "Developing deep learning models with a high-level API.",
+      },
+      {
+        name: "Gemini",
+        category: "GENERATIVE AI",
+        icon: "/images/logo-gemini.png",
+        description: "Exploring ideas and workflows with generative AI.",
+      },
     ],
   },
   {
     number: "03",
     title: "DESIGN",
     technologies: [
-      { name: "Figma", category: "UI/UX DESIGN", icon: "/images/logo-figma.png", description: "Designing interfaces and interactive prototypes." },
-      { name: "Canva", category: "GRAPHIC DESIGN", icon: "/images/logo-canva.png", description: "Creating visual assets and presentation materials." },
+      {
+        name: "Figma",
+        category: "UI/UX DESIGN",
+        icon: "/images/logo-figma.png",
+        description: "Designing interfaces and interactive prototypes.",
+      },
+      {
+        name: "Canva",
+        category: "GRAPHIC DESIGN",
+        icon: "/images/logo-canva.png",
+        description: "Creating visual assets and presentation materials.",
+      },
     ],
   },
   {
     number: "04",
     title: "PRODUCTIVITY",
     technologies: [
-      { name: "MS Word", category: "DOCUMENTS", icon: "/images/logo-word.png", description: "Preparing and formatting documents." },
-      { name: "MS Excel", category: "SPREADSHEETS", icon: "/images/logo-excel.png", description: "Organizing information and working with data." },
+      {
+        name: "MS Word",
+        category: "DOCUMENTS",
+        icon: "/images/logo-word.png",
+        description: "Preparing and formatting documents.",
+      },
+      {
+        name: "MS Excel",
+        category: "SPREADSHEETS",
+        icon: "/images/logo-excel.png",
+        description: "Organizing information and working with data.",
+      },
     ],
   },
 ];
 
 export default function AboutSection() {
   return (
-    <section id="about" className={styles.about} aria-labelledby="about-heading">
+    <section
+      id="about"
+      className={styles.about}
+      aria-labelledby="about-heading"
+    >
       <div className={styles.sectionInner}>
         <div className={styles.aboutInner} data-reveal>
           <div className={styles.copy}>
@@ -123,10 +165,12 @@ export default function AboutSection() {
               I’m Steve
             </h2>
             <p className={styles.bio}>
-              I&apos;m an Informatics graduate passionate about software
-              development, AI, and UI/UX design. I enjoy turning ideas into
-              functional digital solutions by combining technical skills,
-              creative thinking, and user-centered design.
+              I&apos;m an Informatics graduate with an interest in technology,
+              data management, and software development. I enjoy exploring how
+              technology can be used to solve problems, manage information, and
+              create effective digital solutions. With a background in
+              programming, databases, and user-centered design, I'm always eager
+              to learn new skills and adapt to different challenges.
             </p>
 
             <ul className={styles.skills} aria-label="Skills">
@@ -137,9 +181,16 @@ export default function AboutSection() {
               ))}
             </ul>
 
-            <a id="resume" className={styles.resume} href="/resume.pdf" download>
+            <a
+              id="resume"
+              className={styles.resume}
+              href="/resume.pdf"
+              download
+            >
               DOWNLOAD RESUME <span>[PDF]</span>
-              <span className={styles.arrow} aria-hidden="true">↗</span>
+              <span className={styles.arrow} aria-hidden="true">
+                ↗
+              </span>
             </a>
           </div>
 
@@ -156,7 +207,10 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className={styles.capabilities} aria-labelledby="capabilities-heading">
+        <div
+          className={styles.capabilities}
+          aria-labelledby="capabilities-heading"
+        >
           <div className={styles.capabilitiesHeading} data-reveal>
             <p className={styles.capabilitiesEyebrow}>WHAT I WORK WITH</p>
             <h2 className={styles.capabilitiesTitle} id="capabilities-heading">
@@ -164,11 +218,17 @@ export default function AboutSection() {
             </h2>
           </div>
           <div className={styles.layer}>
-            <h3 className={styles.layerTitle}><span>01</span> — DEVELOPMENT</h3>
+            <h3 className={styles.layerTitle}>
+              <span>01</span> — DEVELOPMENT
+            </h3>
             {technologyLayers.map((layer) => (
               <div className={styles.subLayer} key={layer.label}>
                 <h4 className={styles.subLayerTitle}>{layer.label}</h4>
-                <ul className={styles.technologyGrid} aria-label={layer.label} data-reveal-stagger>
+                <ul
+                  className={styles.technologyGrid}
+                  aria-label={layer.label}
+                  data-reveal-stagger
+                >
                   {layer.technologies.map((technology) => (
                     <li className={styles.technologyCard} key={technology.name}>
                       <div className={styles.cardTop}>
@@ -179,9 +239,13 @@ export default function AboutSection() {
                           width={48}
                           height={48}
                         />
-                        <span className={styles.category}>{technology.category}</span>
+                        <span className={styles.category}>
+                          {technology.category}
+                        </span>
                       </div>
-                      <h5 className={styles.technologyName}>{technology.name}</h5>
+                      <h5 className={styles.technologyName}>
+                        {technology.name}
+                      </h5>
                       <p className={styles.technologyDescription}>
                         {technology.description}
                       </p>
@@ -198,10 +262,17 @@ export default function AboutSection() {
                 key={group.number}
                 aria-labelledby={`capability-${group.number}`}
               >
-                <h3 className={styles.layerTitle} id={`capability-${group.number}`}>
+                <h3
+                  className={styles.layerTitle}
+                  id={`capability-${group.number}`}
+                >
                   <span>{group.number}</span> — {group.title}
                 </h3>
-                <ul className={styles.continuationGrid} aria-label={group.title} data-reveal-stagger>
+                <ul
+                  className={styles.continuationGrid}
+                  aria-label={group.title}
+                  data-reveal-stagger
+                >
                   {group.technologies.map((technology) => (
                     <li className={styles.technologyCard} key={technology.name}>
                       <div className={styles.cardTop}>
@@ -212,9 +283,13 @@ export default function AboutSection() {
                           width={48}
                           height={48}
                         />
-                        <span className={styles.category}>{technology.category}</span>
+                        <span className={styles.category}>
+                          {technology.category}
+                        </span>
                       </div>
-                      <h4 className={styles.technologyName}>{technology.name}</h4>
+                      <h4 className={styles.technologyName}>
+                        {technology.name}
+                      </h4>
                       <p className={styles.technologyDescription}>
                         {technology.description}
                       </p>
