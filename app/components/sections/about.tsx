@@ -1,7 +1,12 @@
 import Image from "next/image";
 import styles from "./about.module.css";
 
-const skills = ["UI/UX DESIGN", "WEB DEVELOPMENT", "FIGMA", "FRONT-END"];
+const skills = [
+  "DATA MANAGEMENT",
+  "WEB DEVELOPMENT",
+  "DATABASE MANAGEMENT",
+  "UI/UX DESIGN",
+];
 
 const technologies = [
   {
@@ -169,8 +174,8 @@ export default function AboutSection() {
               data management, and software development. I enjoy exploring how
               technology can be used to solve problems, manage information, and
               create effective digital solutions. With a background in
-              programming, databases, and user-centered design, I'm always eager
-              to learn new skills and adapt to different challenges.
+              programming, databases, and user-centered design, I&apos;m always
+              eager to learn new skills and adapt to different challenges.
             </p>
 
             <ul className={styles.skills} aria-label="Skills">
