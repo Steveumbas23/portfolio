@@ -35,7 +35,7 @@ export default function HomeSection() {
       aria-labelledby="home-heading"
     >
       <div className={`${styles.content} home-content-enter`}>
-        <p className={styles.eyebrow}>PORTFOLIO&nbsp; / &nbsp;UI/UX DESIGN</p>
+        <p className={styles.eyebrow}>PORTFOLIO</p>
         <h1 className={styles.heading} id="home-heading">
           <span>I’M STEVE,</span>
           <span className={styles.roleBlock}>A DEVELOPER</span>
@@ -43,15 +43,25 @@ export default function HomeSection() {
           <span className={styles.roleBlock}>THINKER</span>
         </h1>
         <p className={styles.intro}>
-          I&apos;m an Informatics graduate passionate about building meaningful
-          digital experiences through software development, AI, and UI/UX
-          design. I combine technical knowledge with creative problem-solving
-          to develop applications and systems that are functional, intuitive,
-          and visually engaging.
+          I&apos;m an Informatics graduate with a strong interest in technology,
+          software development, and data management. I enjoy exploring new
+          technologies and turning ideas into practical solutions through
+          analytical thinking, technical skills, and creativity. With a
+          background in programming, database management, and UI/UX design,
+          I&apos;m eager to continuously learn, adapt, and contribute to
+          developing effective digital solutions.
         </p>
         <div className={styles.actions}>
-          <a className={styles.button} href="#projects">VIEW WORK</a>
-          <a className={styles.button} href="#resume" onClick={handleResumeClick}>RESUME</a>
+          <a className={styles.button} href="#projects">
+            VIEW WORK
+          </a>
+          <a
+            className={styles.button}
+            href="#resume"
+            onClick={handleResumeClick}
+          >
+            RESUME
+          </a>
         </div>
       </div>
 

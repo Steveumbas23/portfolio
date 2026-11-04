@@ -184,10 +184,9 @@ export default function AboutSection() {
             <a
               id="resume"
               className={styles.resume}
-              href="/resume.pdf"
-              download
+              href="mailto:umbasteve10@gmail.com?subject=Request%20for%20Resume"
             >
-              DOWNLOAD RESUME <span>[PDF]</span>
+              REQUEST RESUME <span>[EMAIL]</span>
               <span className={styles.arrow} aria-hidden="true">
                 ↗
               </span>
