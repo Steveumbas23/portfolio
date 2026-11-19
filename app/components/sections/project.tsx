@@ -211,7 +211,7 @@ export default function ProjectSection() {
       className={`${styles.projects} ${lexend.variable} ${archivoNarrow.variable}`}
       aria-labelledby="projects-heading"
     >
-      <div className={styles.inner}>
+      <div className="content-container">
         <header className={styles.header} data-reveal>
           <h2 className={styles.heading} id="projects-heading">COOL THINGS I MADE</h2>
           <span className={styles.headerMark} aria-hidden="true">✳</span>

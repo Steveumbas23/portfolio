@@ -7,11 +7,6 @@
   font-family: var(--font-archivo-narrow), "Arial Narrow", sans-serif;
 }
 
-.sectionInner {
-  width: min(100%, var(--content-width));
-  margin-inline: auto;
-}
-
 .aboutInner {
   min-height: min(820px, 100vh);
   display: grid;

@@ -11,15 +11,8 @@ const certificates: Certificate[] = [
     issuer: "Microsoft / Coursera",
     year: "2026",
     image: "/images/excel&copilot.png",
-    verifiedUrl: "https://www.coursera.org/account/accomplishments/verify/RE1U7QA4VTJO",
-  },
-  {
-    id: "excel-everyday",
-    title: "Excel Everyday",
-    issuer: "Coursera",
-    year: "2026",
-    image: "/images/excelEveryDay.png",
-    verifiedUrl: "https://www.coursera.org/account/accomplishments/verify/K0ZQKFMO05ZV",
+    verifiedUrl:
+      "https://www.coursera.org/account/accomplishments/verify/RE1U7QA4VTJO",
   },
   {
     id: "web-development-bootcamp",
@@ -27,7 +20,8 @@ const certificates: Certificate[] = [
     issuer: "Udemy",
     year: "2026",
     image: "/images/full-stack.jpg",
-    verifiedUrl: "https://www.udemy.com/certificate/UC-98d6a168-f71e-4765-8ca9-939e2f90dc0e/",
+    verifiedUrl:
+      "https://www.udemy.com/certificate/UC-98d6a168-f71e-4765-8ca9-939e2f90dc0e/",
   },
   {
     id: "figma-components",
@@ -35,7 +29,8 @@ const certificates: Certificate[] = [
     issuer: "Skillshare / Coursera",
     year: "2026",
     image: "/images/figma.png",
-    verifiedUrl: "https://www.coursera.org/account/accomplishments/verify/VRLP6N859QE3",
+    verifiedUrl:
+      "https://www.coursera.org/account/accomplishments/verify/VRLP6N859QE3",
   },
   {
     id: "adobe-photoshop",
@@ -43,7 +38,8 @@ const certificates: Certificate[] = [
     issuer: "Adobe / Certiport",
     year: "2026",
     image: "/images/adobe.png",
-    verifiedUrl: "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&format=pdf&id=428",
+    verifiedUrl:
+      "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&format=pdf&id=428",
   },
   {
     id: "canva-linkedin",
@@ -51,7 +47,8 @@ const certificates: Certificate[] = [
     issuer: "Coursera",
     year: "2026",
     image: "/images/GraphicDesign_coursera_sertifikat.jpg",
-    verifiedUrl: "https://www.coursera.org/account/accomplishments/verify/V25XY0I3OPWD",
+    verifiedUrl:
+      "https://www.coursera.org/account/accomplishments/verify/V25XY0I3OPWD",
   },
 ];
 

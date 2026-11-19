@@ -38,18 +38,17 @@ export default function HomeSection() {
         <p className={styles.eyebrow}>PORTFOLIO</p>
         <h1 className={styles.heading} id="home-heading">
           <span>I’M STEVE,</span>
-          <span className={styles.roleBlock}>A DEVELOPER</span>
+          <span className={styles.roleBlock}>A UI/UX DESIGNER</span>
           <span className={styles.roleBlock}>&amp; CREATIVE</span>
           <span className={styles.roleBlock}>THINKER</span>
         </h1>
         <p className={styles.intro}>
-          I&apos;m an Informatics graduate with a strong interest in technology,
-          software development, and data management. I enjoy exploring new
-          technologies and turning ideas into practical solutions through
-          analytical thinking, technical skills, and creativity. With a
-          background in programming, database management, and UI/UX design,
-          I&apos;m eager to continuously learn, adapt, and contribute to
-          developing effective digital solutions.
+          I&apos;m an Informatics graduate passionate about UI/UX design and
+          digital product development. I enjoy creating intuitive user
+          interfaces and meaningful user experiences through user-centered
+          design, wireframing, and prototyping. Skilled in Figma and frontend
+          development, I&apos;m eager to learn and create user-friendly digital
+          solutions.
         </p>
         <div className={styles.actions}>
           <a className={styles.button} href="#projects">

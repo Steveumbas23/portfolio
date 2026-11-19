@@ -15,7 +15,7 @@ const contacts = [
 export default function ContactSection() {
   return (
     <section id="contact" className={`${styles.contact} ${lexend.variable}`} aria-labelledby="contact-heading">
-      <div className={styles.inner}>
+      <div className="content-container">
         <div className={styles.columns}>
           <div className={styles.contactColumn} data-reveal>
             <h2 className={styles.heading} id="contact-heading">CONTACT</h2>

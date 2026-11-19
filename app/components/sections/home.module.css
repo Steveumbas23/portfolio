@@ -1,8 +1,8 @@
 .home {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
-  column-gap: clamp(32px, 5vw, 88px);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  column-gap: clamp(28px, 4vw, 64px);
   align-items: stretch;
   min-height: calc(100svh - 78px);
   overflow: hidden;
@@ -15,6 +15,8 @@
   position: relative;
   z-index: 1;
   align-self: center;
+  width: 100%;
+  max-width: 560px;
   min-width: 0;
   padding-block: 20px 72px;
 }
@@ -39,7 +41,7 @@
   gap: 0.02em;
   margin: 0;
   font-family: var(--font-lexend), sans-serif;
-  font-size: clamp(48px, 6vw, 92px);
+  font-size: clamp(48px, 5.4vw, 82px);
   font-weight: 700;
   letter-spacing: -0.065em;
   line-height: 1.02;
@@ -53,18 +55,23 @@
 }
 
 .heading .roleBlock {
-  padding: 0.025em 0.12em 0.055em;
+  width: fit-content;
+  max-width: 100%;
+  border-radius: 3px;
+  font-size: clamp(0.66em, 3.8vw, 0.72em);
+  padding: 0.025em 0.1em 0.045em;
   background: #000;
   color: #f4ff00;
+  white-space: nowrap;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
 .intro {
-  max-width: 600px;
+  max-width: 48ch;
   margin: clamp(18px, 2.6vh, 26px) 0 0 2px;
   font-size: clamp(17px, 1.5vw, 22px);
-  line-height: 1.45;
+  line-height: 1.55;
   letter-spacing: 0.005em;
 }
 
@@ -130,6 +137,8 @@
   max-height: calc(100svh - 78px);
   object-fit: contain;
   object-position: right bottom;
+  transform: scale(1.12);
+  transform-origin: 68% 100%;
 }
 
 .index {

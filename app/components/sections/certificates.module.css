@@ -1,12 +1,11 @@
 .page {
   min-height: 100vh;
+  padding-inline: var(--content-inset);
   background: #080808;
   color: #fff;
 }
 
 .inner {
-  width: min(calc(100% - 2 * var(--content-inset)), var(--content-width));
-  margin-inline: auto;
   padding: clamp(62px, 8vw, 108px) 0 100px;
 }
 

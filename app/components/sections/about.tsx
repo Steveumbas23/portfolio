@@ -162,7 +162,7 @@ export default function AboutSection() {
       className={styles.about}
       aria-labelledby="about-heading"
     >
-      <div className={styles.sectionInner}>
+      <div className="content-container">
         <div className={styles.aboutInner} data-reveal>
           <div className={styles.copy}>
             <p className={styles.eyebrow}>WHO AM I?</p>

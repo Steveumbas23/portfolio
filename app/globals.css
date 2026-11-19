@@ -4,8 +4,13 @@
   --background: #ffffff;
   --foreground: #171717;
   --content-gutter: clamp(16px, 2.5vw, 32px);
-  --content-width: 1800px;
+  --content-width: 1280px;
   --content-inset: max(var(--content-gutter), calc((100vw - var(--content-width)) / 2));
+}
+
+.content-container {
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
 }
 
 @theme inline {
