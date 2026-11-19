@@ -15,10 +15,15 @@ type ProjectModalProps = {
 export default function ProjectModal({ project, fontClassName, isClosing, onClose }: ProjectModalProps) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const [galleryIndex, setGalleryIndex] = useState(0);
+  const [showCaseStudy, setShowCaseStudy] = useState(false);
   const titleId = `project-dialog-title-${project.id}`;
   const descriptionId = `project-dialog-description-${project.id}`;
   const modalTitle = project.modalTitle ?? project.name;
   const galleryImages = project.galleryImages;
+  const category = project.category ?? project.details.category;
+  const prototypeUrl = project.externalUrl && /^https:\/\/(www\.)?figma\.com\/proto\//i.test(project.externalUrl)
+    ? project.externalUrl
+    : undefined;
 
   useEffect(() => {
     closeButtonRef.current?.focus();
@@ -74,10 +79,10 @@ export default function ProjectModal({ project, fontClassName, isClosing, onClos
           <span aria-hidden="true">×</span>
         </button>
         <header className={styles.projectHeader}>
-          <p className={styles.eyebrow}>PROJECT DETAILS</p>
-          <p className={styles.category}>{project.details.category}</p>
+          <p className={styles.eyebrow}>{showCaseStudy ? "PROJECT CASE STUDY" : "PROJECT PREVIEW"}</p>
+          <p className={styles.category}>{category}</p>
           <h2 className={styles.title} id={titleId}>{modalTitle}</h2>
-          <p className={styles.summary} id={descriptionId}>{project.details.summary}</p>
+          <p className={styles.summary} id={descriptionId}>{project.description}</p>
         </header>
 
         <figure className={`${styles.visual} ${galleryImages ? styles.carousel : ""}`}>
@@ -123,52 +128,88 @@ export default function ProjectModal({ project, fontClassName, isClosing, onClos
           )}
         </figure>
 
-        <div className={styles.content}>
-          <section className={styles.section} aria-labelledby={`${titleId}-overview`}>
-            <h3 className={styles.sectionTitle} id={`${titleId}-overview`}>Overview</h3>
-            <p className={styles.copy}>{project.details.overview}</p>
-          </section>
-
-          <section className={styles.section} aria-labelledby={`${titleId}-features`}>
-            <h3 className={styles.sectionTitle} id={`${titleId}-features`}>Key Features</h3>
-            <ul className={styles.list}>
-              {project.details.features.map((feature) => <li key={feature}>{feature}</li>)}
-            </ul>
-          </section>
-
-          {project.details.technicalDetails.length > 0 && (
-            <section className={styles.section} aria-labelledby={`${titleId}-technical`}>
-              <h3 className={styles.sectionTitle} id={`${titleId}-technical`}>Technical Details</h3>
-              <ul className={styles.list}>
-                {project.details.technicalDetails.map((detail) => <li key={detail}>{detail}</li>)}
-              </ul>
+        {!showCaseStudy ? (
+          <div className={styles.previewContent}>
+            <section className={styles.previewSection} aria-labelledby={`${titleId}-role`}>
+              <h3 className={styles.sectionTitle} id={`${titleId}-role`}>My Role</h3>
+              {project.focusAreas && project.focusAreas.length > 0 ? (
+                <ul className={styles.tags}>
+                  {project.focusAreas.map((area) => <li className={styles.tag} key={area}>{area}</li>)}
+                </ul>
+              ) : (
+                <p className={styles.copy}>Role details are not listed for this project.</p>
+              )}
             </section>
-          )}
-
-          <section className={styles.section} aria-labelledby={`${titleId}-technologies`}>
-            <h3 className={styles.sectionTitle} id={`${titleId}-technologies`}>Technology Stack</h3>
-            {project.details.technologies.length > 0 ? (
+            <section className={styles.previewSection} aria-labelledby={`${titleId}-tools`}>
+              <h3 className={styles.sectionTitle} id={`${titleId}-tools`}>Tools &amp; Technologies</h3>
               <ul className={styles.tags}>
-                {project.details.technologies.map((technology) => (
+                {project.technologies.map((technology) => (
                   <li className={styles.tag} key={technology}>{technology}</li>
                 ))}
               </ul>
-            ) : (
-              <p className={styles.copy}>No technologies are listed in the available project information.</p>
-            )}
-          </section>
+            </section>
+            <div className={styles.modalActions}>
+              <button className={styles.caseStudyButton} type="button" onClick={() => setShowCaseStudy(true)}>
+                View Case Study <span aria-hidden="true">↗</span>
+              </button>
+              {prototypeUrl && (
+                <a className={styles.prototypeButton} href={prototypeUrl} target="_blank" rel="noreferrer">
+                  View Prototype <span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className={styles.content}>
+            <button className={styles.backButton} type="button" onClick={() => setShowCaseStudy(false)}>
+              ← Back to preview
+            </button>
+            <section className={styles.section} aria-labelledby={`${titleId}-overview`}>
+              <h3 className={styles.sectionTitle} id={`${titleId}-overview`}>Overview</h3>
+              <p className={styles.copy}>{project.details.overview}</p>
+            </section>
 
-          {project.focusAreas && project.focusAreas.length > 0 && (
-            <section className={styles.section} aria-labelledby={`${titleId}-focus-areas`}>
-              <h3 className={styles.sectionTitle} id={`${titleId}-focus-areas`}>Focus Areas</h3>
-              <ul className={styles.tags}>
-                {project.focusAreas.map((focusArea) => (
-                  <li className={styles.tag} key={focusArea}>{focusArea}</li>
-                ))}
+            <section className={styles.section} aria-labelledby={`${titleId}-features`}>
+              <h3 className={styles.sectionTitle} id={`${titleId}-features`}>Key Features</h3>
+              <ul className={styles.list}>
+                {project.details.features.map((feature) => <li key={feature}>{feature}</li>)}
               </ul>
             </section>
-          )}
-        </div>
+
+            {project.details.technicalDetails.length > 0 && (
+              <section className={styles.section} aria-labelledby={`${titleId}-technical`}>
+                <h3 className={styles.sectionTitle} id={`${titleId}-technical`}>Technical Details</h3>
+                <ul className={styles.list}>
+                  {project.details.technicalDetails.map((detail) => <li key={detail}>{detail}</li>)}
+                </ul>
+              </section>
+            )}
+
+            <section className={styles.section} aria-labelledby={`${titleId}-technologies`}>
+              <h3 className={styles.sectionTitle} id={`${titleId}-technologies`}>Technology Stack</h3>
+              {project.details.technologies.length > 0 ? (
+                <ul className={styles.tags}>
+                  {project.details.technologies.map((technology) => (
+                    <li className={styles.tag} key={technology}>{technology}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className={styles.copy}>No technologies are listed in the available project information.</p>
+              )}
+            </section>
+
+            {project.focusAreas && project.focusAreas.length > 0 && (
+              <section className={styles.section} aria-labelledby={`${titleId}-focus-areas`}>
+                <h3 className={styles.sectionTitle} id={`${titleId}-focus-areas`}>Focus Areas</h3>
+                <ul className={styles.tags}>
+                  {project.focusAreas.map((focusArea) => (
+                    <li className={styles.tag} key={focusArea}>{focusArea}</li>
+                  ))}
+                </ul>
+              </section>
+            )}
+          </div>
+        )}
 
       </section>
     </div>

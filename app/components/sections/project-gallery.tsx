@@ -61,7 +61,13 @@ export default function ProjectGallery({
       <div className={styles.columns} data-reveal-stagger>
         {projects.map((project, index) => (
           <article className={`${styles.project} ${styles[project.id] ?? ""}`} id={project.id} key={project.id}>
-            <div className={styles.imageFrame}>
+            <button
+              className={styles.imageFrame}
+              type="button"
+              onClick={(event) => openProject(project, event)}
+              aria-label={`Preview ${project.name}`}
+              aria-haspopup="dialog"
+            >
               <Image
                 className={styles.image}
                 src={project.image}
@@ -70,7 +76,7 @@ export default function ProjectGallery({
                 height={700}
                 sizes="(max-width: 760px) 100vw, (max-width: 1100px) 44vw, 33vw"
               />
-            </div>
+            </button>
             <div className={styles.projectBody}>
               <p className={styles.projectIndex}>SELECTED PROJECT · {String(index + 1).padStart(2, "0")}</p>
               {project.category && <p className={styles.projectCategory}>{project.category}</p>}
@@ -109,6 +115,7 @@ export default function ProjectGallery({
       </div>
       {activeProject && portalRoot && createPortal(
         <ProjectModal
+          key={activeProject.id}
           project={activeProject}
           fontClassName={fontClassName}
           isClosing={isClosing}

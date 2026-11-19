@@ -6,13 +6,13 @@ const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" });
 
 const certificates: Certificate[] = [
   {
-    id: "excel-and-copilot-fundamentals",
-    title: "Excel and Copilot Fundamentals",
-    issuer: "Microsoft / Coursera",
+    id: "figma-components",
+    title: "Figma Pro Pt. 1: Auto Layouts, Grids & Components",
+    issuer: "Skillshare / Coursera",
     year: "2026",
-    image: "/images/excel&copilot.png",
+    image: "/images/figma.png",
     verifiedUrl:
-      "https://www.coursera.org/account/accomplishments/verify/RE1U7QA4VTJO",
+      "https://www.coursera.org/account/accomplishments/verify/VRLP6N859QE3",
   },
   {
     id: "web-development-bootcamp",
@@ -24,15 +24,6 @@ const certificates: Certificate[] = [
       "https://www.udemy.com/certificate/UC-98d6a168-f71e-4765-8ca9-939e2f90dc0e/",
   },
   {
-    id: "figma-components",
-    title: "Figma Pro Pt. 1: Auto Layouts, Grids & Components",
-    issuer: "Skillshare / Coursera",
-    year: "2026",
-    image: "/images/figma.png",
-    verifiedUrl:
-      "https://www.coursera.org/account/accomplishments/verify/VRLP6N859QE3",
-  },
-  {
     id: "adobe-photoshop",
     title: "Adobe Certified Professional — Visual Design Using Adobe Photoshop",
     issuer: "Adobe / Certiport",
@@ -40,6 +31,23 @@ const certificates: Certificate[] = [
     image: "/images/adobe.png",
     verifiedUrl:
       "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&format=pdf&id=428",
+  },
+  {
+    id: "everyday-excel-part-1",
+    title: "Everyday Excel, Part 1",
+    issuer: "University of Colorado Boulder / Coursera",
+    year: "2026",
+    image: "/images/excelEveryDay.png",
+    verifiedUrl: "https://coursera.org/verify/KOZKQFM005ZV",
+  },
+  {
+    id: "excel-and-copilot-fundamentals",
+    title: "Excel and Copilot Fundamentals",
+    issuer: "Microsoft / Coursera",
+    year: "2026",
+    image: "/images/excel&copilot.png",
+    verifiedUrl:
+      "https://www.coursera.org/account/accomplishments/verify/RE1U7QA4VTJO",
   },
   {
     id: "canva-linkedin",

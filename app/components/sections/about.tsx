@@ -2,10 +2,10 @@ import Image from "next/image";
 import styles from "./about.module.css";
 
 const skills = [
-  "DATA MANAGEMENT",
+  "UI/UX DESIGN",
+  "USER-CENTERED DESIGN",
   "WEB DEVELOPMENT",
   "DATABASE MANAGEMENT",
-  "UI/UX DESIGN",
 ];
 
 const technologies = [
@@ -170,12 +170,12 @@ export default function AboutSection() {
               I’m Steve
             </h2>
             <p className={styles.bio}>
-              I&apos;m an Informatics graduate with an interest in technology,
-              data management, and software development. I enjoy exploring how
-              technology can be used to solve problems, manage information, and
-              create effective digital solutions. With a background in
-              programming, databases, and user-centered design, I&apos;m always
-              eager to learn new skills and adapt to different challenges.
+              I&apos;m an Informatics graduate passionate about UI/UX design and
+              digital product development. I enjoy understanding user needs and
+              translating them into intuitive, functional, and user-friendly
+              designs. With experience in Figma, wireframing, prototyping, and
+              frontend development, I&apos;m eager to continuously learn and
+              create meaningful digital experiences.
             </p>
 
             <ul className={styles.skills} aria-label="Skills">

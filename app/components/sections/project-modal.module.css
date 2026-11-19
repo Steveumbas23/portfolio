@@ -134,6 +134,73 @@
   padding: 6px clamp(24px, 5vw, 54px) 38px;
 }
 
+.previewContent {
+  padding: 24px clamp(24px, 5vw, 54px) 36px;
+}
+
+.previewSection {
+  margin-top: 4px;
+  border-top: 1px solid #e8e5e1;
+  padding-top: 20px;
+}
+
+.previewSection + .previewSection { margin-top: 22px; }
+
+.modalActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.caseStudyButton,
+.prototypeButton {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #080808;
+  border-radius: 999px;
+  padding: 11px 19px;
+  font-family: var(--font-archivo-narrow), "Arial Narrow", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease, transform 150ms ease;
+  cursor: pointer;
+}
+
+.caseStudyButton {
+  background: #080808;
+  color: #f4ff00;
+}
+
+.prototypeButton {
+  background: #f4ff00;
+  color: #080808;
+}
+
+.caseStudyButton:hover,
+.prototypeButton:hover { transform: translateY(-2px); }
+
+.caseStudyButton:focus-visible,
+.prototypeButton:focus-visible,
+.backButton:focus-visible { outline: 2px solid #bd0000; outline-offset: 3px; }
+
+.backButton {
+  margin: 0 0 4px;
+  border: 0;
+  padding: 8px 0;
+  background: transparent;
+  color: #bd0000;
+  cursor: pointer;
+  font-family: var(--font-archivo-narrow), "Arial Narrow", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
 .section {
   margin-top: 25px;
   border-top: 1px solid #e8e5e1;
@@ -228,6 +295,9 @@
   .nextArrow { right: 8px; }
   .carouselCounter { right: 9px; bottom: 8px; font-size: 13px; }
   .content { padding: 1px 22px 28px; }
+  .previewContent { padding: 20px 22px 26px; }
+  .modalActions { gap: 9px; margin-top: 23px; }
+  .caseStudyButton, .prototypeButton { min-height: 45px; padding-inline: 15px; font-size: 15px; }
   .section { margin-top: 21px; padding-top: 17px; }
   .sectionTitle { font-size: 17px; }
   .copy, .list { font-size: 17px; }
@@ -235,7 +305,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .overlay, .dialog, .closing, .closing .dialog, .closeButton, .carouselArrow {
+  .overlay, .dialog, .closing, .closing .dialog, .closeButton, .carouselArrow, .caseStudyButton, .prototypeButton {
     animation-duration: 0.01ms;
     transition-duration: 0.01ms;
   }

@@ -68,12 +68,20 @@
 .project:focus-within { transform: translateY(-5px); }
 
 .imageFrame {
+  position: relative;
+  display: block;
   width: 100%;
   overflow: hidden;
   aspect-ratio: 16 / 10;
   border-radius: clamp(18px, 2vw, 28px) clamp(18px, 2vw, 28px) 0 0;
+  border: 0;
+  padding: 0;
   background: #151515;
+  cursor: pointer;
+  appearance: none;
 }
+
+.imageFrame:focus-visible { outline: 3px solid #ffd43b; outline-offset: -5px; }
 
 .image {
   display: block;
