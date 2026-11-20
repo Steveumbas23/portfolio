@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { createPortal } from "react-dom";
 import ProjectModal from "./project-modal";
@@ -16,13 +17,8 @@ export default function ProjectGallery({
 }) {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [isClosing, setIsClosing] = useState(false);
-  const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
   const openerRef = useRef<HTMLButtonElement | null>(null);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    setPortalRoot(document.body);
-  }, []);
 
   useEffect(() => {
     if (!activeProject) return;
@@ -90,14 +86,20 @@ export default function ProjectGallery({
                 </ul>
               )}
               <div className={styles.projectActions}>
-                <button
-                  className={styles.projectLink}
-                  type="button"
-                  onClick={(event) => openProject(project, event)}
-                  aria-haspopup="dialog"
-                >
-                  Explore Project <span aria-hidden="true">↗</span>
-                </button>
+                {project.caseStudyUrl ? (
+                  <Link className={styles.projectLink} href={project.caseStudyUrl}>
+                    Read Case Study <span aria-hidden="true">↗</span>
+                  </Link>
+                ) : (
+                  <button
+                    className={styles.projectLink}
+                    type="button"
+                    onClick={(event) => openProject(project, event)}
+                    aria-haspopup="dialog"
+                  >
+                    Explore Project <span aria-hidden="true">↗</span>
+                  </button>
+                )}
                 {project.externalUrl && (
                   <a
                     className={styles.externalProjectLink}
@@ -113,7 +115,7 @@ export default function ProjectGallery({
           </article>
         ))}
       </div>
-      {activeProject && portalRoot && createPortal(
+      {activeProject && createPortal(
         <ProjectModal
           key={activeProject.id}
           project={activeProject}
@@ -121,7 +123,7 @@ export default function ProjectGallery({
           isClosing={isClosing}
           onClose={closeProject}
         />,
-        portalRoot,
+        document.body,
       )}
     </>
   );

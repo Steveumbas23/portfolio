@@ -10,6 +10,7 @@ export type Project = {
   image: string;
   imageAlt: string;
   galleryImages?: { src: string; alt: string }[];
+  caseStudyUrl?: string;
   externalUrl?: string;
   externalLinkLabel?: string;
   technologies: string[];
@@ -91,6 +92,107 @@ const projects: Project[] = [
     },
   },
   {
+    id: "openmile",
+    name: "OpenMile — Travel Booking App",
+    category: "UI/UX Design",
+    description:
+      "A travel booking app concept for flight search, destination discovery, and trip bookings.",
+    image: "/images/preview openMile.png",
+    imageAlt: "OpenMile travel booking app concept with flight search and destination screens",
+    caseStudyUrl: "/projects/openmile",
+    externalUrl: "https://www.figma.com/proto/QRPxkMJE0rFr4v7Ryjf0fU/OpenMile?t=bfzF0I2XYI9qGHPA-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=0-1&starting-point-node-id=4%3A238&fuid=1441746115386135378",
+    externalLinkLabel: "View Prototype",
+    technologies: ["UI/UX Design", "Figma", "Prototyping"],
+    details: {
+      category: "UI/UX Design",
+      summary: "A travel booking app concept for flights and destination discovery.",
+      overview:
+        "OpenMile presents a mobile travel experience with flight seat selection, destination discovery, and accommodation browsing.",
+      features: [
+        "Flight search and seat selection screens.",
+        "Destination discovery and nearby travel inspiration.",
+        "Accommodation browsing concept.",
+      ],
+      technicalDetails: [],
+      technologies: ["UI/UX Design", "Figma", "Prototyping"],
+    },
+  },
+  {
+    id: "adventist-paal-2-library",
+    name: "Adventist Paal 2 Library",
+    category: "UI/UX Design",
+    description:
+      "A mobile library app concept for browsing new arrivals, viewing borrowed books, and accessing library services.",
+    image: "/images/preview ibrary.png",
+    imageAlt: "Adventist Paal 2 Library mobile app screens",
+    caseStudyUrl: "/projects/adventist-paal-2-library",
+    externalUrl: "https://www.figma.com/proto/7FvkikOv8vM8iaa7FzYlZ3/SAD-LIBRARY-PROJECT?node-id=128-365&p=f&t=EwVoqRQxpOXYb9TK-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=128%3A365",
+    externalLinkLabel: "View Prototype",
+    technologies: ["UI/UX Design", "Figma", "Prototyping"],
+    details: {
+      category: "UI/UX Design",
+      summary: "A mobile app concept for the Adventist Paal 2 Library.",
+      overview:
+        "The app concept includes a library welcome and login screen, new book arrivals, and a previously borrowed books view.",
+      features: [
+        "Library sign-in screen.",
+        "New arrivals and book browsing screens.",
+        "Previously borrowed books view.",
+      ],
+      technicalDetails: [],
+      technologies: ["UI/UX Design", "Figma", "Prototyping"],
+    },
+  },
+  {
+    id: "champs",
+    name: "Champs — Boxing Club Website",
+    category: "UI/UX Design",
+    description:
+      "A boxing club website concept presenting training programs, featured projects, and club information.",
+    image: "/images/preview champs.png",
+    imageAlt: "Champs boxing club website design shown across desktop screens",
+    technologies: ["UI/UX Design", "Figma", "Prototyping"],
+    details: {
+      category: "UI/UX Design",
+      summary: "A website concept for a boxing and training club.",
+      overview:
+        "The Champs website design introduces the club, presents training programs and featured work, and provides contact information.",
+      features: [
+        "Club introduction and training program sections.",
+        "Featured projects and club information.",
+        "Contact call to action.",
+      ],
+      technicalDetails: [],
+      technologies: ["UI/UX Design", "Figma", "Prototyping"],
+    },
+  },
+  {
+    id: "pertamina",
+    name: "Pertamina Offshore — Website Redesign",
+    category: "UI/UX Design",
+    description:
+      "A corporate website redesign concept for Pertamina's offshore energy operations.",
+    image: "/images/preview pertamina.png",
+    imageAlt: "Pertamina offshore energy website wireframe and visual redesign",
+    caseStudyUrl: "/projects/pertamina-offshore",
+    externalUrl: "https://www.figma.com/proto/YQWCVajSW78n3kodqsI6wP/Pertamina-Offshore-Corporate-Website-UI-UX?node-id=2-8&t=bfzF0I2XYI9qGHPA-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&fuid=1441746115386135378",
+    externalLinkLabel: "View Prototype",
+    technologies: ["UI/UX Design", "Figma", "Prototyping"],
+    details: {
+      category: "UI/UX Design",
+      summary: "A corporate website redesign concept for offshore energy operations.",
+      overview:
+        "The design explores a transition from wireframes to a visual website for presenting offshore operations, company information, and sustainability content.",
+      features: [
+        "Homepage concept with offshore operations imagery.",
+        "Company, operations, services, and sustainability sections.",
+        "Operational statistics and consultation call to action.",
+      ],
+      technicalDetails: [],
+      technologies: ["UI/UX Design", "Figma", "Prototyping"],
+    },
+  },
+  {
     id: "lapor-jalan",
     name: "Lapor Jalan — Location-Based Road Reporting",
     modalTitle: "LaporJalan — Road Damage Reporting and Management System",
@@ -124,8 +226,9 @@ const projects: Project[] = [
       "Merancang konsep aplikasi kesehatan yang membantu pengguna memantau aktivitas harian, mengelola asupan nutrisi, dan melihat perkembangan kesehatan melalui antarmuka yang intuitif dan modern.",
     image: "/images/preview vitae.png",
     imageAlt: "Vitae health and wellness app mockup",
-    externalUrl: "https://www.figma.com/design/olWjJ86dqbQhQEhPsETanl/Vitae?node-id=0-1&t=pXCdblWiBJGkFHna-1",
-    externalLinkLabel: "Open Figma Project",
+    caseStudyUrl: "/projects/vitae",
+    externalUrl: "https://www.figma.com/proto/olWjJ86dqbQhQEhPsETanl/Vitae?node-id=0-1&p=f&t=bfzF0I2XYI9qGHPA-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=120%3A931&fuid=1441746115386135378",
+    externalLinkLabel: "View Prototype",
     technologies: ["UI/UX", "Figma", "Auto Layout", "Components", "Prototyping"],
     details: {
       category: "UI/UX Design",
@@ -184,6 +287,7 @@ const projects: Project[] = [
       "A premium basketball shoe shopping experience designed with a bold dark interface, lime green accents, and intuitive product browsing.",
     image: "/images/preview courtline.png",
     imageAlt: "COURTLINE basketball shoe e-commerce interface design",
+    caseStudyUrl: "/projects/courtline",
     externalUrl: "https://www.figma.com/design/pcYu2eNAFluHyCA0JxxVhU/Untitled?node-id=0-1&t=L9XTPYlotvHZhnjj-1",
     externalLinkLabel: "Open Figma Project",
     technologies: ["Figma", "UI/UX", "Auto Layout", "Components"],
@@ -204,6 +308,23 @@ const projects: Project[] = [
   },
 ];
 
+const projectOrder = [
+  "openmile",
+  "pertamina",
+  "vitae",
+  "courtline",
+  "champs",
+  "adventist-paal-2-library",
+  "poster",
+  "lucit",
+  "dayone",
+  "lapor-jalan",
+];
+
+const orderedProjects = [...projects].sort(
+  (first, second) => projectOrder.indexOf(first.id) - projectOrder.indexOf(second.id),
+);
+
 export default function ProjectSection() {
   return (
     <section
@@ -217,7 +338,7 @@ export default function ProjectSection() {
           <span className={styles.headerMark} aria-hidden="true">✳</span>
         </header>
         <ProjectGallery
-          projects={projects}
+          projects={orderedProjects}
           fontClassName={`${lexend.variable} ${archivoNarrow.variable}`}
         />
       </div>

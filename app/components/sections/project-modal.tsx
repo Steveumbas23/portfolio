@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import type { Project } from "./project";
 import styles from "./project-modal.module.css";
@@ -152,6 +153,11 @@ export default function ProjectModal({ project, fontClassName, isClosing, onClos
               <button className={styles.caseStudyButton} type="button" onClick={() => setShowCaseStudy(true)}>
                 View Case Study <span aria-hidden="true">↗</span>
               </button>
+              {project.caseStudyUrl && (
+                <Link className={styles.prototypeButton} href={project.caseStudyUrl}>
+                  Read Full Case Study <span aria-hidden="true">↗</span>
+                </Link>
+              )}
               {prototypeUrl && (
                 <a className={styles.prototypeButton} href={prototypeUrl} target="_blank" rel="noreferrer">
                   View Prototype <span aria-hidden="true">↗</span>
