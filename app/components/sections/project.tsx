@@ -68,7 +68,7 @@ const projects: Project[] = [
     modalTitle: "DayOne — AI-Powered Health and Fitness Tracker",
     description:
       "A fitness web application for tracking BMI, monitoring weight progress, setting goals, and receiving personalized guidance from an AI Coach.",
-    image: "/images/dayone.png",
+    image: "/images/preview dayone.png",
     imageAlt: "DayOne fitness and weight tracking application displayed on a phone",
     technologies: ["Next.js", "React", "TypeScript", "FastAPI", "Python", "Supabase", "PostgreSQL", "Gemini API"],
     details: {
@@ -122,7 +122,7 @@ const projects: Project[] = [
     category: "UI/UX Design",
     description:
       "Merancang konsep aplikasi kesehatan yang membantu pengguna memantau aktivitas harian, mengelola asupan nutrisi, dan melihat perkembangan kesehatan melalui antarmuka yang intuitif dan modern.",
-    image: "/images/vitae.png",
+    image: "/images/preview vitae.png",
     imageAlt: "Vitae health and wellness app mockup",
     externalUrl: "https://www.figma.com/design/olWjJ86dqbQhQEhPsETanl/Vitae?node-id=0-1&t=pXCdblWiBJGkFHna-1",
     externalLinkLabel: "Open Figma Project",
@@ -182,7 +182,7 @@ const projects: Project[] = [
     category: "UI/UX Design",
     description:
       "A premium basketball shoe shopping experience designed with a bold dark interface, lime green accents, and intuitive product browsing.",
-    image: "/images/courtline.jpg",
+    image: "/images/preview courtline.png",
     imageAlt: "COURTLINE basketball shoe e-commerce interface design",
     externalUrl: "https://www.figma.com/design/pcYu2eNAFluHyCA0JxxVhU/Untitled?node-id=0-1&t=L9XTPYlotvHZhnjj-1",
     externalLinkLabel: "Open Figma Project",
