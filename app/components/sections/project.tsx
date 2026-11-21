@@ -39,12 +39,14 @@ const archivoNarrow = Archivo_Narrow({
 const projects: Project[] = [
   {
     id: "lucit",
-    name: "LUCIT — Lung and Colon Cancer Detection Using Interpretable Transfer Learning",
+    name: "LUCIT — Intelligent Histopathology Decision Support",
+    category: "Full Stack Development & AI",
     description:
-      "An AI-powered web application for lung and colon cancer classification using histopathological images and Explainable AI.",
+      "A research-based decision support web application integrating histopathology classification, segmentation, explainability, and AI-generated explanations.",
     image: "/images/lucit.png",
     imageAlt: "LUCIT cancer detection application displayed on a desktop monitor",
-    technologies: ["React", "Python", "Flask", "Supabase", "TypeScript", "TensorFlow", "Keras", "Gemini API"],
+    caseStudyUrl: "/projects/lucit",
+    technologies: ["React", "TypeScript", "Python", "Flask", "TensorFlow", "Keras", "Supabase", "Gemini API"],
     details: {
       category: "AI & Healthcare",
       summary: "Histopathology image classification and segmentation with interpretable results.",
@@ -70,7 +72,8 @@ const projects: Project[] = [
     description:
       "A fitness web application for tracking BMI, monitoring weight progress, setting goals, and receiving personalized guidance from an AI Coach.",
     image: "/images/preview dayone.png",
-    imageAlt: "DayOne fitness and weight tracking application displayed on a phone",
+    imageAlt: "DayOne landing page and health tracking screens shown in a multi-device preview collage",
+    caseStudyUrl: "/projects/dayone",
     technologies: ["Next.js", "React", "TypeScript", "FastAPI", "Python", "Supabase", "PostgreSQL", "Gemini API"],
     details: {
       category: "Fitness & Wellness",
@@ -82,7 +85,7 @@ const projects: Project[] = [
         "Gemini AI Coach uses BMI and fitness goals to generate personalized guidance.",
         "Offers workout and nutrition suggestions for general fitness planning.",
         "Supports daily activity tracking and progress reviews over time.",
-        "Lets users set fitness goals, including a target weight.",
+        "Stores a gain, lose, or maintain goal type alongside the user's health profile.",
       ],
       technicalDetails: [
         "The Gemini API powers an LLM-based AI Coach, using BMI information and selected fitness goals as context.",
@@ -151,7 +154,10 @@ const projects: Project[] = [
       "A boxing club website concept presenting training programs, featured projects, and club information.",
     image: "/images/preview champs.png",
     imageAlt: "Champs boxing club website design shown across desktop screens",
-    technologies: ["UI/UX Design", "Figma", "Prototyping"],
+    caseStudyUrl: "/projects/champs",
+    externalUrl: "https://www.figma.com/proto/HZRnpm2906EucECtEL3qIK/Motion-Studio?node-id=0-1&p=f&t=HWc1jAiGZulmMsLP-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&fuid=1441746115386135378",
+    externalLinkLabel: "View Prototype",
+    technologies: ["UI/UX Design", "Figma", "Website Concept"],
     details: {
       category: "UI/UX Design",
       summary: "A website concept for a boxing and training club.",
@@ -194,19 +200,21 @@ const projects: Project[] = [
   },
   {
     id: "lapor-jalan",
-    name: "Lapor Jalan — Location-Based Road Reporting",
+    name: "LaporJalan — Road Damage Reporting System",
     modalTitle: "LaporJalan — Road Damage Reporting and Management System",
+    category: "Full Stack Development / GIS / DevOps",
     description:
-      "A web application for reporting damaged roads using location-based data to help users document road conditions and identify problem areas.",
+      "A full-stack road reporting system with map-selected locations and an admin dashboard for managing report status and follow-up.",
     image: "/images/laporjalan.png",
     imageAlt: "Lapor Jalan road reporting application displayed on a laptop",
-    technologies: ["React", "Laravel", "PHP", "MySQL"],
+    caseStudyUrl: "/projects/lapor-jalan",
+    technologies: ["React", "TypeScript", "Vite", "Laravel", "PHP", "MySQL", "Leaflet"],
     details: {
       category: "Road Reporting & Management",
       summary: "A public reporting website paired with a desktop dashboard for reviewing and managing road damage reports.",
       overview:
         "LaporJalan connects the public with administrators. Residents submit road damage reports through a public website, while administrators review submissions and follow up through a desktop dashboard.",
-      technologies: ["React", "Laravel", "PHP", "MySQL"],
+      technologies: ["React", "TypeScript", "Vite", "Laravel", "PHP", "MySQL", "React-Leaflet", "OpenStreetMap"],
       features: [
         "Public landing page introducing the road reporting platform.",
         "Road reporting form accepts a photo, damage description, and map-selected location for administrator review.",
@@ -263,8 +271,6 @@ const projects: Project[] = [
       { src: "/images/Hot Dog.jpg", alt: "Hot Dog poster design" },
       { src: "/images/Dumplings Momos.jpg", alt: "Dumplings Momos poster design" },
     ],
-    externalUrl: "https://www.figma.com/design/EMajMGGOoecfhFHx6z6az4/Poster?node-id=0-1&t=8IJasUVQ4maUORFz-1",
-    externalLinkLabel: "Open Figma Project",
     technologies: ["Figma"],
     details: {
       category: "Graphic Design",

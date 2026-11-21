@@ -76,7 +76,7 @@ export default function AdventistPaal2LibraryCaseStudyPage() {
   return (
     <>
       <Navbar />
-      <main className={styles.page}>
+      <main className={styles.page} data-case-study>
         <div className={styles.container}>
           <Link className={styles.backLink} href="/#projects">
             <span aria-hidden="true">←</span> Back to selected projects

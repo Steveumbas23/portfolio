@@ -1,0 +1,156 @@
+.page {
+  --lj-ink: #0f2944;
+  --lj-navy: #143252;
+  --lj-blue: #2f6b99;
+  --lj-pale: #eaf1f7;
+  --lj-line: #d9e6f2;
+  --lj-muted: #657b90;
+  padding: 28px var(--content-inset) 80px;
+  background: #fff;
+  color: var(--lj-ink);
+}
+
+.container { width: min(100%, 1120px); margin-inline: auto; }
+.backLink { display: inline-flex; align-items: center; gap: 9px; color: #536c82; font-size: 14px; font-weight: 650; text-decoration: none; }
+.backLink:hover, .footer a:hover { color: var(--lj-blue); }
+.backLink:focus-visible, .heroLink:focus-visible, .footer a:focus-visible { outline: 2px solid var(--lj-blue); outline-offset: 4px; }
+
+.hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(260px, .75fr); align-items: end; gap: clamp(36px, 7vw, 94px); padding: clamp(54px, 9vw, 110px) 0 54px; }
+.eyebrow, .kicker { margin: 0; color: #376b95; font-size: 11px; font-weight: 800; letter-spacing: .14em; line-height: 1.5; }
+.title { margin: 15px 0 0; color: var(--lj-ink); font-family: var(--font-geist-sans), sans-serif; font-size: clamp(58px, 10vw, 126px); font-weight: 780; letter-spacing: -.085em; line-height: .9; }
+.subtitle { margin: 14px 0 0; color: #376b95; font-size: clamp(18px, 2.3vw, 24px); font-weight: 650; letter-spacing: -.025em; }
+.lede { max-width: 620px; margin: 18px 0 0; color: #536779; font-size: clamp(17px, 1.8vw, 21px); line-height: 1.6; }
+.heroLink { display: inline-flex; align-items: center; gap: 11px; margin-top: 27px; border-bottom: 1px solid #6d9abe; padding-bottom: 7px; color: var(--lj-ink); font-size: 15px; font-weight: 700; text-decoration: none; }
+.heroLink span { color: #376b95; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; margin: 0; border-top: 1px solid var(--lj-line); }
+.facts div { min-width: 0; border-bottom: 1px solid var(--lj-line); padding: 16px 0 17px; }
+.facts dt { margin-bottom: 5px; color: var(--lj-muted); font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.facts dd { margin: 0; color: #263f56; font-size: 13px; font-weight: 650; line-height: 1.5; }
+
+.cover { overflow: hidden; margin: 0; border: 1px solid #dbe5ed; border-radius: 18px; background: #0c1f33; }
+.cover img { display: block; width: 100%; height: auto; }
+.cover figcaption { padding: 12px 18px 15px; color: #d3e0eb; font-size: 12px; line-height: 1.5; }
+
+.section { display: grid; grid-template-columns: minmax(230px, .72fr) minmax(0, 1.28fr); gap: clamp(30px, 7vw, 92px); padding: clamp(54px, 8vw, 96px) 0; border-top: 1px solid var(--lj-line); scroll-margin-top: 90px; }
+.sectionIntro h2 { max-width: 480px; margin: 15px 0 0; color: #152f48; font-size: clamp(29px, 4vw, 46px); font-weight: 650; letter-spacing: -.055em; line-height: 1.1; }
+.sectionNote { max-width: 440px; margin: 15px 0 0; color: #6d7f8f; font-size: 14px; line-height: 1.6; }
+.copy { max-width: 720px; color: #4f6171; font-size: 16px; line-height: 1.75; }
+.copy > p { margin: 0; }
+.copy > p + p { margin-top: 15px; }
+.stackList { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
+.stackList li { border: 1px solid #d4e2ee; border-radius: 999px; padding: 7px 10px; background: #f8fbfd; color: #345b79; font-size: 11px; font-weight: 650; }
+.softSection { margin-inline: calc(-1 * var(--content-inset)); padding-inline: var(--content-inset); background: #f5f7fa; }
+
+.objectives { display: grid; align-content: start; }
+.objectives article, .challengeList article { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 13px; border-bottom: 1px solid #dce6ee; padding: 17px 0 20px; }
+.objectives article:first-child, .challengeList article:first-child { padding-top: 0; }
+.objectives article > span, .challengeList article > span { color: #3f7aa8; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+.objectives h3, .challengeList h3 { margin: 0; color: #203a52; font-size: 16px; font-weight: 700; }
+.objectives p, .challengeList p { margin: 7px 0 0; color: #5f7180; font-size: 14px; line-height: 1.6; }
+
+.architecture { align-self: start; min-width: 0; border: 1px solid #dce7ef; border-radius: 17px; padding: clamp(17px, 3vw, 26px); background: linear-gradient(145deg, #fff, #f4f8fb); }
+.flow { display: flex; align-items: center; gap: 10px; }
+.archNode { min-width: 0; flex: 1; border: 1px solid #d8e5ef; border-radius: 12px; padding: 15px 13px; background: #fff; box-shadow: 0 5px 18px rgb(15 41 68 / 5%); }
+.archNode > span { color: #547c9b; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.archNode h3 { margin: 9px 0 0; color: #193752; font-size: 14px; line-height: 1.3; }
+.archNode p { margin: 6px 0 0; color: #697d8e; font-size: 11px; line-height: 1.5; }
+.apiNode { border-color: #abc8de; background: #fafdff; }
+.databaseNode { border-color: #bdd5e5; background: #f7fbfe; }
+.arrow { flex: 0 0 auto; color: #6c93b0; font-size: 18px; }
+.gisBranch { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 17px 0 0 34%; border-top: 1px dashed #adc6d8; padding-top: 17px; position: relative; }
+.branchStem { position: absolute; top: -18px; left: 50%; height: 18px; border-left: 1px dashed #adc6d8; }
+.gisNode { display: grid; gap: 5px; border: 1px solid #dce7ef; border-radius: 10px; padding: 12px; background: #fff; }
+.gisNode span { color: #5581a2; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.gisNode strong { color: #25445f; font-size: 13px; }
+.gisNode small { color: #687c8d; font-size: 10px; line-height: 1.45; }
+.architectureCaption { margin: 15px 0 0; color: #657889; font-size: 11px; line-height: 1.55; }
+
+.darkSection { margin-inline: calc(-1 * var(--content-inset)); padding-inline: var(--content-inset); background: #0f2944; }
+.darkSection .sectionIntro h2 { color: #fff; }
+.darkSection .kicker { color: #b8d3e7; }
+.darkSection .sectionNote { color: #d1deea; }
+.processList { display: grid; margin: 0; padding: 0; list-style: none; }
+.processList li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; border-bottom: 1px solid rgb(255 255 255 / 15%); padding: 17px 0 20px; }
+.processList li:first-child { padding-top: 0; }
+.processList li > span { color: #b8d3e7; font-size: 12px; font-weight: 800; }
+.processList h3 { margin: 0; color: #fff; font-size: 16px; }
+.processList p { margin: 7px 0 0; color: #d5e0e9; font-size: 14px; line-height: 1.6; }
+
+.featureGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.featureCard { min-width: 0; border: 1px solid #dce6ee; border-radius: 14px; padding: 18px; background: #fff; }
+.featureCard > p { margin: 0; color: #64839d; font-size: 9px; font-weight: 800; letter-spacing: .11em; }
+.featureCard h3 { margin: 10px 0 0; color: #1d3a55; font-size: 16px; }
+.featureCard > div { margin-top: 8px; color: #627382; font-size: 12px; line-height: 1.6; }
+.featureCard > span { display: inline-block; margin-top: 14px; border-radius: 5px; padding: 5px 7px; background: #eaf1f7; color: #496b85; font-size: 9px; font-weight: 700; }
+
+.gisContent { color: #536677; font-size: 15px; line-height: 1.7; }
+.gisContent > p { margin: 0; }
+.gisContent > p + p { margin-top: 13px; }
+.gisFlow { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-bottom: 18px; }
+.gisFlow span { border: 1px solid #d7e4ee; border-radius: 999px; padding: 9px 11px; background: #f6fafd; color: #365975; font-size: 11px; font-weight: 650; line-height: 1.35; }
+.gisFlow b { color: #7196b2; font-weight: 500; }
+.gisCaveat { border-left: 3px solid #7ea5c1; padding-left: 14px; color: #6a7c8b; font-size: 13px; }
+
+.databaseContent { display: grid; gap: 16px; }
+.relationDiagram { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 13px; }
+.relationDiagram article { min-width: 0; border: 1px solid #d8e5ef; border-radius: 12px; padding: 15px; background: #fafdff; }
+.relationDiagram article > span { color: #68859c; font-size: 9px; font-weight: 800; letter-spacing: .11em; }
+.relationDiagram h3 { margin: 7px 0 0; color: #163653; font-family: var(--font-geist-mono), monospace; font-size: 15px; }
+.relationDiagram p { margin: 6px 0 0; color: #697d8c; font-size: 10px; line-height: 1.5; }
+.reportTable { border-color: #b9d2e4 !important; background: #f3f8fc !important; }
+.relation { display: grid; justify-items: center; gap: 2px; color: #53738d; font-size: 10px; white-space: nowrap; }
+.relation b { color: #285a7d; font-size: 13px; }
+.fieldList { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin: 0; padding: 0; list-style: none; }
+.fieldList li { border-radius: 7px; padding: 9px 10px; background: #f5f8fa; color: #526778; font-family: var(--font-geist-mono), monospace; font-size: 9px; line-height: 1.5; overflow-wrap: anywhere; }
+.backendNote { border-top: 1px solid #e2e9ef; padding-top: 11px; color: #5b6c7a; font-size: 12px; line-height: 1.65; }
+.backendNote p { margin: 8px 0 0; }
+.backendNote strong { color: #294965; }
+.backendNote code { border-radius: 4px; padding: 1px 4px; background: #edf3f7; color: #294965; font-size: 10px; }
+
+.artifactFlow { display: flex; align-items: center; gap: 12px; }
+.artifactFlow article, .artifactState article { display: grid; min-width: 0; gap: 6px; border: 1px solid rgb(255 255 255 / 18%); border-radius: 11px; padding: 14px; background: rgb(255 255 255 / 5%); }
+.artifactFlow article { flex: 1; }
+.artifactFlow article > span, .artifactState article > span { color: #b8d3e7; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.artifactFlow strong, .artifactState strong { color: #fff; font-size: 13px; }
+.artifactFlow small, .artifactState small { color: #d2dee8; font-size: 10px; line-height: 1.5; }
+.artifactFlow > b { color: #b8d3e7; }
+.artifactState { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
+.unverified { margin-top: 13px; border: 1px solid rgb(255 255 255 / 19%); border-radius: 11px; padding: 15px; background: rgb(0 0 0 / 12%); }
+.unverified > span { color: #c6d9e8; font-size: 9px; font-weight: 800; letter-spacing: .11em; }
+.unverified p { margin: 8px 0 0; color: #e0e8ee; font-size: 12px; line-height: 1.6; }
+
+.challengeList { display: grid; }
+.challengeList p strong { color: #385a76; }
+.footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--lj-line); padding-top: 24px; color: #71808c; font-size: 13px; }
+.footer p { margin: 0; }
+.footer a { color: #355873; font-weight: 700; text-decoration: none; }
+
+@media (max-width: 920px) {
+  .hero { grid-template-columns: 1fr; gap: 30px; padding-top: 64px; }
+  .facts { max-width: 620px; }
+  .section { grid-template-columns: 1fr; gap: 25px; }
+  .sectionIntro h2 { max-width: 700px; }
+  .featureGrid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .page { padding-top: 20px; padding-bottom: 48px; }
+  .hero { padding: 50px 0 36px; }
+  .title { font-size: clamp(54px, 16vw, 88px); letter-spacing: -.075em; }
+  .facts { gap: 0 11px; }
+  .facts dd { font-size: 12px; }
+  .cover { border-radius: 13px; }
+  .cover figcaption { padding: 10px 12px 12px; font-size: 11px; }
+  .section { padding-block: 47px; }
+  .sectionIntro h2 { font-size: clamp(28px, 8vw, 37px); }
+  .flow { align-items: stretch; flex-direction: column; }
+  .arrow { align-self: center; transform: rotate(90deg); }
+  .gisBranch { grid-template-columns: 1fr; margin-left: 0; }
+  .featureGrid, .artifactState { grid-template-columns: 1fr; }
+  .fieldList { grid-template-columns: 1fr; }
+  .relationDiagram { grid-template-columns: 1fr; }
+  .relation { grid-auto-flow: column; justify-content: center; align-items: center; gap: 8px; }
+  .artifactFlow { align-items: stretch; flex-direction: column; }
+  .artifactFlow > b { align-self: center; transform: rotate(90deg); }
+  .footer { align-items: flex-start; flex-direction: column; }
+}

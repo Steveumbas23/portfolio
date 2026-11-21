@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo_Narrow, Geist, Geist_Mono, Libre_Caslon_Text } from "next/font/google";
 import "./globals.css";
+import "./projects/case-study.css";
 import AnimationObserver from "./components/animation-observer";
 
 const geistSans = Geist({
