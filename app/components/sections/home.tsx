@@ -67,10 +67,10 @@ export default function HomeSection() {
       <div className={`${styles.portrait} home-portrait-enter`}>
         <Image
           className={styles.image}
-          src="/images/Steve.png"
+          src="/images/steve.webp"
           alt="Steve Umbas"
-          width={1590}
-          height={1578}
+          width={3180}
+          height={3156}
           priority
           sizes="(max-width: 700px) 92vw, (max-width: 1024px) 48vw, 43vw"
         />

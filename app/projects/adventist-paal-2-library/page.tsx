@@ -89,14 +89,6 @@ export default function AdventistPaal2LibraryCaseStudyPage() {
                 Explore the case study <span aria-hidden="true">↓</span>
               </a>
               <a
-                className={styles.figmaLink}
-                href="https://www.figma.com/design/7FvkikOv8vM8iaa7FzYlZ3"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open Figma Project <span aria-hidden="true">↗</span>
-              </a>
-              <a
                 className={styles.prototypeLink}
                 href="https://www.figma.com/proto/7FvkikOv8vM8iaa7FzYlZ3/SAD-LIBRARY-PROJECT?node-id=128-365&p=f&t=EwVoqRQxpOXYb9TK-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=128%3A365"
                 target="_blank"
@@ -129,7 +121,7 @@ export default function AdventistPaal2LibraryCaseStudyPage() {
 
           <section className={styles.section} id="overview" aria-labelledby="overview-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>01 / HERO &amp; OVERVIEW</p>
+              <p className={styles.kicker}>01 / PROJECT OVERVIEW</p>
               <h2 id="overview-title">A school library service across two distinct platforms.</h2>
             </div>
             <div className={styles.copy}>
@@ -148,7 +140,7 @@ export default function AdventistPaal2LibraryCaseStudyPage() {
 
           <section className={`${styles.section} ${styles.blueSection}`} aria-labelledby="challenges-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>02 / DESIGN CHALLENGES</p>
+              <p className={styles.kicker}>02 / PROBLEMS &amp; DESIGN CHALLENGES</p>
               <h2 id="challenges-title">Make the library experience clear for each role.</h2>
               <p className={styles.sectionNote}>Design considerations based on the project scope, not user research.</p>
             </div>
@@ -167,50 +159,43 @@ export default function AdventistPaal2LibraryCaseStudyPage() {
               <h2 id="role-title">UI/UX Designer</h2>
               <p className={styles.sectionNote}>Contribution details beyond the role and platform scope were not separately documented in the local assets.</p>
             </div>
+            <div className={styles.roleContent}>
             <ul className={styles.roleList}>
               {roleAreas.map((item, index) => (
                 <li key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>
               ))}
             </ul>
+            <p className={styles.sectionNote}>A Figma design and prototype link is provided; its detailed contents were not accessible in the available project review.</p>
+            </div>
           </section>
 
-          <section className={`${styles.section} ${styles.neutralSection}`} aria-labelledby="wireframe-title">
+          <section className={`${styles.section} ${styles.darkSection}`} aria-labelledby="process-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>04 / WIREFRAMES</p>
-              <h2 id="wireframe-title">Wireframe files were not found in the repository.</h2>
+              <p className={styles.kicker}>04 / DESIGN PROCESS</p>
+              <h2 id="process-title">From available screens to a broader library service concept.</h2>
             </div>
-            <div className={styles.unavailablePanel}>
+            <div className={styles.processContent}>
+              <h3>Research</h3>
+              <p className={styles.processNote}>No user research findings are documented in the available project materials.</p>
+              <h3>Wireframing</h3>
+              <div className={styles.unavailablePanel}>
               <span className={styles.statusMark} aria-hidden="true">—</span>
               <div>
                 <h3>No wireframe image is available locally</h3>
                 <p>The provided mockup is a styled mobile UI collage. It does not show a wireframe-to-final comparison, so no wireframe is recreated or presented as original.</p>
               </div>
-            </div>
-          </section>
-
-          <section className={styles.section} aria-labelledby="flow-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>05 / USER FLOW</p>
-              <h2 id="flow-title">The source flow diagram is not available.</h2>
-              <p className={styles.sectionNote}>The case study does not infer screen order from the feature inventory.</p>
-            </div>
-            <div className={styles.unavailablePanel}>
+              </div>
+              <h3>User Flow</h3>
+              <p className={styles.processNote}>The case study does not infer screen order from the feature inventory.</p>
+              <div className={styles.unavailablePanel}>
               <span className={styles.statusMark} aria-hidden="true">—</span>
               <div>
                 <h3>No flow artifact found</h3>
                 <p>The project context lists service areas but does not include a documented sequence or user-flow diagram.</p>
               </div>
-            </div>
-          </section>
-
-          <section className={`${styles.section} ${styles.darkSection}`} aria-labelledby="mobile-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>06 / FINAL DESIGN · MOBILE</p>
-              <h2 id="mobile-title">Screens visible in the supplied mockup.</h2>
-              <p className={styles.sectionNote}>
-                These are the screens identifiable in the local collage. The wider mobile scope from the brief is listed separately below.
-              </p>
-            </div>
+              </div>
+              <h3>Final design: available mobile screens</h3>
+              <p className={styles.processNote}>The local collage shows selected screens. The wider mobile scope from the brief is listed separately below.</p>
             <div className={styles.screenGrid}>
               {visibleMobileScreens.map((item, index) => (
                 <article className={styles.screenCard} key={item.name}>
@@ -222,14 +207,8 @@ export default function AdventistPaal2LibraryCaseStudyPage() {
                 <ul>{mobileScope.map((item) => <li key={item}>{item}</li>)}</ul>
               </div>
             </div>
-          </section>
-
-          <section className={styles.section} aria-labelledby="admin-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>07 / FINAL DESIGN · DESKTOP ADMIN</p>
-              <h2 id="admin-title">A separate desktop platform scope.</h2>
-              <p className={styles.sectionNote}>No desktop admin mockup or screenshot is available in the local repository.</p>
-            </div>
+              <h3>Desktop admin scope</h3>
+              <p className={styles.processNote}>No desktop admin mockup or screenshot is available in the local repository.</p>
             <div className={styles.adminPanel}>
               <div className={styles.unavailablePanel}>
                 <span className={styles.statusMark} aria-hidden="true">—</span>
@@ -237,11 +216,20 @@ export default function AdventistPaal2LibraryCaseStudyPage() {
               </div>
               <ul className={styles.adminScope}>{adminScope.map((item) => <li key={item}>{item}</li>)}</ul>
             </div>
+              <h3>Platform considerations</h3>
+              <div className={styles.platformGrid}>
+                <article><span>01 / MOBILE</span><h3>Readers and visitors</h3><p>The local mockup shows phone-sized screens for library entry, login, book discovery, and borrowed-book information.</p></article>
+                <article><span>02 / DESKTOP ADMIN</span><h3>Library management</h3><p>The brief describes a distinct desktop admin platform. Its screenshots and responsive behavior are not available locally.</p></article>
+                <p className={styles.platformNote}>These are two platform experiences, not desktop and mobile breakpoints of one responsive screen design.</p>
+              </div>
+              <h3>Interactive prototyping</h3>
+              <p className={styles.processNote}>A Figma prototype link is available from the case study hero.</p>
+            </div>
           </section>
 
           <section className={`${styles.section} ${styles.blueSection}`} aria-labelledby="system-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>08 / DESIGN SYSTEM &amp; UI GUIDELINES</p>
+              <p className={styles.kicker}>05 / DESIGN SYSTEM</p>
               <h2 id="system-title">A blue-and-white library identity.</h2>
               <p className={styles.sectionNote}>The blue value follows the provided brief. Neutral values are approximate samples; a published token sheet was not available.</p>
             </div>
@@ -264,23 +252,12 @@ export default function AdventistPaal2LibraryCaseStudyPage() {
             </div>
           </section>
 
-          <section className={styles.section} aria-labelledby="platform-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>09 / PLATFORM CONSIDERATIONS</p>
-              <h2 id="platform-title">Mobile reader experience and desktop administration are separate platforms.</h2>
-            </div>
-            <div className={styles.platformGrid}>
-              <article><span>01 / MOBILE</span><h3>Readers and visitors</h3><p>The local mockup shows phone-sized screens for library entry, login, book discovery, and borrowed-book information.</p></article>
-              <article><span>02 / DESKTOP ADMIN</span><h3>Library management</h3><p>The brief describes a distinct desktop admin platform. Its screenshots and responsive behavior are not available locally.</p></article>
-              <p className={styles.platformNote}>These are two platform experiences, not desktop and mobile breakpoints of one responsive screen design.</p>
-            </div>
-          </section>
-
           <section className={`${styles.section} ${styles.neutralSection}`} aria-labelledby="outcome-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>10 / OUTCOME &amp; REFLECTION</p>
+              <p className={styles.kicker}>06 / VALIDATION</p>
               <h2 id="outcome-title">A library interface concept, not a launched system.</h2>
             </div>
+            <div className={styles.validationContent}>
             <div className={styles.outcomeGrid}>
               <article className={styles.outcomeCard}>
                 <h3>Project status</h3>
@@ -296,16 +273,10 @@ export default function AdventistPaal2LibraryCaseStudyPage() {
                 <p>The project context covers both reader-facing tasks and administration. Separate screen exports, the source flow, and the desktop admin visuals would make it possible to document the end-to-end service more fully.</p>
               </article>
             </div>
-          </section>
-
-          <section className={styles.section} aria-labelledby="testing-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>11 / TESTING</p>
-              <h2 id="testing-title">Testing status is not documented in the available materials.</h2>
-            </div>
             <p className={styles.testingNote}>
               No user-testing records, participant feedback, or validation results were found in the repository. This case study makes no claims about testing outcomes.
             </p>
+            </div>
           </section>
 
           <footer className={styles.footer}>

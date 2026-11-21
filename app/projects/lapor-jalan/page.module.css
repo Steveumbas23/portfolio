@@ -4,7 +4,7 @@
   --lj-blue: #2f6b99;
   --lj-pale: #eaf1f7;
   --lj-line: #d9e6f2;
-  --lj-muted: #657b90;
+  --lj-muted: #52697e;
   padding: 28px var(--content-inset) 80px;
   background: #fff;
   color: var(--lj-ink);
@@ -32,7 +32,7 @@
 
 .section { display: grid; grid-template-columns: minmax(230px, .72fr) minmax(0, 1.28fr); gap: clamp(30px, 7vw, 92px); padding: clamp(54px, 8vw, 96px) 0; border-top: 1px solid var(--lj-line); scroll-margin-top: 90px; }
 .sectionIntro h2 { max-width: 480px; margin: 15px 0 0; color: #152f48; font-size: clamp(29px, 4vw, 46px); font-weight: 650; letter-spacing: -.055em; line-height: 1.1; }
-.sectionNote { max-width: 440px; margin: 15px 0 0; color: #6d7f8f; font-size: 14px; line-height: 1.6; }
+.sectionNote { max-width: 440px; margin: 15px 0 0; color: #526879; font-size: 14px; line-height: 1.6; }
 .copy { max-width: 720px; color: #4f6171; font-size: 16px; line-height: 1.75; }
 .copy > p { margin: 0; }
 .copy > p + p { margin-top: 15px; }
@@ -50,18 +50,18 @@
 .architecture { align-self: start; min-width: 0; border: 1px solid #dce7ef; border-radius: 17px; padding: clamp(17px, 3vw, 26px); background: linear-gradient(145deg, #fff, #f4f8fb); }
 .flow { display: flex; align-items: center; gap: 10px; }
 .archNode { min-width: 0; flex: 1; border: 1px solid #d8e5ef; border-radius: 12px; padding: 15px 13px; background: #fff; box-shadow: 0 5px 18px rgb(15 41 68 / 5%); }
-.archNode > span { color: #547c9b; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.archNode > span { color: #486b86; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
 .archNode h3 { margin: 9px 0 0; color: #193752; font-size: 14px; line-height: 1.3; }
-.archNode p { margin: 6px 0 0; color: #697d8e; font-size: 11px; line-height: 1.5; }
+.archNode p { margin: 6px 0 0; color: #536879; font-size: 11px; line-height: 1.5; }
 .apiNode { border-color: #abc8de; background: #fafdff; }
 .databaseNode { border-color: #bdd5e5; background: #f7fbfe; }
-.arrow { flex: 0 0 auto; color: #6c93b0; font-size: 18px; }
+.arrow { flex: 0 0 auto; color: #496e89; font-size: 18px; }
 .gisBranch { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 17px 0 0 34%; border-top: 1px dashed #adc6d8; padding-top: 17px; position: relative; }
 .branchStem { position: absolute; top: -18px; left: 50%; height: 18px; border-left: 1px dashed #adc6d8; }
 .gisNode { display: grid; gap: 5px; border: 1px solid #dce7ef; border-radius: 10px; padding: 12px; background: #fff; }
-.gisNode span { color: #5581a2; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.gisNode span { color: #486b86; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
 .gisNode strong { color: #25445f; font-size: 13px; }
-.gisNode small { color: #687c8d; font-size: 10px; line-height: 1.45; }
+.gisNode small { color: #536879; font-size: 10px; line-height: 1.45; }
 .architectureCaption { margin: 15px 0 0; color: #657889; font-size: 11px; line-height: 1.55; }
 
 .darkSection { margin-inline: calc(0px - var(--section-bleed)); padding-inline: var(--section-bleed); background: #0f2944; }
@@ -77,7 +77,7 @@
 
 .featureGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .featureCard { min-width: 0; border: 1px solid #dce6ee; border-radius: 14px; padding: 18px; background: #fff; }
-.featureCard > p { margin: 0; color: #64839d; font-size: 9px; font-weight: 800; letter-spacing: .11em; }
+.featureCard > p { margin: 0; color: #486a84; font-size: 9px; font-weight: 800; letter-spacing: .11em; }
 .featureCard h3 { margin: 10px 0 0; color: #1d3a55; font-size: 16px; }
 .featureCard > div { margin-top: 8px; color: #627382; font-size: 12px; line-height: 1.6; }
 .featureCard > span { display: inline-block; margin-top: 14px; border-radius: 5px; padding: 5px 7px; background: #eaf1f7; color: #496b85; font-size: 9px; font-weight: 700; }
@@ -87,15 +87,15 @@
 .gisContent > p + p { margin-top: 13px; }
 .gisFlow { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-bottom: 18px; }
 .gisFlow span { border: 1px solid #d7e4ee; border-radius: 999px; padding: 9px 11px; background: #f6fafd; color: #365975; font-size: 11px; font-weight: 650; line-height: 1.35; }
-.gisFlow b { color: #7196b2; font-weight: 500; }
-.gisCaveat { border-left: 3px solid #7ea5c1; padding-left: 14px; color: #6a7c8b; font-size: 13px; }
+.gisFlow b { color: #496e89; font-weight: 500; }
+.gisCaveat { border-left: 3px solid #7ea5c1; padding-left: 14px; color: #536879; font-size: 13px; }
 
 .databaseContent { display: grid; gap: 16px; }
 .relationDiagram { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 13px; }
 .relationDiagram article { min-width: 0; border: 1px solid #d8e5ef; border-radius: 12px; padding: 15px; background: #fafdff; }
-.relationDiagram article > span { color: #68859c; font-size: 9px; font-weight: 800; letter-spacing: .11em; }
+.relationDiagram article > span { color: #4d7089; font-size: 9px; font-weight: 800; letter-spacing: .11em; }
 .relationDiagram h3 { margin: 7px 0 0; color: #163653; font-family: var(--font-geist-mono), monospace; font-size: 15px; }
-.relationDiagram p { margin: 6px 0 0; color: #697d8c; font-size: 10px; line-height: 1.5; }
+.relationDiagram p { margin: 6px 0 0; color: #536879; font-size: 10px; line-height: 1.5; }
 .reportTable { border-color: #b9d2e4 !important; background: #f3f8fc !important; }
 .relation { display: grid; justify-items: center; gap: 2px; color: #53738d; font-size: 10px; white-space: nowrap; }
 .relation b { color: #285a7d; font-size: 13px; }
@@ -120,7 +120,7 @@
 
 .challengeList { display: grid; }
 .challengeList p strong { color: #385a76; }
-.footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--lj-line); padding-top: 24px; color: #71808c; font-size: 13px; }
+.footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--lj-line); padding-top: 24px; color: #526576; font-size: 13px; }
 .footer p { margin: 0; }
 .footer a { color: #355873; font-weight: 700; text-decoration: none; }
 

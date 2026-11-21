@@ -1,6 +1,6 @@
 .page {
   --dayone-ink: #202021;
-  --dayone-muted: #747276;
+  --dayone-muted: #625e61;
   --dayone-line: #e7e2df;
   --dayone-wash: #f7f4f2;
   --dayone-accent: #c94735;
@@ -17,14 +17,14 @@
 .lede { max-width: 640px; margin: 26px 0 24px; color: #5f5b5e; font-size: clamp(17px, 2vw, 21px); line-height: 1.6; }
 .heroLink { display: inline-flex; gap: 10px; align-items: center; border-radius: 999px; background: var(--dayone-accent); padding: 13px 19px; color: white; font-size: 13px; font-weight: 700; text-decoration: none; }
 .heroLink:hover { background: #a93629; }
-.status { display: block; margin-top: 20px; color: #888286; font-size: 12px; }
+.status { display: block; margin-top: 20px; color: #625b5e; font-size: 12px; }
 .projectFacts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; margin: 0; border-top: 1px solid var(--dayone-line); }
 .projectFacts div { min-width: 0; border-bottom: 1px solid var(--dayone-line); padding: 14px 0; }
-.projectFacts dt { margin-bottom: 6px; color: #8c8587; font-size: 11px; }
+.projectFacts dt { margin-bottom: 6px; color: #625b5e; font-size: 11px; }
 .projectFacts dd { margin: 0; color: #302c2e; font-size: 13px; font-weight: 700; line-height: 1.45; }
 .heroVisual { overflow: hidden; margin: 0; border: 1px solid #ebe5e1; border-radius: 20px; background: #f3efed; box-shadow: 0 24px 70px #35242012; }
 .heroVisual img { display: block; width: 100%; height: auto; }
-.heroVisual figcaption { border-top: 1px solid #ebe5e1; padding: 13px 18px; color: #80797a; font-size: 12px; line-height: 1.5; }
+.heroVisual figcaption { border-top: 1px solid #ebe5e1; padding: 13px 18px; color: #625b5e; font-size: 12px; line-height: 1.5; }
 .section { display: grid; grid-template-columns: minmax(250px, .85fr) minmax(0, 1.15fr); gap: clamp(36px, 7vw, 90px); border-top: 1px solid var(--dayone-line); padding: 72px 0; }
 .sectionIntro { align-self: start; }
 .sectionIntro h2 { max-width: 540px; margin: 0; font-size: clamp(30px, 4vw, 46px); letter-spacing: -.055em; line-height: 1.08; }
@@ -46,16 +46,16 @@
 .nodeType { margin-bottom: 12px; color: var(--dayone-accent); font-size: 9px; font-weight: 800; letter-spacing: .14em; }
 .archNode strong, .serviceNode strong { font-size: 20px; letter-spacing: -.04em; }
 .archNode > span:not(.nodeType), .serviceNode > span:not(.nodeType) { margin-top: 6px; color: #70696c; font-size: 12px; }
-.archNode small { margin-top: 12px; color: #938b8c; font-size: 10px; line-height: 1.4; }
+.archNode small { margin-top: 12px; color: #625b5e; font-size: 10px; line-height: 1.4; }
 .archArrow { position: relative; color: var(--dayone-accent); font-size: 29px; text-align: center; }
-.archArrow small { position: absolute; top: 31px; left: 50%; width: 80px; transform: translateX(-50%); color: #8b8384; font-size: 9px; }
-.serviceLinks { grid-column: 3; display: flex; justify-content: space-around; gap: 8px; margin: 4px 0 -4px; color: #8b8384; font-size: 9px; text-align: center; }
+.archArrow small { position: absolute; top: 31px; left: 50%; width: 80px; transform: translateX(-50%); color: #625b5e; font-size: 9px; }
+.serviceLinks { grid-column: 3; display: flex; justify-content: space-around; gap: 8px; margin: 4px 0 -4px; color: #625b5e; font-size: 9px; text-align: center; }
 .archServices { grid-column: 3; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .serviceNode { min-height: 108px; border-color: #e6e1de; padding: 13px; }
 .serviceNode .nodeType { margin-bottom: 7px; font-size: 8px; }
 .serviceNode strong { font-size: 15px; }
 .serviceNode > span:not(.nodeType) { font-size: 10px; }
-.archNote, .assetNote { margin: 16px 0 0; color: #817a7c; font-size: 12px; line-height: 1.65; }
+.archNote, .assetNote { margin: 16px 0 0; color: #625b5e; font-size: 12px; line-height: 1.65; }
 .darkSection { margin-inline: calc(0px - var(--section-bleed)); padding-inline: var(--section-bleed); background: var(--dayone-deep); color: #fff; }
 .darkSection .sectionIntro h2 { color: #fff; }
 .darkSection .kicker { color: #ef826e; }
@@ -74,14 +74,14 @@
 .aiFlow > div { min-height: 120px; display: flex; flex-direction: column; justify-content: center; border: 1px solid #e9d7d1; border-radius: 12px; background: #fff; padding: 14px; }
 .aiFlow > div span { color: var(--dayone-accent); font-size: 10px; font-weight: 800; }
 .aiFlow strong { margin-top: 11px; font-size: 13px; }
-.aiFlow small { margin-top: 5px; color: #817a7b; font-size: 10px; line-height: 1.45; }
+.aiFlow small { margin-top: 5px; color: #625b5e; font-size: 10px; line-height: 1.45; }
 .aiFlow > b { color: var(--dayone-accent); text-align: center; }
 .dataPanel { min-width: 0; }
 .relationship { display: grid; gap: 0; border-radius: 14px; background: #f7f4f2; padding: 12px 18px; color: #4b4142; font-size: 10px; font-weight: 700; line-height: 1.5; }
 .relationship > div { display: grid; grid-template-columns: minmax(95px, .7fr) 24px minmax(135px, 1.2fr) 24px minmax(135px, 1.2fr); align-items: center; border-bottom: 1px solid #e9e3e0; padding: 10px 0; text-align: center; }
 .relationship > div:last-child { border-bottom: 0; }
 .relationship i { color: var(--dayone-accent); font-size: 16px; font-style: normal; }
-.relationship small { color: #827a7c; font-size: 9px; font-weight: 500; }
+.relationship small { color: #625b5e; font-size: 9px; font-weight: 500; }
 .tableList { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; margin: 20px 0 0; padding: 0; list-style: none; }
 .tableList li { display: grid; gap: 5px; align-content: start; border-top: 1px solid var(--dayone-line); padding: 12px 0; }
 .tableList strong { color: #393435; font-size: 11px; overflow-wrap: anywhere; }
@@ -90,7 +90,7 @@
 .challengeGrid article { border-color: #ffffff24; background: #ffffff08; padding: 20px; }
 .challengeGrid h3 { margin: 0 0 8px; font-size: 14px; }
 .challengeGrid p { color: #c1b8b7; }
-.footer { display: flex; align-items: center; justify-content: space-between; gap: 18px; border-top: 1px solid var(--dayone-line); padding-top: 24px; color: #817a7c; font-size: 12px; }
+.footer { display: flex; align-items: center; justify-content: space-between; gap: 18px; border-top: 1px solid var(--dayone-line); padding-top: 24px; color: #625b5e; font-size: 12px; }
 .footer p { margin: 0; }
 .footer a { color: #9f392d; font-weight: 700; text-decoration: none; }
 

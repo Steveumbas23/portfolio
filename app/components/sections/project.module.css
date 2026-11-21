@@ -270,6 +270,12 @@
     -webkit-line-clamp: 3;
   }
   .technologies { max-height: 60px; overflow: hidden; gap: 6px; margin: auto 0 18px; }
+  .project[id="openmile"] .technologies,
+  .project[id="pertamina"] .technologies,
+  .project[id="vitae"] .technologies,
+  .project[id="courtline"] .technologies,
+  .project[id="adventist-paal-2-library"] .technologies,
+  .project[id="champs"] .technologies { max-height: none; overflow: visible; }
   .technology { padding: 6px 9px; font-size: 13px; }
   .projectActions {
     display: grid;

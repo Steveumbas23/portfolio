@@ -10,7 +10,7 @@
 }
 
 .container { width: min(100%, 1120px); margin-inline: auto; }
-.sectionLink:focus-visible, .figmaLink:focus-visible, .footer a:focus-visible { outline: 2px solid var(--courtline-lime); outline-offset: 4px; }
+.sectionLink:focus-visible, .prototypeLink:focus-visible, .footer a:focus-visible { outline: 2px solid var(--courtline-lime); outline-offset: 4px; }
 
 .hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(270px, .8fr); align-items: end; gap: clamp(36px, 7vw, 90px); padding: clamp(54px, 9vw, 108px) 0 52px; }
 .eyebrow, .kicker { margin: 0; color: var(--courtline-lime); font-size: 11px; font-weight: 750; letter-spacing: .16em; line-height: 1.55; }
@@ -18,8 +18,10 @@
 .lede { max-width: 620px; margin: 24px 0 0; color: #c3c4bf; font-size: clamp(18px, 2vw, 22px); line-height: 1.6; }
 .sectionLink { display: inline-flex; align-items: center; gap: 11px; margin-top: 28px; border-bottom: 1px solid var(--courtline-lime); padding-bottom: 7px; color: #f5f5f1; font-size: 14px; font-weight: 700; text-decoration: none; }
 .sectionLink span { color: var(--courtline-lime); }
-.figmaLink { display: flex; width: fit-content; align-items: center; gap: 9px; margin-top: 18px; border: 1px solid var(--courtline-lime); border-radius: 999px; padding: 12px 17px; background: var(--courtline-lime); color: #080808; font-size: 14px; font-weight: 750; text-decoration: none; transition: background-color 160ms ease, color 160ms ease; }
-.figmaLink:hover { background: transparent; color: var(--courtline-lime); }
+.heroActions { display: grid; justify-items: start; gap: 14px; margin-top: 28px; }
+.heroActions .sectionLink, .heroActions .prototypeLink { margin-top: 0; }
+.prototypeLink { display: flex; width: fit-content; align-items: center; gap: 10px; margin-top: 16px; border: 1px solid var(--courtline-lime); border-radius: 999px; padding: 12px 17px; background: var(--courtline-lime); color: #080808; font-size: 14px; font-weight: 700; text-decoration: none; transition: background-color 160ms ease, color 160ms ease; }
+.prototypeLink:hover { background: transparent; color: var(--courtline-lime); }
 
 .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; margin: 0; border-top: 1px solid var(--courtline-line); }
 .facts div { min-width: 0; border-bottom: 1px solid var(--courtline-line); padding: 15px 0 16px; }
@@ -52,11 +54,15 @@
 .challenge p { margin: 7px 0 0; color: #333a20; font-size: 14px; line-height: 1.55; }
 
 .roleGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 25px; margin: 0; padding: 0; list-style: none; }
+.roleContent { display: grid; align-content: start; gap: 12px; min-width: 0; }
 .roleGrid li { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; border-bottom: 1px solid var(--courtline-line); padding: 16px 0; color: #d5d6d0; font-size: 14px; line-height: 1.5; }
 .roleGrid li span { color: var(--courtline-lime); font-size: 11px; font-weight: 750; }
 
 .darkSection { margin-inline: calc(0px - var(--section-bleed)); padding-inline: var(--section-bleed); background: #111; }
 .darkSection .sectionNote { color: #a4a59f; }
+.processContent, .validationContent { display: grid; align-content: start; gap: 15px; min-width: 0; }
+.processContent > h3 { margin: 14px 0 0; color: #0c0d0a; font-size: 18px; font-weight: 800; }
+.processNote { margin: -8px 0 0; color: #414b24; font-size: 14px; line-height: 1.6; }
 .wireframeDetails { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .wireframeDetails article { border: 1px solid #303030; border-radius: 12px; padding: 19px 17px; background: #171717; }
 .wireframeDetails article > span { color: var(--courtline-lime); font-size: 11px; font-weight: 750; letter-spacing: .08em; }

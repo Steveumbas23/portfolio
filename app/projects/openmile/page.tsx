@@ -38,9 +38,9 @@ const screenGroups = [
 const processSteps = [
   {
     number: "01",
-    title: "Understand the design goals",
+    title: "Research & design goals",
     description:
-      "Set the direction around destination discovery and a simpler, more organized flight booking experience. These are design goals, not findings from user research.",
+      "Set the direction around destination discovery and a simpler, more organized flight booking experience. No formal user research is documented; these are project goals, not research findings.",
   },
   {
     number: "02",
@@ -50,9 +50,9 @@ const processSteps = [
   },
   {
     number: "03",
-    title: "Structure the screens",
+    title: "Wireframing & screen structure",
     description:
-      "Plan page layouts and information hierarchy so travelers can scan destination and flight details as they move through the flow.",
+      "Plan page layouts and information hierarchy so travelers can scan destination and flight details as they move through the flow. Separate wireframe exports are not included in the available portfolio assets.",
   },
   {
     number: "04",
@@ -62,9 +62,9 @@ const processSteps = [
   },
   {
     number: "05",
-    title: "Prototype status",
+    title: "Interactive prototyping",
     description:
-      "The current portfolio materials include a static design overview. An interactive prototype link was not provided, so this case study does not present one as available.",
+      "An interactive Figma prototype is available to explore the mobile travel and flight booking flows. It demonstrates the design concept and is not a functional application.",
   },
 ];
 
@@ -143,7 +143,7 @@ export default function OpenMileCaseStudyPage() {
 
           <section className={`${styles.section} ${styles.tintedSection}`} aria-labelledby="audience-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>02 / PEOPLE &amp; NEEDS</p>
+              <p className={styles.kicker}>02 / PROBLEMS &amp; DESIGN CHALLENGES</p>
               <h2 id="audience-title">Designing around travel planning needs.</h2>
               <p className={styles.sectionNote}>
                 These are intended audiences and design considerations. They have not been validated through user research.
@@ -177,6 +177,7 @@ export default function OpenMileCaseStudyPage() {
               <p className={styles.kicker}>03 / MY ROLE</p>
               <h2 id="role-title">From flow structure to mobile interface.</h2>
             </div>
+            <div className={styles.roleContent}>
             <div className={styles.contributionGrid}>
               {[
                 "Defined the app structure and navigation.",
@@ -192,16 +193,19 @@ export default function OpenMileCaseStudyPage() {
                 </div>
               ))}
             </div>
+            <p className={styles.roleTools}><strong>Tools:</strong> Figma, Auto Layout, component variants, layout grids and interactive prototyping.</p>
+            </div>
           </section>
 
           <section className={`${styles.section} ${styles.darkSection}`} aria-labelledby="screens-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>04 / DESIGN SCOPE</p>
-              <h2 id="screens-title">A planned path from discovery to booking review.</h2>
+              <p className={styles.kicker}>04 / DESIGN PROCESS</p>
+              <h2 id="screens-title">From travel planning needs to a booking flow.</h2>
               <p className={styles.sectionNote}>
                 Screen groups below follow the project brief. The portfolio currently contains one composite preview; separate exports for each screen are not available here.
               </p>
             </div>
+            <div className={styles.processContent}>
             <div className={styles.screenGroups}>
               {screenGroups.map((group) => (
                 <article className={styles.screenGroup} key={group.number}>
@@ -213,16 +217,8 @@ export default function OpenMileCaseStudyPage() {
                 </article>
               ))}
             </div>
-          </section>
-
-          <section className={styles.section} aria-labelledby="process-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>05 / DESIGN PROCESS</p>
-              <h2 id="process-title">A considered design journey.</h2>
-              <p className={styles.sectionNote}>
-                The process reflects the work and design scope described for this project; no user research or usability testing is claimed.
-              </p>
-            </div>
+            <h3 className={styles.processHeading}>Design stages</h3>
+            <p className={styles.processNote}>The process reflects the work and design scope described for this project; no user research or usability testing is claimed.</p>
             <ol className={styles.processList}>
               {processSteps.map((step) => (
                 <li className={styles.processStep} key={step.number}>
@@ -231,11 +227,12 @@ export default function OpenMileCaseStudyPage() {
                 </li>
               ))}
             </ol>
+            </div>
           </section>
 
           <section className={`${styles.section} ${styles.tintedSection}`} aria-labelledby="system-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>06 / VISUAL SYSTEM</p>
+              <p className={styles.kicker}>05 / DESIGN SYSTEM</p>
               <h2 id="system-title">A fresh, calm visual language.</h2>
               <p className={styles.sectionNote}>
                 The design direction uses a modern, clean and minimal approach, with rounded components and a consistent visual hierarchy.
@@ -252,8 +249,12 @@ export default function OpenMileCaseStudyPage() {
                 ))}
               </div>
               <div className={styles.tools}>
-                <h3>Tools</h3>
-                <div><strong>Figma</strong><span>UI design, layouts, components, and prototyping.</span></div>
+                <h3>Tools &amp; techniques</h3>
+                <div><strong>Figma</strong><span>UI/UX design and interactive prototyping.</span></div>
+                <div><strong>Auto Layout</strong><span>Structure flexible interface groups with consistent spacing.</span></div>
+                <div><strong>Component variants</strong><span>Organize reusable UI component variations.</span></div>
+                <div><strong>Grid &amp; constraints</strong><span>Align screen content and define how elements resize within layouts.</span></div>
+                <div><strong>Responsive design</strong><span>Plan layouts to adapt across screen widths while keeping content clear.</span></div>
                 <div><strong>Stitch AI</strong><span>AI-assisted design exploration and initial screen generation.</span></div>
               </div>
             </div>
@@ -261,9 +262,10 @@ export default function OpenMileCaseStudyPage() {
 
           <section className={styles.section} aria-labelledby="outcome-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>07 / OUTCOME &amp; VALIDATION</p>
+              <p className={styles.kicker}>06 / VALIDATION</p>
               <h2 id="outcome-title">A design concept, with room for validation.</h2>
             </div>
+            <div className={styles.validationContent}>
             <div className={styles.outcomeGrid}>
               <div className={styles.outcomeCard}>
                 <h3>Project status</h3>
@@ -280,6 +282,7 @@ export default function OpenMileCaseStudyPage() {
                   User testing and validation have not yet been conducted. The current project focuses on UI/UX exploration and interface design.
                 </p>
               </div>
+            </div>
             </div>
           </section>
 

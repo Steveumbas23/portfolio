@@ -69,17 +69,19 @@ export default function CourtlineCaseStudyPage() {
               <p className={styles.lede}>
                 A basketball shoe e-commerce concept designed to make product discovery feel bold, focused, and easy to navigate.
               </p>
-              <a className={styles.sectionLink} href="#overview">
-                Explore the case study <span aria-hidden="true">↓</span>
-              </a>
-              <a
-                className={styles.figmaLink}
-                href="https://www.figma.com/design/pcYu2eNAFluHyCA0JxxVhU/Untitled?node-id=0-1&t=L9XTPYlotvHZhnjj-1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open Figma Project <span aria-hidden="true">↗</span>
-              </a>
+              <div className={styles.heroActions}>
+                <a className={styles.sectionLink} href="#overview">
+                  Explore the case study <span aria-hidden="true">↓</span>
+                </a>
+                <a
+                  className={styles.prototypeLink}
+                  href="https://www.figma.com/proto/pcYu2eNAFluHyCA0JxxVhU/Untitled?node-id=0-1&scaling=scale-down&content-scaling=fixed"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View Interactive Prototype <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
             <dl className={styles.facts}>
               <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
@@ -107,7 +109,7 @@ export default function CourtlineCaseStudyPage() {
 
           <section className={styles.section} id="overview" aria-labelledby="overview-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>01 / OVERVIEW</p>
+              <p className={styles.kicker}>01 / PROJECT OVERVIEW</p>
               <h2 id="overview-title">A focused storefront for basketball footwear.</h2>
             </div>
             <div className={styles.copy}>
@@ -128,7 +130,7 @@ export default function CourtlineCaseStudyPage() {
 
           <section className={`${styles.section} ${styles.limeSection}`} aria-labelledby="challenges-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>02 / PROBLEM &amp; DESIGN CHALLENGES</p>
+              <p className={styles.kicker}>02 / PROBLEMS &amp; DESIGN CHALLENGES</p>
               <h2 id="challenges-title">Make product discovery work at game speed.</h2>
               <p className={styles.sectionNote}>These are design challenges for the concept, not findings from user research.</p>
             </div>
@@ -147,64 +149,56 @@ export default function CourtlineCaseStudyPage() {
               <h2 id="role-title">Structuring the store and shaping its interface.</h2>
               <p className={styles.sectionNote}>Role: UI/UX Designer</p>
             </div>
+            <div className={styles.roleContent}>
             <ol className={styles.roleGrid}>
               {roleItems.map((item, index) => (
                 <li key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>
               ))}
             </ol>
-          </section>
-
-          <section className={`${styles.section} ${styles.darkSection}`} aria-labelledby="wireframe-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>04 / WIREFRAME EXPLORATION</p>
-              <h2 id="wireframe-title">From page blocks to a high-contrast storefront.</h2>
-              <p className={styles.sectionNote}>
-                The supplied COURTLINE board contains a low-fidelity layout and visual UI. No separate wireframe export was found.
-              </p>
-            </div>
-            <div className={styles.wireframeDetails}>
-              <article><span>01</span><h3>Page structure</h3><p>The wireframe view establishes header navigation, a prominent hero area, product discovery content, and a product detail layout.</p></article>
-              <article><span>02</span><h3>Visual development</h3><p>The paired final UI introduces product imagery, the dark canvas, and the lime accent while retaining the overall page structure.</p></article>
-              <p className={styles.assetNote}>The paired wireframe-to-UI comparison is visible in the project board above. The wireframe is not recreated or presented as a separate source file.</p>
+            <p className={styles.sectionNote}>Tool: Figma.</p>
             </div>
           </section>
 
-          <section className={styles.section} aria-labelledby="flow-title">
+          <section className={`${styles.section} ${styles.limeSection}`} aria-labelledby="process-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>05 / USER FLOW</p>
-              <h2 id="flow-title">Documented shopping interactions.</h2>
+              <p className={styles.kicker}>04 / DESIGN PROCESS</p>
+              <h2 id="process-title">From page structure to a shopping interface.</h2>
               <p className={styles.sectionNote}>
-                No original user-flow diagram was found. The interactions below are listed in the existing project description; their exact order is not represented as a verified flow.
+                The supplied board includes a low-fidelity layout and visual UI. No separate wireframe export or original user-flow diagram was found.
               </p>
             </div>
-            <div className={styles.interactionList}>
-              {["Browse products", "Filter and paginate listings", "Open product details", "Choose color and size", "Use wishlist or cart actions"].map((item, index) => (
-                <div className={styles.interaction} key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></div>
-              ))}
-            </div>
-          </section>
-
-          <section className={`${styles.section} ${styles.limeSection}`} aria-labelledby="design-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>06 / FINAL DESIGN</p>
-              <h2 id="design-title">Four documented desktop page designs.</h2>
-              <p className={styles.sectionNote}>
-                These page names come from the existing project description. Separate screen exports are not available in the local assets.
-              </p>
-            </div>
-            <div className={styles.pageGrid}>
-              {documentedPages.map((item) => (
-                <article className={styles.pageCard} key={item.number}>
-                  <span>{item.number}</span><h3>{item.title}</h3><p>{item.detail}</p>
-                </article>
-              ))}
-              <p className={styles.assetNote}>Wishlist and cart are documented as interactions. No separate wishlist or cart page is listed or shown in the available board.</p>
+            <div className={styles.processContent}>
+              <h3>Wireframing &amp; UI design</h3>
+              <div className={styles.wireframeDetails}>
+                <article><span>01</span><h3>Page structure</h3><p>The wireframe view establishes header navigation, a prominent hero area, product discovery content, and a product detail layout.</p></article>
+                <article><span>02</span><h3>Visual development</h3><p>The paired final UI introduces product imagery, the dark canvas, and the lime accent while retaining the overall page structure.</p></article>
+                <p className={styles.assetNote}>The paired wireframe-to-UI comparison is visible in the project board above. The wireframe is not recreated or presented as a separate source file.</p>
+              </div>
+              <h3>User flow considerations</h3>
+              <p className={styles.processNote}>No original user-flow diagram was found. These interactions are listed in the existing project description; their exact order is not represented as a verified flow.</p>
+              <div className={styles.interactionList}>
+                {["Browse products", "Filter and paginate listings", "Open product details", "Choose color and size", "Use wishlist or cart actions"].map((item, index) => (
+                  <div className={styles.interaction} key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></div>
+                ))}
+              </div>
+              <h3>Final design: documented pages</h3>
+              <p className={styles.processNote}>Page names come from the existing project description. Separate screen exports are not available in local assets.</p>
+              <div className={styles.pageGrid}>
+                {documentedPages.map((item) => (
+                  <article className={styles.pageCard} key={item.number}>
+                    <span>{item.number}</span><h3>{item.title}</h3><p>{item.detail}</p>
+                  </article>
+                ))}
+                <p className={styles.assetNote}>Wishlist and cart are documented as interactions. No separate wishlist or cart page is listed or shown in the available board.</p>
+              </div>
+              <h3>Research &amp; interactive prototyping</h3>
+              <p className={styles.processNote}>No user research or usability findings are documented. A Figma prototype link is available from the case study hero.</p>
             </div>
           </section>
 
           <section className={styles.section} aria-labelledby="system-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>07 / DESIGN SYSTEM</p>
+              <p className={styles.kicker}>05 / DESIGN SYSTEM</p>
               <h2 id="system-title">Dark, athletic, and deliberately high contrast.</h2>
               <p className={styles.sectionNote}>
                 COURTLINE&apos;s brief specifies black and lime. Supporting swatches are approximate observations from the supplied mockup, not confirmed design tokens.
@@ -229,22 +223,16 @@ export default function CourtlineCaseStudyPage() {
             </div>
           </section>
 
-          <section className={`${styles.section} ${styles.darkSection}`} aria-labelledby="responsive-title">
+          <section className={`${styles.section} ${styles.darkSection}`} aria-labelledby="validation-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>08 / RESPONSIVE CONSIDERATIONS</p>
-              <h2 id="responsive-title">The available mockup is desktop-focused.</h2>
+              <p className={styles.kicker}>06 / VALIDATION</p>
+              <h2 id="validation-title">Validation and responsive status.</h2>
               <p className={styles.sectionNote}>No tablet or mobile design screens were found among the local COURTLINE assets.</p>
             </div>
+            <div className={styles.validationContent}>
             <div className={styles.responsiveContent}>
               <p>The case study layout adapts for smaller viewports. The COURTLINE source board shows desktop designs only; it does not present a completed mobile or tablet storefront.</p>
               <div className={styles.deviceStatus}><span>Desktop · shown</span><span>Tablet · not supplied</span><span>Mobile · not supplied</span></div>
-            </div>
-          </section>
-
-          <section className={styles.section} aria-labelledby="outcome-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>09 / OUTCOME &amp; REFLECTION</p>
-              <h2 id="outcome-title">A storefront concept, not a functional store.</h2>
             </div>
             <div className={styles.outcomeGrid}>
               <article className={styles.outcomeCard}>
@@ -252,7 +240,7 @@ export default function CourtlineCaseStudyPage() {
                 <dl>
                   <div><dt>Type</dt><dd>Personal e-commerce website design concept</dd></div>
                   <div><dt>Pages listed</dt><dd>Home, Shop, Basketball Category, Product Detail</dd></div>
-                  <div><dt>Prototype</dt><dd>Interactive prototyping is listed as a focus area; no prototype-specific link is supplied.</dd></div>
+                  <div><dt>Prototype</dt><dd>Figma prototype link available</dd></div>
                   <div><dt>Development</dt><dd>Not claimed as developed or launched</dd></div>
                 </dl>
               </article>
@@ -263,16 +251,10 @@ export default function CourtlineCaseStudyPage() {
                 </p>
               </article>
             </div>
-          </section>
-
-          <section className={`${styles.section} ${styles.testingSection}`} aria-labelledby="testing-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>10 / TESTING</p>
-              <h2 id="testing-title">Testing results are not documented.</h2>
-            </div>
             <p className={styles.testingNote}>
               No user testing or validation results were included in the available project materials. This case study does not claim participant feedback, usability scores, or research outcomes.
             </p>
+            </div>
           </section>
 
           <footer className={styles.footer}>

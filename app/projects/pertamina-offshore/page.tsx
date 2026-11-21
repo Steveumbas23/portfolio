@@ -85,6 +85,12 @@ const processSteps = [
     description:
       "Refine spacing, type hierarchy, image placement, and action emphasis across the presented page sections.",
   },
+  {
+    number: "06",
+    title: "Interactive prototyping",
+    description:
+      "A Figma prototype link is available from the case study hero. No usability evaluation results are claimed.",
+  },
 ];
 
 const palette = [
@@ -146,7 +152,7 @@ export default function PertaminaOffshoreCaseStudyPage() {
 
           <section className={styles.section} id="overview" aria-labelledby="overview-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>01 / OVERVIEW</p>
+              <p className={styles.kicker}>01 / PROJECT OVERVIEW</p>
               <h2 id="overview-title">A clearer landing page for offshore operations.</h2>
             </div>
             <div className={styles.copy}>
@@ -167,7 +173,7 @@ export default function PertaminaOffshoreCaseStudyPage() {
 
           <section className={`${styles.section} ${styles.softSection}`} aria-labelledby="challenges-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>02 / PROBLEM &amp; DESIGN CHALLENGES</p>
+              <p className={styles.kicker}>02 / PROBLEMS &amp; DESIGN CHALLENGES</p>
               <h2 id="challenges-title">Make complex information feel approachable.</h2>
               <p className={styles.sectionNote}>Design challenges for the concept, not conclusions from user research.</p>
             </div>
@@ -186,63 +192,52 @@ export default function PertaminaOffshoreCaseStudyPage() {
               <h2 id="role-title">From page structure to visual refinement.</h2>
               <p className={styles.sectionNote}>Role: UI/UX Designer</p>
             </div>
+            <div className={styles.roleContent}>
             <ol className={styles.roleGrid}>
               {roleItems.map((item, index) => (
                 <li key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>
               ))}
             </ol>
-          </section>
-
-          <section className={`${styles.section} ${styles.darkSection}`} aria-labelledby="wireframe-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>04 / WIREFRAME EXPLORATION</p>
-              <h2 id="wireframe-title">Start with structure, then shape the visual story.</h2>
-              <p className={styles.sectionNote}>
-                The supplied wireframe presents the desktop page structure beside its corresponding high-fidelity design.
-              </p>
-            </div>
-            <div className={styles.wireframeNotes}>
-              <article><span>01</span><h3>Establish the page hierarchy</h3><p>The wireframe places the navigation and hero first, then uses a metrics band and a company introduction to continue the story.</p></article>
-              <article><span>02</span><h3>Keep content groups distinct</h3><p>Operational themes are organized into smaller content areas below the introductory section.</p></article>
-              <article><span>03</span><h3>Preserve the comparison</h3><p>The wireframe and final visual design are shown together in the supplied project asset above.</p></article>
+            <p className={styles.sectionNote}>Tool: Figma.</p>
             </div>
           </section>
 
-          <section className={styles.section} aria-labelledby="final-design-title">
+          <section className={`${styles.section} ${styles.darkSection}`} aria-labelledby="process-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>05 / FINAL DESIGN</p>
-              <h2 id="final-design-title">A desktop landing page with a clear content sequence.</h2>
-              <p className={styles.sectionNote}>
-                The available final UI is the right-hand desktop design in the original comparison board above.
-              </p>
+              <p className={styles.kicker}>04 / DESIGN PROCESS</p>
+              <h2 id="process-title">From wireframing to the final visual story.</h2>
+              <p className={styles.sectionNote}>The project materials support a wireframe-to-UI process. No research or testing activities are inferred beyond the supplied design materials.</p>
             </div>
-            <div className={styles.pageSections}>
-              {pageSections.map((item) => (
-                <article className={styles.pageSection} key={item.number}>
-                  <span>{item.number}</span><div><h3>{item.title}</h3><p>{item.description}</p></div>
-                </article>
-              ))}
+            <div className={styles.processContent}>
+              <h3>Wireframing</h3>
+              <div className={styles.wireframeNotes}>
+                <article><span>01</span><h3>Establish the page hierarchy</h3><p>The wireframe places the navigation and hero first, then uses a metrics band and a company introduction to continue the story.</p></article>
+                <article><span>02</span><h3>Keep content groups distinct</h3><p>Operational themes are organized into smaller content areas below the introductory section.</p></article>
+                <article><span>03</span><h3>Preserve the comparison</h3><p>The wireframe and final visual design are shown together in the supplied project asset above.</p></article>
+              </div>
+              <h3>UI design: desktop page structure</h3>
+              <p className={styles.processNote}>The available final UI is the right-hand desktop design in the original comparison board above.</p>
+              <div className={styles.pageSections}>
+                {pageSections.map((item) => (
+                  <article className={styles.pageSection} key={item.number}>
+                    <span>{item.number}</span><div><h3>{item.title}</h3><p>{item.description}</p></div>
+                  </article>
+                ))}
+              </div>
+              <h3>Design stages</h3>
+              <ol className={styles.processList}>
+                {processSteps.map((item) => (
+                  <li className={styles.processStep} key={item.number}>
+                    <span>{item.number}</span><div><h3>{item.title}</h3><p>{item.description}</p></div>
+                  </li>
+                ))}
+              </ol>
             </div>
-          </section>
-
-          <section className={`${styles.section} ${styles.softSection}`} aria-labelledby="process-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>06 / DESIGN PROCESS</p>
-              <h2 id="process-title">A wireframe-to-UI workflow.</h2>
-              <p className={styles.sectionNote}>No research or testing activities are inferred beyond the supplied design materials.</p>
-            </div>
-            <ol className={styles.processList}>
-              {processSteps.map((item) => (
-                <li className={styles.processStep} key={item.number}>
-                  <span>{item.number}</span><div><h3>{item.title}</h3><p>{item.description}</p></div>
-                </li>
-              ))}
-            </ol>
           </section>
 
           <section className={styles.section} aria-labelledby="system-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>07 / DESIGN SYSTEM</p>
+              <p className={styles.kicker}>05 / DESIGN SYSTEM</p>
               <h2 id="system-title">A restrained, image-led corporate visual direction.</h2>
               <p className={styles.sectionNote}>
                 Color values are approximate samples from the supplied final UI image. The original token and type specifications were not provided.
@@ -267,26 +262,20 @@ export default function PertaminaOffshoreCaseStudyPage() {
             </div>
           </section>
 
-          <section className={`${styles.section} ${styles.softSection}`} aria-labelledby="responsive-title">
+          <section className={`${styles.section} ${styles.softSection}`} aria-labelledby="validation-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>08 / RESPONSIVE CONSIDERATIONS</p>
-              <h2 id="responsive-title">The source visual is desktop-only.</h2>
+              <p className={styles.kicker}>06 / VALIDATION</p>
+              <h2 id="validation-title">Validation and delivery status.</h2>
               <p className={styles.sectionNote}>
                 No mobile or tablet design export was included with the project assets.
               </p>
             </div>
+            <div className={styles.validationContent}>
             <div className={styles.responsiveNote}>
               <p>
                 The case study page itself adapts to smaller screens. The original project board only shows a desktop landing page, so a mobile navigation, stacked hero, and rearranged metrics are not presented as completed design screens.
               </p>
               <div className={styles.deviceLabels}><span>Desktop design · available</span><span>Tablet layout · not supplied</span><span>Mobile layout · not supplied</span></div>
-            </div>
-          </section>
-
-          <section className={styles.section} aria-labelledby="outcome-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>09 / OUTCOME &amp; REFLECTION</p>
-              <h2 id="outcome-title">A visual concept, not a released website.</h2>
             </div>
             <div className={styles.outcomeGrid}>
               <article className={styles.outcomeCard}>
@@ -305,16 +294,10 @@ export default function PertaminaOffshoreCaseStudyPage() {
                 </p>
               </article>
             </div>
-          </section>
-
-          <section className={`${styles.section} ${styles.testingSection}`} aria-labelledby="testing-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>10 / TESTING</p>
-              <h2 id="testing-title">Validation has not yet been conducted.</h2>
-            </div>
             <p className={styles.testingNote}>
               User testing and validation have not yet been conducted. This case study reports no participant feedback, usability scores, or research outcomes.
             </p>
+            </div>
           </section>
 
           <footer className={styles.footer}>

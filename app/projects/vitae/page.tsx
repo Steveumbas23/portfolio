@@ -130,7 +130,7 @@ export default function VitaeCaseStudyPage() {
 
           <section className={styles.section} id="overview" aria-labelledby="overview-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>01 / OVERVIEW</p>
+              <p className={styles.kicker}>01 / PROJECT OVERVIEW</p>
               <h2 id="overview-title">Everyday wellness, made easier to follow.</h2>
             </div>
             <div className={styles.copy}>
@@ -151,7 +151,7 @@ export default function VitaeCaseStudyPage() {
 
           <section className={`${styles.section} ${styles.softSection}`} aria-labelledby="challenges-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>02 / PROBLEM &amp; DESIGN CHALLENGES</p>
+              <p className={styles.kicker}>02 / PROBLEMS &amp; DESIGN CHALLENGES</p>
               <h2 id="challenges-title">Make wellness information easier to understand.</h2>
               <p className={styles.sectionNote}>
                 These are design challenges that shaped the concept, not findings from user research.
@@ -176,21 +176,25 @@ export default function VitaeCaseStudyPage() {
               <h2 id="role-title">Shaping the experience from structure to screens.</h2>
               <p className={styles.sectionNote}>Role: UI/UX Designer</p>
             </div>
+            <div className={styles.roleContent}>
             <ol className={styles.roleGrid}>
               {roleItems.map((item, index) => (
                 <li key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>
               ))}
             </ol>
+            <p className={styles.sectionNote}>Tools: Figma and Stitch AI, as listed in the project materials.</p>
+            </div>
           </section>
 
           <section className={`${styles.section} ${styles.darkSection}`} aria-labelledby="screens-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>04 / FEATURES &amp; SCREENS</p>
-              <h2 id="screens-title">A mobile experience across activity and nutrition.</h2>
+              <p className={styles.kicker}>04 / DESIGN PROCESS</p>
+              <h2 id="screens-title">From wellness goals to a clear mobile experience.</h2>
               <p className={styles.sectionNote}>
                 Screen names below follow the project information provided. The single supplied mockup is shown above; individual screens are not duplicated or recreated here.
               </p>
             </div>
+            <div className={styles.processContent}>
             <div className={styles.screenGroups}>
               {screenGroups.map((group) => (
                 <article className={styles.screenGroup} key={group.number}>
@@ -200,16 +204,8 @@ export default function VitaeCaseStudyPage() {
                 </article>
               ))}
             </div>
-          </section>
-
-          <section className={styles.section} aria-labelledby="process-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>05 / DESIGN PROCESS</p>
-              <h2 id="process-title">From wellness goals to a clear mobile interface.</h2>
-              <p className={styles.sectionNote}>
-                The process is presented as a design workflow. No user research or usability results are claimed.
-              </p>
-            </div>
+            <h3 className={styles.processHeading}>Design stages</h3>
+            <p className={styles.processNote}>The process is presented as a design workflow. No user research or usability results are claimed.</p>
             <ol className={styles.processList}>
               {designProcess.map((item) => (
                 <li className={styles.processStep} key={item.step}>
@@ -217,11 +213,36 @@ export default function VitaeCaseStudyPage() {
                 </li>
               ))}
             </ol>
+            <h3 className={styles.processHeading}>User flow</h3>
+            <p className={styles.processNote}>These high-level flows are derived from the screen list in the project brief. Exact interaction details should be confirmed against the Figma file.</p>
+            <div className={styles.flowCards}>
+              <article className={styles.flowCard}>
+                <p className={styles.flowLabel}>GENERAL NAVIGATION</p>
+                <div className={styles.flow}>
+                  {["Onboarding", "Sign In", "Home Dashboard", "Activity / Nutrition / Progress", "Profile"].map((step, index) => (
+                    <div className={styles.flowStep} key={step}>
+                      <span>{step}</span>{index < 4 && <b aria-hidden="true">→</b>}
+                    </div>
+                  ))}
+                </div>
+              </article>
+              <article className={styles.flowCard}>
+                <p className={styles.flowLabel}>FOOD SCANNING</p>
+                <div className={styles.flow}>
+                  {["Open Food Scanner", "Scan Food", "Review Nutrition Facts"].map((step, index) => (
+                    <div className={styles.flowStep} key={step}>
+                      <span>{step}</span>{index < 2 && <b aria-hidden="true">→</b>}
+                    </div>
+                  ))}
+                </div>
+              </article>
+            </div>
+            </div>
           </section>
 
           <section className={`${styles.section} ${styles.softSection}`} aria-labelledby="system-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>06 / DESIGN SYSTEM</p>
+              <p className={styles.kicker}>05 / DESIGN SYSTEM</p>
               <h2 id="system-title">A light interface with a fresh green accent.</h2>
               <p className={styles.sectionNote}>
                 Palette samples are approximate colors sampled from the supplied mockup, not a published VITAE token specification.
@@ -245,43 +266,12 @@ export default function VitaeCaseStudyPage() {
             </div>
           </section>
 
-          <section className={styles.section} aria-labelledby="flow-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>07 / USER FLOW</p>
-              <h2 id="flow-title">Two paths through the wellness experience.</h2>
-              <p className={styles.sectionNote}>
-                High-level flows derived from the screen list in the project brief. Exact interaction details should be confirmed against the Figma file.
-              </p>
-            </div>
-            <div className={styles.flowCards}>
-              <article className={styles.flowCard}>
-                <p className={styles.flowLabel}>GENERAL NAVIGATION</p>
-                <div className={styles.flow}>
-                  {["Onboarding", "Sign In", "Home Dashboard", "Activity / Nutrition / Progress", "Profile"].map((step, index) => (
-                    <div className={styles.flowStep} key={step}>
-                      <span>{step}</span>{index < 4 && <b aria-hidden="true">→</b>}
-                    </div>
-                  ))}
-                </div>
-              </article>
-              <article className={styles.flowCard}>
-                <p className={styles.flowLabel}>FOOD SCANNING</p>
-                <div className={styles.flow}>
-                  {["Open Food Scanner", "Scan Food", "Review Nutrition Facts"].map((step, index) => (
-                    <div className={styles.flowStep} key={step}>
-                      <span>{step}</span>{index < 2 && <b aria-hidden="true">→</b>}
-                    </div>
-                  ))}
-                </div>
-              </article>
-            </div>
-          </section>
-
           <section className={`${styles.section} ${styles.softSection}`} aria-labelledby="outcome-title">
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>08 / OUTCOME &amp; REFLECTION</p>
+              <p className={styles.kicker}>06 / VALIDATION</p>
               <h2 id="outcome-title">A design concept ready for further validation.</h2>
             </div>
+            <div className={styles.validationContent}>
             <div className={styles.outcomeGrid}>
               <article className={styles.outcomeCard}>
                 <h3>Project status</h3>
@@ -299,16 +289,10 @@ export default function VitaeCaseStudyPage() {
                 </p>
               </article>
             </div>
-          </section>
-
-          <section className={styles.section} aria-labelledby="testing-title">
-            <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>09 / TESTING</p>
-              <h2 id="testing-title">Validation is a future step.</h2>
-            </div>
             <p className={styles.testingNote}>
               User testing and validation have not yet been conducted. The current project focuses on UI/UX exploration and interface design.
             </p>
+            </div>
           </section>
 
           <footer className={styles.footer}>
