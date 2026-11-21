@@ -49,7 +49,9 @@
 .archNode small { margin-top: 12px; color: #625b5e; font-size: 10px; line-height: 1.4; }
 .archArrow { position: relative; color: var(--dayone-accent); font-size: 29px; text-align: center; }
 .archArrow small { position: absolute; top: 31px; left: 50%; width: 80px; transform: translateX(-50%); color: #625b5e; font-size: 9px; }
-.serviceLinks { grid-column: 3; display: flex; justify-content: space-around; gap: 8px; margin: 4px 0 -4px; color: #625b5e; font-size: 9px; text-align: center; }
+.serviceLinks { grid-column: 3; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 4px 0 -4px; color: #625b5e; font-size: 10px; text-align: center; }
+.serviceLinks span { display: grid; justify-items: center; gap: 2px; }
+.serviceLinks span::after { content: "↓"; color: var(--dayone-accent); font-size: 16px; font-weight: 700; line-height: 1; }
 .archServices { grid-column: 3; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .serviceNode { min-height: 108px; border-color: #e6e1de; padding: 13px; }
 .serviceNode .nodeType { margin-bottom: 7px; font-size: 8px; }

@@ -150,7 +150,7 @@ export default function LucitCaseStudyPage() {
                 ))}
               </div>
               <div className={styles.serviceConnectors}>
-                <span className={styles.connectorLine} aria-hidden="true" />
+                <p className={styles.serviceHeading}>Connected application services</p>
                 <div className={styles.serviceNode}><span>GENERATIVE AI</span><strong>Gemini 2.5 Flash</strong><small>Analysis explanation · contextual chatbot</small></div>
                 <div className={styles.serviceNode}><span>DATA &amp; STORAGE</span><strong>Supabase</strong><small>Analysis history · records · processed images</small></div>
               </div>

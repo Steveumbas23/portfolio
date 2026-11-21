@@ -171,7 +171,7 @@ export default function LaporJalanCaseStudyPage() {
                 <article className={`${styles.archNode} ${styles.databaseNode}`}><span>03 · DATA</span><h3>MySQL</h3><p>Users · reports · image records</p></article>
               </div>
               <div className={styles.gisBranch}>
-                <span className={styles.branchStem} aria-hidden="true" />
+                <p className={styles.gisHeading}>Browser map integrations · direct client connections</p>
                 <div className={styles.gisNode}><span>MAP TILES</span><strong>OpenStreetMap</strong><small>Leaflet tile layer</small></div>
                 <div className={styles.gisNode}><span>ADDRESS LOOKUP</span><strong>Nominatim</strong><small>Reverse geocoding from map coordinates</small></div>
               </div>
