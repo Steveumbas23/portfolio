@@ -10,9 +10,7 @@
 }
 
 .container { width: min(100%, 1120px); margin-inline: auto; }
-.backLink { display: inline-flex; align-items: center; gap: 9px; color: #c4c6c0; font-size: 14px; font-weight: 650; text-decoration: none; }
-.backLink:hover { color: var(--courtline-lime); }
-.backLink:focus-visible, .sectionLink:focus-visible, .figmaLink:focus-visible, .footer a:focus-visible { outline: 2px solid var(--courtline-lime); outline-offset: 4px; }
+.sectionLink:focus-visible, .figmaLink:focus-visible, .footer a:focus-visible { outline: 2px solid var(--courtline-lime); outline-offset: 4px; }
 
 .hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(270px, .8fr); align-items: end; gap: clamp(36px, 7vw, 90px); padding: clamp(54px, 9vw, 108px) 0 52px; }
 .eyebrow, .kicker { margin: 0; color: var(--courtline-lime); font-size: 11px; font-weight: 750; letter-spacing: .16em; line-height: 1.55; }
@@ -42,7 +40,7 @@
 .audienceNote p { margin: 8px 0 0; color: #b8bab4; font-size: 14px; line-height: 1.65; }
 .conceptNote { margin: 21px 0 0 !important; border-top: 1px solid var(--courtline-line); padding-top: 16px; color: #f0f0eb; font-size: 13px; font-weight: 650; }
 
-.limeSection { margin-inline: calc(-1 * var(--content-inset)); padding-inline: var(--content-inset); background: var(--courtline-lime); color: #10110d; }
+.limeSection { margin-inline: calc(0px - var(--section-bleed)); padding-inline: var(--section-bleed); background: var(--courtline-lime); color: #10110d; }
 .limeSection .sectionIntro h2 { color: #0c0d0a; }
 .limeSection .kicker { color: #404d19; }
 .limeSection .sectionNote { color: #414b24; }
@@ -57,7 +55,7 @@
 .roleGrid li { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; border-bottom: 1px solid var(--courtline-line); padding: 16px 0; color: #d5d6d0; font-size: 14px; line-height: 1.5; }
 .roleGrid li span { color: var(--courtline-lime); font-size: 11px; font-weight: 750; }
 
-.darkSection { margin-inline: calc(-1 * var(--content-inset)); padding-inline: var(--content-inset); background: #111; }
+.darkSection { margin-inline: calc(0px - var(--section-bleed)); padding-inline: var(--section-bleed); background: #111; }
 .darkSection .sectionNote { color: #a4a59f; }
 .wireframeDetails { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .wireframeDetails article { border: 1px solid #303030; border-radius: 12px; padding: 19px 17px; background: #171717; }

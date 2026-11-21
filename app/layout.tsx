@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Archivo_Narrow, Geist, Geist_Mono, Libre_Caslon_Text } from "next/font/google";
 import "./globals.css";
 import "./projects/case-study.css";
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   description: "Portfolio Steve Umbas",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children, modal }: { children: ReactNode; modal: ReactNode }) {
   return (
     <html
       lang="en"
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <AnimationObserver />
         {children}
+        {modal}
       </body>
     </html>
   );

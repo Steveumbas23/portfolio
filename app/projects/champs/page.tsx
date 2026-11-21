@@ -27,10 +27,6 @@ export default function ChampsCaseStudyPage() {
       <Navbar />
       <main className={styles.page} data-case-study>
         <div className={styles.container}>
-          <Link className={styles.backLink} href="/#projects">
-            <span aria-hidden="true">←</span> Back to selected projects
-          </Link>
-
           <header className={styles.hero}>
             <div className={styles.heroCopy}>
               <p className={styles.eyebrow}>UI/UX DESIGN CASE STUDY · PERSONAL CONCEPT</p>

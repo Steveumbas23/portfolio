@@ -85,10 +85,6 @@ export default function VitaeCaseStudyPage() {
       <Navbar />
       <main className={styles.page} data-case-study>
         <div className={styles.container}>
-          <Link className={styles.backLink} href="/#projects">
-            <span aria-hidden="true">←</span> Back to selected projects
-          </Link>
-
           <header className={styles.hero}>
             <div className={styles.heroCopy}>
               <p className={styles.eyebrow}>UI/UX DESIGN CASE STUDY · PERSONAL CONCEPT</p>
@@ -98,14 +94,6 @@ export default function VitaeCaseStudyPage() {
               </p>
               <a className={styles.sectionLink} href="#overview">
                 Explore the case study <span aria-hidden="true">↓</span>
-              </a>
-              <a
-                className={styles.figmaLink}
-                href="https://www.figma.com/design/olWjJ86dqbQhQEhPsETanl/Vitae?node-id=0-1&t=pXCdblWiBJGkFHna-1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open Figma Project <span aria-hidden="true">↗</span>
               </a>
               <a
                 className={styles.prototypeLink}
@@ -309,9 +297,6 @@ export default function VitaeCaseStudyPage() {
                 <p>
                   VITAE brings activity, nutrition, and progress into a single visual direction. A next step would be to validate the navigation and information clarity with users, then refine the design based on observed feedback.
                 </p>
-                <a href="https://www.figma.com/design/olWjJ86dqbQhQEhPsETanl/Vitae?node-id=0-1&t=pXCdblWiBJGkFHna-1" target="_blank" rel="noreferrer">
-                  Open Figma Design File <span aria-hidden="true">↗</span>
-                </a>
               </article>
             </div>
           </section>

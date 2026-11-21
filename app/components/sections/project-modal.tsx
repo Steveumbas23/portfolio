@@ -77,7 +77,9 @@ export default function ProjectModal({ project, fontClassName, isClosing, onClos
           aria-label="Close project details"
           ref={closeButtonRef}
         >
-          <span aria-hidden="true">×</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
         </button>
         <header className={styles.projectHeader}>
           <p className={styles.eyebrow}>{showCaseStudy ? "PROJECT CASE STUDY" : "PROJECT PREVIEW"}</p>
@@ -154,7 +156,7 @@ export default function ProjectModal({ project, fontClassName, isClosing, onClos
                 View Case Study <span aria-hidden="true">↗</span>
               </button>
               {project.caseStudyUrl && (
-                <Link className={styles.prototypeButton} href={project.caseStudyUrl}>
+                <Link className={styles.prototypeButton} href={project.caseStudyUrl} scroll={false}>
                   Read Full Case Study <span aria-hidden="true">↗</span>
                 </Link>
               )}

@@ -87,7 +87,7 @@ export default function ProjectGallery({
               )}
               <div className={styles.projectActions}>
                 {project.caseStudyUrl ? (
-                  <Link className={styles.projectLink} href={project.caseStudyUrl}>
+                  <Link className={styles.projectLink} href={project.caseStudyUrl} scroll={false}>
                     Read Case Study <span aria-hidden="true">↗</span>
                   </Link>
                 ) : (

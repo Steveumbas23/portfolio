@@ -102,10 +102,6 @@ export default function PertaminaOffshoreCaseStudyPage() {
       <Navbar />
       <main className={styles.page} data-case-study>
         <div className={styles.container}>
-          <Link className={styles.backLink} href="/#projects">
-            <span aria-hidden="true">←</span> Back to selected projects
-          </Link>
-
           <header className={styles.hero}>
             <div className={styles.heroCopy}>
               <p className={styles.eyebrow}>UI/UX DESIGN CASE STUDY · PERSONAL CONCEPT</p>
@@ -136,15 +132,15 @@ export default function PertaminaOffshoreCaseStudyPage() {
 
           <figure className={styles.comparisonBoard}>
             <Image
-              src="/images/preview pertamina.png"
-              alt="Original Pertamina Offshore design board comparing the desktop wireframe on the left with the high-fidelity visual design on the right"
-              width={1200}
-              height={800}
+              src="/images/wireframe.png"
+              alt="Pertamina Offshore desktop wireframe and matching high-fidelity website design shown side by side"
+              width={595}
+              height={842}
               priority
               sizes="(max-width: 760px) 100vw, 1200px"
             />
             <figcaption>
-              Original project board: desktop wireframe on the left, final visual design on the right. This is a personal design concept, not an official Pertamina website.
+              Desktop wireframe and corresponding final visual design for this personal concept, not an official Pertamina website.
             </figcaption>
           </figure>
 
@@ -202,13 +198,13 @@ export default function PertaminaOffshoreCaseStudyPage() {
               <p className={styles.kicker}>04 / WIREFRAME EXPLORATION</p>
               <h2 id="wireframe-title">Start with structure, then shape the visual story.</h2>
               <p className={styles.sectionNote}>
-                The supplied board shows the original desktop wireframe alongside the corresponding high-fidelity design for direct comparison.
+                The supplied wireframe presents the desktop page structure beside its corresponding high-fidelity design.
               </p>
             </div>
             <div className={styles.wireframeNotes}>
               <article><span>01</span><h3>Establish the page hierarchy</h3><p>The wireframe places the navigation and hero first, then uses a metrics band and a company introduction to continue the story.</p></article>
               <article><span>02</span><h3>Keep content groups distinct</h3><p>Operational themes are organized into smaller content areas below the introductory section.</p></article>
-              <article><span>03</span><h3>Preserve the comparison</h3><p>The original paired board is shown above as provided; no separate wireframe files were found in the project assets.</p></article>
+              <article><span>03</span><h3>Preserve the comparison</h3><p>The wireframe and final visual design are shown together in the supplied project asset above.</p></article>
             </div>
           </section>
 

@@ -62,14 +62,10 @@ export default function CourtlineCaseStudyPage() {
       <Navbar />
       <main className={styles.page} data-case-study>
         <div className={styles.container}>
-          <Link className={styles.backLink} href="/#projects">
-            <span aria-hidden="true">←</span> Back to selected projects
-          </Link>
-
           <header className={styles.hero}>
             <div className={styles.heroCopy}>
               <p className={styles.eyebrow}>UI/UX DESIGN CASE STUDY · PERSONAL CONCEPT</p>
-              <h1 className={styles.title}>COURTLINE</h1>
+              <h1 className={styles.title} data-fit="wide">COURTLINE</h1>
               <p className={styles.lede}>
                 A basketball shoe e-commerce concept designed to make product discovery feel bold, focused, and easy to navigate.
               </p>

@@ -1,7 +1,18 @@
 /* Shared case study geometry and type hierarchy. Project CSS keeps all theme colors. */
+[data-case-study] {
+  container-type: inline-size;
+  --section-bleed: calc(var(--content-inset) + max(0px, calc((100cqi - 1120px) / 2)));
+}
+
 [data-case-study].page {
   box-sizing: border-box;
-  padding: 24px clamp(18px, 4vw, 24px) 72px;
+  min-width: 0;
+  padding: 28px var(--content-inset) 80px;
+}
+
+[data-case-study] * {
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 [data-case-study] > div {
@@ -26,6 +37,11 @@
   padding: clamp(54px, 9vw, 108px) 0 52px;
 }
 
+[data-case-study] > div > header > *,
+[data-case-study] > div > section > * {
+  min-width: 0;
+}
+
 [data-case-study] > div > header h1 {
   margin: 16px 0 0;
   font-family: var(--font-geist-sans), sans-serif;
@@ -33,6 +49,10 @@
   font-weight: 800;
   letter-spacing: -0.085em;
   line-height: 0.92;
+}
+
+[data-case-study] > div > header h1[data-fit="wide"] {
+  font-size: clamp(58px, 9vw, 118px);
 }
 
 [data-case-study] > div > header > div > p:first-child {
@@ -67,10 +87,10 @@
   display: grid;
   grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
   gap: clamp(30px, 7vw, 92px);
-  padding: clamp(58px, 8vw, 92px) 0;
+  padding-block: clamp(58px, 8vw, 92px);
   border-top-width: 1px;
   border-top-style: solid;
-  scroll-margin-top: 90px;
+  scroll-margin-top: 0;
 }
 
 [data-case-study] > div > section > div:first-child > p:first-child {
@@ -121,7 +141,7 @@
 
 @media (max-width: 600px) {
   [data-case-study].page {
-    padding: 20px 18px 48px;
+    padding: 20px var(--content-inset) 48px;
   }
 
   [data-case-study] > div > header {

@@ -92,14 +92,10 @@ export default function LaporJalanCaseStudyPage() {
       <Navbar />
       <main className={styles.page} data-case-study>
         <div className={styles.container}>
-          <Link className={styles.backLink} href="/#projects">
-            <span aria-hidden="true">←</span> Back to selected projects
-          </Link>
-
           <header className={styles.hero}>
             <div className={styles.heroCopy}>
               <p className={styles.eyebrow}>FULL STACK DEVELOPMENT · GIS · DEVOPS</p>
-              <h1 className={styles.title}>LaporJalan</h1>
+              <h1 className={styles.title} data-fit="wide">LaporJalan</h1>
               <p className={styles.subtitle}>Road Damage Reporting System</p>
               <p className={styles.lede}>
                 A web application for submitting road damage reports with geographic coordinates, then reviewing and managing those reports through an authenticated admin dashboard.
