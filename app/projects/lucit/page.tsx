@@ -291,7 +291,6 @@ export default function LucitCaseStudyPage() {
 
           <footer className={styles.footer}>
             <p>LUCIT · Intelligent Histopathology Decision Support</p>
-            <Link href="/#projects">Back to all projects <span aria-hidden="true">↗</span></Link>
           </footer>
         </div>
       </main>

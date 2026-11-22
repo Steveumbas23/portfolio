@@ -259,7 +259,6 @@ export default function CourtlineCaseStudyPage() {
 
           <footer className={styles.footer}>
             <p>COURTLINE · Personal E-commerce Design Concept</p>
-            <Link href="/#projects">Back to all projects <span aria-hidden="true">↗</span></Link>
           </footer>
         </div>
       </main>

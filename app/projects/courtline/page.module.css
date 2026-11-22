@@ -18,7 +18,7 @@
 .lede { max-width: 620px; margin: 24px 0 0; color: #c3c4bf; font-size: clamp(18px, 2vw, 22px); line-height: 1.6; }
 .sectionLink { display: inline-flex; align-items: center; gap: 11px; margin-top: 28px; border-bottom: 1px solid var(--courtline-lime); padding-bottom: 7px; color: #f5f5f1; font-size: 14px; font-weight: 700; text-decoration: none; }
 .sectionLink span { color: var(--courtline-lime); }
-.heroActions { display: grid; justify-items: start; gap: 14px; margin-top: 28px; }
+.heroActions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 28px; }
 .heroActions .sectionLink, .heroActions .prototypeLink { margin-top: 0; }
 .prototypeLink { display: flex; width: fit-content; align-items: center; gap: 10px; margin-top: 16px; border: 1px solid var(--courtline-lime); border-radius: 999px; padding: 12px 17px; background: var(--courtline-lime); color: #080808; font-size: 14px; font-weight: 700; text-decoration: none; transition: background-color 160ms ease, color 160ms ease; }
 .prototypeLink:hover { background: transparent; color: var(--courtline-lime); }

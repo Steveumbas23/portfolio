@@ -206,7 +206,6 @@ export default function ChampsCaseStudyPage() {
 
           <footer className={styles.footer}>
             <p>CHAMPS · Personal UI/UX Design Concept</p>
-            <Link href="/#projects">Back to all projects <span aria-hidden="true">↗</span></Link>
           </footer>
         </div>
       </main>

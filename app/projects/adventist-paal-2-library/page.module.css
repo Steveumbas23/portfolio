@@ -9,6 +9,8 @@
 }
 
 .container { width: min(100%, 1120px); margin-inline: auto; }
+.heroActions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 28px; }
+.heroActions .sectionLink, .heroActions .prototypeLink { margin-top: 0; }
 .sectionLink:focus-visible, .prototypeLink:focus-visible, .footer a:focus-visible { outline: 2px solid var(--library-blue); outline-offset: 4px; }
 
 .hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(260px, .8fr); align-items: end; gap: clamp(36px, 7vw, 90px); padding: clamp(54px, 9vw, 108px) 0 52px; }

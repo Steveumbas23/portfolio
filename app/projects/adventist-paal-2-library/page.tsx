@@ -85,17 +85,19 @@ export default function AdventistPaal2LibraryCaseStudyPage() {
               <p className={styles.lede}>
                 A library service interface concept with a mobile experience for readers and a separate desktop platform scope for administrators.
               </p>
-              <a className={styles.sectionLink} href="#overview">
-                Explore the case study <span aria-hidden="true">↓</span>
-              </a>
-              <a
-                className={styles.prototypeLink}
-                href="https://www.figma.com/proto/7FvkikOv8vM8iaa7FzYlZ3/SAD-LIBRARY-PROJECT?node-id=128-365&p=f&t=EwVoqRQxpOXYb9TK-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=128%3A365"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View Interactive Prototype <span aria-hidden="true">↗</span>
-              </a>
+              <div className={styles.heroActions}>
+                <a className={styles.sectionLink} href="#overview">
+                                Explore the case study <span aria-hidden="true">↓</span>
+                              </a>
+                              <a
+                                className={styles.prototypeLink}
+                                href="https://www.figma.com/proto/7FvkikOv8vM8iaa7FzYlZ3/SAD-LIBRARY-PROJECT?node-id=128-365&p=f&t=EwVoqRQxpOXYb9TK-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=128%3A365"
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                View Interactive Prototype <span aria-hidden="true">↗</span>
+                              </a>
+              </div>
             </div>
             <dl className={styles.facts}>
               <div><dt>Role</dt><dd>UI/UX Designer</dd></div>
@@ -281,7 +283,6 @@ export default function AdventistPaal2LibraryCaseStudyPage() {
 
           <footer className={styles.footer}>
             <p>Adventist Paal 2 Library · UI/UX Design Concept</p>
-            <Link href="/#projects">Back to all projects <span aria-hidden="true">↗</span></Link>
           </footer>
         </div>
       </main>

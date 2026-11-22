@@ -268,7 +268,6 @@ export default function DayOneCaseStudyPage() {
 
           <footer className={styles.footer}>
             <p>DayOne · Full Stack Development &amp; AI Integration</p>
-            <Link href="/#projects">Back to projects ↑</Link>
           </footer>
         </div>
       </main>

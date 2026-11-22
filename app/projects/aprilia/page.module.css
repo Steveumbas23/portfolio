@@ -83,6 +83,9 @@
 
 .systemContent { display: grid; gap: 30px; }
 .subheading { margin: 0 0 14px; color: var(--aprilia-white); font-size: 15px; font-weight: 700; }
+.tools { border-top: 1px solid var(--aprilia-border); padding-top: 22px; }
+.tools div { display: grid; grid-template-columns: 120px 1fr; gap: 12px; border-top: 1px solid var(--aprilia-border); padding: 13px 0; color: var(--aprilia-muted); font-size: 14px; line-height: 1.5; }
+.tools strong { color: var(--aprilia-white); font-weight: 700; }
 .palette { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
 .swatch { display: grid; grid-template-columns: 34px 1fr; grid-template-rows: auto auto; align-items: center; gap: 2px 9px; min-width: 0; border: 1px solid var(--aprilia-border); border-radius: 8px; padding: 9px; background: #191818; }
 .swatchColor { grid-row: span 2; width: 34px; height: 34px; border: 1px solid rgb(255 255 255 / 18%); border-radius: 5px; }
@@ -161,6 +164,7 @@
   .sectionIntro h2 { font-size: clamp(30px, 8vw, 38px); }
   .needsGrid, .contributionGrid, .contentAreas, .outcomeGrid { grid-template-columns: 1fr; }
   .palette { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tools div { grid-template-columns: 90px 1fr; gap: 10px; }
   .typeRow { grid-template-columns: 1fr; gap: 9px; }
   .componentBoard { padding: 15px; }
   .componentExamples { grid-template-columns: 1fr 1fr; }
