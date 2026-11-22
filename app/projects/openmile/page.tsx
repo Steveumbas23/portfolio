@@ -108,7 +108,7 @@ export default function OpenMileCaseStudyPage() {
               <div><dt>My role</dt><dd>UI/UX Designer</dd></div>
               <div><dt>Platform</dt><dd>Mobile application</dd></div>
               <div><dt>Project type</dt><dd>Personal design concept</dd></div>
-              <div><dt>Status</dt><dd>Design concept · not released</dd></div>
+              <div><dt>Status</dt><dd>Design in Progress</dd></div>
             </dl>
           </header>
 
@@ -133,10 +133,7 @@ export default function OpenMileCaseStudyPage() {
             </div>
             <div className={styles.overviewCopy}>
               <p>
-                OpenMile is a mobile travel booking concept for people who want to find destinations, explore places to visit, and plan a trip. The design objective is to make destination exploration and flight booking easier to understand and more organized.
-              </p>
-              <p>
-                This is a personal UI/UX design concept. It is not a released travel booking product and is not currently available for commercial use.
+                OpenMile is a mobile travel booking concept designed to help users discover destinations, explore places to visit, and plan their trips. The design focuses on creating a clear and intuitive experience for destination exploration and flight booking, with an organized flow that simplifies travel planning.
               </p>
             </div>
           </section>
@@ -144,9 +141,12 @@ export default function OpenMileCaseStudyPage() {
           <section className={`${styles.section} ${styles.tintedSection}`} aria-labelledby="audience-title">
             <div className={styles.sectionIntro}>
               <p className={styles.kicker}>02 / PROBLEMS &amp; DESIGN CHALLENGES</p>
-              <h2 id="audience-title">Designing around travel planning needs.</h2>
+              <h2 id="audience-title">Making travel planning simpler and more connected.</h2>
               <p className={styles.sectionNote}>
-                These are intended audiences and design considerations. They have not been validated through user research.
+                Planning a trip involves multiple decisions, from discovering destinations to selecting flights and reviewing booking details. OpenMile explores how these steps can be organized into a clear and seamless mobile experience.
+              </p>
+              <p className={styles.researchNote}>
+                Intended users and design challenges are assumptions for this concept, not findings from formal user research.
               </p>
             </div>
             <div className={styles.needsGrid}>
@@ -154,20 +154,32 @@ export default function OpenMileCaseStudyPage() {
                 <span className={styles.cardIndex}>A</span>
                 <h3>Intended users</h3>
                 <ul>
-                  <li>People looking for and planning a trip.</li>
-                  <li>Travelers exploring destinations.</li>
-                  <li>Mobile users who want a straightforward flight booking flow.</li>
+                  <li>Travelers looking for inspiration and destinations for their next trip.</li>
+                  <li>Users who want to explore attractions before deciding where to go.</li>
+                  <li>Mobile users who prefer a clear and convenient flight booking experience.</li>
                 </ul>
               </article>
               <article className={styles.infoCard}>
                 <span className={styles.cardIndex}>B</span>
-                <h3>Design problem</h3>
-                <ul>
-                  <li>How might destination discovery be easy to start?</li>
-                  <li>How might flight details be presented clearly?</li>
-                  <li>How might booking steps be easy to follow?</li>
-                  <li>How might travelers review flight and passenger details before payment?</li>
-                </ul>
+                <h3>Key Design Challenges</h3>
+                <ol className={styles.challengeList}>
+                  <li>
+                    <span>01.</span>
+                    <div><h4>Destination Discovery</h4><p>How can users discover destinations and explore relevant places without feeling overwhelmed?</p></div>
+                  </li>
+                  <li>
+                    <span>02.</span>
+                    <div><h4>Information Clarity</h4><p>How can destination and flight information be structured so users can easily understand and compare their options?</p></div>
+                  </li>
+                  <li>
+                    <span>03.</span>
+                    <div><h4>Booking Flow</h4><p>How can the flight booking process be organized into clear, manageable steps?</p></div>
+                  </li>
+                  <li>
+                    <span>04.</span>
+                    <div><h4>Booking Review</h4><p>How can users review flight selections and passenger details with confidence before proceeding to payment?</p></div>
+                  </li>
+                </ol>
               </article>
             </div>
           </section>

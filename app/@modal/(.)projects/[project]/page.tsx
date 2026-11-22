@@ -5,6 +5,7 @@ import AdventistLibraryCaseStudyPage from "../../../projects/adventist-paal-2-li
 import ChampsCaseStudyPage from "../../../projects/champs/page";
 import CourtlineCaseStudyPage from "../../../projects/courtline/page";
 import DayOneCaseStudyPage from "../../../projects/dayone/page";
+import ApriliaCaseStudyPage from "../../../projects/aprilia/page";
 import LaporJalanCaseStudyPage from "../../../projects/lapor-jalan/page";
 import LucitCaseStudyPage from "../../../projects/lucit/page";
 import OpenMileCaseStudyPage from "../../../projects/openmile/page";
@@ -12,6 +13,7 @@ import PertaminaCaseStudyPage from "../../../projects/pertamina-offshore/page";
 import VitaeCaseStudyPage from "../../../projects/vitae/page";
 
 const caseStudyPages: Record<string, ComponentType> = {
+  aprilia: ApriliaCaseStudyPage,
   "adventist-paal-2-library": AdventistLibraryCaseStudyPage,
   champs: ChampsCaseStudyPage,
   courtline: CourtlineCaseStudyPage,

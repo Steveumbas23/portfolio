@@ -137,6 +137,49 @@ const projects: Project[] = [
     },
   },
   {
+    id: "aprilia",
+    name: "Aprilia Racing — The MotoGP Experience",
+    category: "UI/UX Design",
+    description:
+      "A motorsport website concept showcasing Aprilia Racing's RS-GP motorcycle, technical specifications, and racing imagery.",
+    image: "/images/preview aprilia.png",
+    imageAlt: "Aprilia Racing website concept featuring an RS-GP motorcycle, specifications, and racing gallery",
+    caseStudyUrl: "/projects/aprilia",
+    externalUrl: "https://www.figma.com/proto/N0FdntZ3gG1JCF4dRP8CMh/Website-Motor-GP-Aprilia?node-id=0-1&p=f&t=XtRkWswgago5qiQA-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A5&fuid=1441746115386135378",
+    externalLinkLabel: "View Prototype",
+    technologies: [
+      "UI/UX Design",
+      "Figma",
+      "Prototyping",
+      "Auto Layout",
+      "Component Variants",
+      "Responsive Design",
+      "Layout Grid & Constraints",
+    ],
+    details: {
+      category: "UI/UX Design",
+      summary: "A motorsport website concept for presenting Aprilia Racing and the RS-GP.",
+      overview:
+        "The concept pairs a bold black and red visual direction with an RS-GP hero presentation, motorcycle specifications, racing imagery, and a contact section for the racing division.",
+      features: [
+        "RS-GP motorcycle hero section with calls to explore the machine and watch racing.",
+        "Technical specifications and motorcycle overview sections.",
+        "Racing image and video gallery concept.",
+        "Contact section for the racing division.",
+      ],
+      technicalDetails: [],
+      technologies: [
+        "UI/UX Design",
+        "Figma",
+        "Prototyping",
+        "Auto Layout",
+        "Component Variants",
+        "Responsive Design",
+        "Layout Grid & Constraints",
+      ],
+    },
+  },
+  {
     id: "adventist-paal-2-library",
     name: "Adventist Paal 2 Library",
     category: "UI/UX Design",
@@ -408,6 +451,7 @@ const projects: Project[] = [
 
 const projectOrder = [
   "openmile",
+  "aprilia",
   "pertamina",
   "vitae",
   "courtline",
