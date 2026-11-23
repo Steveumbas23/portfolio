@@ -96,7 +96,7 @@ const projects: Project[] = [
   },
   {
     id: "openmile",
-    name: "OpenMile — Travel Booking App",
+    name: "OpenMile — Travel Booking App UI/UX Concept",
     category: "UI/UX Design",
     description:
       "A travel booking app concept for flight search, destination discovery, and trip bookings.",
@@ -138,7 +138,7 @@ const projects: Project[] = [
   },
   {
     id: "aprilia",
-    name: "Aprilia Racing — The MotoGP Experience",
+    name: "Aprilia Racing — MotoGP Experience UI/UX Concept",
     category: "UI/UX Design",
     description:
       "A motorsport website concept showcasing Aprilia Racing's RS-GP motorcycle, technical specifications, and racing imagery.",
@@ -181,7 +181,7 @@ const projects: Project[] = [
   },
   {
     id: "adventist-paal-2-library",
-    name: "Adventist Paal 2 Library",
+    name: "Adventist Paal 2 Library — Library Management System UI/UX Design",
     category: "UI/UX Design",
     description:
       "A mobile library app concept for browsing new arrivals, viewing borrowed books, and accessing library services.",
@@ -223,7 +223,7 @@ const projects: Project[] = [
   },
   {
     id: "champs",
-    name: "Champs — Boxing Club Website",
+    name: "Champs — Boxing Club Website UI/UX Concept",
     category: "UI/UX Design",
     description:
       "A boxing club website concept presenting training programs, featured projects, and club information.",
@@ -331,7 +331,7 @@ const projects: Project[] = [
   },
   {
     id: "vitae",
-    name: "Vitae — Health & Wellness App",
+    name: "Vitae — Health & Wellness App UI/UX Concept",
     category: "UI/UX Design",
     description:
       "Merancang konsep aplikasi kesehatan yang membantu pengguna memantau aktivitas harian, mengelola asupan nutrisi, dan melihat perkembangan kesehatan melalui antarmuka yang intuitif dan modern.",
