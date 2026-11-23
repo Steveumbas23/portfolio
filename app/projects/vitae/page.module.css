@@ -91,10 +91,13 @@
 .swatchColor { grid-row: span 2; width: 34px; height: 34px; border: 1px solid rgb(0 0 0 / 8%); border-radius: 8px; }
 .swatchName { overflow: hidden; color: #3b4435; font-size: 12px; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
 .swatchValue { color: #62695e; font-size: 11px; }
-.systemNotes { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; border-top: 1px solid var(--vitae-line); }
-.systemNotes article { border-bottom: 1px solid var(--vitae-line); padding: 17px 0; }
-.systemNotes h3 { margin: 0; color: #30392d; font-size: 15px; font-weight: 700; }
-.systemNotes p { margin: 7px 0 0; color: #666b62; font-size: 14px; line-height: 1.55; }
+.systemNotes { display: grid; border-top: 1px solid var(--vitae-line); }
+.toolsHeading { margin: 0; border-bottom: 1px solid var(--vitae-line); padding: 22px 0 17px; color: #263822; font-size: 15px; font-weight: 700; }
+.techniqueGrid { display: grid; }
+.techniqueItem { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 12px; min-width: 0; border-bottom: 1px solid var(--vitae-line); padding: 14px 0; }
+.techniqueItem:last-child { border-bottom: 0; }
+.techniqueItem h4 { margin: 0; color: #263822; font-size: 14px; font-weight: 700; line-height: 1.5; }
+.techniqueItem p { margin: 0; color: #62695e; font-size: 14px; line-height: 1.5; }
 
 .flowCards { display: grid; gap: 15px; }
 .flowCard { border: 1px solid var(--vitae-line); border-radius: 14px; padding: 19px; background: #fff; }
@@ -136,7 +139,7 @@
   .heroVisual figcaption { padding: 11px 12px 13px; font-size: 11px; }
   .section { padding-block: 48px; }
   .sectionIntro h2 { font-size: clamp(29px, 8vw, 38px); }
-  .roleGrid, .screenGroups, .systemNotes, .outcomeGrid { grid-template-columns: 1fr; }
+  .roleGrid, .screenGroups, .outcomeGrid { grid-template-columns: 1fr; }
   .palette { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .flowCard { padding: 15px; }
   .flowStep span { padding: 8px 10px; font-size: 12px; }

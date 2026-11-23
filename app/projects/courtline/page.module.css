@@ -37,6 +37,10 @@
 .sectionNote { max-width: 440px; margin: 15px 0 0; color: #a2a39d; font-size: 14px; line-height: 1.6; }
 .copy { max-width: 690px; color: #c4c5c0; font-size: 16px; line-height: 1.75; }
 .copy > p { margin: 0; }
+.keyScreens { margin-top: 22px; }
+.keyScreens > strong { display: block; margin-bottom: 11px; color: var(--courtline-lime); font-size: 13px; font-weight: 750; letter-spacing: .04em; }
+.keyScreens ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.keyScreens li { border: 1px solid #3a3b34; border-radius: 999px; padding: 7px 11px; background: #141414; color: #e1e2dc; font-size: 13px; font-weight: 600; line-height: 1.35; }
 .audienceNote { margin-top: 24px; border-left: 3px solid var(--courtline-lime); padding: 2px 0 2px 18px; }
 .audienceNote span { color: var(--courtline-lime); font-size: 11px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
 .audienceNote p { margin: 8px 0 0; color: #b8bab4; font-size: 14px; line-height: 1.65; }
@@ -57,12 +61,20 @@
 .roleContent { display: grid; align-content: start; gap: 12px; min-width: 0; }
 .roleGrid li { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; border-bottom: 1px solid var(--courtline-line); padding: 16px 0; color: #d5d6d0; font-size: 14px; line-height: 1.5; }
 .roleGrid li span { color: var(--courtline-lime); font-size: 11px; font-weight: 750; }
+.roleGrid li strong { color: #f4f4f0; font-size: 14px; font-weight: 700; }
+.roleGrid li p { margin: 6px 0 0; color: #a8aaa4; font-size: 13px; line-height: 1.55; }
 
 .darkSection { margin-inline: calc(0px - var(--section-bleed)); padding-inline: var(--section-bleed); background: #111; }
 .darkSection .sectionNote { color: #a4a59f; }
 .processContent, .validationContent { display: grid; align-content: start; gap: 15px; min-width: 0; }
 .processContent > h3 { margin: 14px 0 0; color: #0c0d0a; font-size: 18px; font-weight: 800; }
 .processNote { margin: -8px 0 0; color: #414b24; font-size: 14px; line-height: 1.6; }
+.processList { display: grid; margin: 0; padding: 0; list-style: none; }
+.processList li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; border-bottom: 1px solid rgb(8 8 8 / 22%); padding: 15px 0; }
+.processList li:first-child { padding-top: 0; }
+.processList li > span { color: #49591a; font-size: 11px; font-weight: 800; }
+.processList h4 { margin: 0; color: #11120e; font-size: 15px; font-weight: 800; }
+.processList li p { margin: 6px 0 0; color: #333a20; font-size: 13px; line-height: 1.55; }
 .wireframeDetails { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .wireframeDetails article { border: 1px solid #303030; border-radius: 12px; padding: 19px 17px; background: #171717; }
 .wireframeDetails article > span { color: var(--courtline-lime); font-size: 11px; font-weight: 750; letter-spacing: .08em; }
@@ -87,10 +99,13 @@
 .swatchColor { grid-row: span 2; width: 34px; height: 34px; border: 1px solid rgb(255 255 255 / 15%); border-radius: 7px; }
 .swatchName { overflow: hidden; color: #efefeb; font-size: 12px; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
 .swatchValue { color: #a0a19b; font-size: 11px; }
-.systemNotes { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; border-top: 1px solid var(--courtline-line); }
-.systemNotes article { border-bottom: 1px solid var(--courtline-line); padding: 16px 0; }
-.systemNotes h3 { margin: 0; color: var(--courtline-lime); font-size: 14px; font-weight: 750; }
-.systemNotes p { margin: 7px 0 0; color: #b7b8b2; font-size: 13px; line-height: 1.55; }
+.systemNotes { display: grid; border-top: 1px solid var(--courtline-line); }
+.systemNotes > h3 { margin: 0; border-bottom: 1px solid var(--courtline-line); padding: 18px 0 15px; color: var(--courtline-lime); font-size: 14px; font-weight: 750; }
+.toolsList { display: grid; }
+.toolItem { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 12px; border-bottom: 1px solid var(--courtline-line); padding: 14px 0; }
+.toolItem:last-child { border-bottom: 0; }
+.toolItem h4 { margin: 0; color: #f4f4f0; font-size: 13px; font-weight: 700; line-height: 1.5; }
+.toolItem p { margin: 0; color: #b7b8b2; font-size: 13px; line-height: 1.55; }
 
 .responsiveContent { color: #c5c6c0; font-size: 15px; line-height: 1.7; }
 .responsiveContent > p { margin: 0; }

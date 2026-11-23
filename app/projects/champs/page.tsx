@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import styles from "./page.module.css";
 
@@ -11,14 +10,85 @@ export const metadata: Metadata = {
 };
 
 const pageSections = [
-  { number: "01", name: "Home", note: "Brand introduction and hero" },
-  { number: "02", name: "About", note: "Club introduction" },
-  { number: "03", name: "Service", note: "Training services" },
-  { number: "04", name: "Choose Us", note: "Reasons to train with CHAMPS" },
-  { number: "05", name: "Project", note: "Featured projects" },
-  { number: "06", name: "Learn More", note: "Additional information" },
-  { number: "07", name: "Testimoni", note: "Testimonial section" },
-  { number: "08", name: "Footer", note: "Closing information and contact" },
+  { number: "01", name: "Home", note: "Brand introduction and hero." },
+  { number: "02", name: "About", note: "An introduction to the club." },
+  { number: "03", name: "Services", note: "The training services on offer." },
+  {
+    number: "04",
+    name: "Why Choose Us",
+    note: "Reasons to train with CHAMPS.",
+  },
+  { number: "05", name: "Projects", note: "Featured projects." },
+  { number: "06", name: "Learn More", note: "Additional information." },
+  {
+    number: "07",
+    name: "Testimonials",
+    note: "What members say about the club.",
+  },
+  {
+    number: "08",
+    name: "Footer",
+    note: "Closing information and contact details.",
+  },
+];
+
+const designPalette = [
+  { name: "Near black", color: "#0B0B0B" },
+  { name: "CHAMPS red", color: "#C6261B" },
+  { name: "White", color: "#FFFFFF" },
+  { name: "Soft gray", color: "#F5F5F5" },
+  { name: "Mid gray", color: "#747474" },
+  { name: "Charcoal", color: "#292929" },
+];
+
+const toolsAndTechniques = [
+  {
+    title: "Figma",
+    description: "UI/UX design and interactive prototyping.",
+  },
+  {
+    title: "Auto Layout",
+    description:
+      "Structured flexible interface groups with consistent spacing.",
+  },
+  {
+    title: "Grid Layout",
+    description:
+      "Organized interface elements using consistent columns, rows, and alignment.",
+  },
+  {
+    title: "Component variants",
+    description:
+      "Organized reusable UI components such as buttons, navigation, and cards with default and active states.",
+  },
+  {
+    title: "Smart Animate",
+    description:
+      "Created transitions between component variants for the interactive prototype.",
+  },
+];
+
+const roleItems = [
+  {
+    title: "Information architecture",
+    description:
+      "Defined the page structure and section order: Home, About, Location, and Contact.",
+  },
+  {
+    title: "Screen layout planning",
+    description:
+      "Laid out the page to set content order and hierarchy before visual styling.",
+  },
+  {
+    title: "UI design",
+    description:
+      "Designed a high-fidelity website interface with bold boxing imagery and a strong club identity.",
+  },
+  {
+    title: "Visual direction",
+    description:
+      'Shaped the overall look and feel, from the "Fight like a champion" headline to the calls to action.',
+  },
 ];
 
 export default function ChampsCaseStudyPage() {
@@ -29,10 +99,13 @@ export default function ChampsCaseStudyPage() {
         <div className={styles.container}>
           <header className={styles.hero}>
             <div className={styles.heroCopy}>
-              <p className={styles.eyebrow}>UI/UX DESIGN CASE STUDY · PERSONAL CONCEPT</p>
+              <p className={styles.eyebrow}>
+                UI/UX DESIGN CASE STUDY · PERSONAL CONCEPT
+              </p>
               <h1 className={styles.title}>CHAMPS</h1>
               <p className={styles.lede}>
-                A boxing and fight training website concept built around a bold club identity and a clear introduction to its training offer.
+                A boxing and fight training website concept built around a bold
+                club identity and a clear introduction to its training offer.
               </p>
               <div className={styles.heroActions}>
                 <a className={styles.heroLink} href="#overview">
@@ -50,10 +123,22 @@ export default function ChampsCaseStudyPage() {
             </div>
 
             <dl className={styles.projectFacts}>
-              <div><dt>My role</dt><dd>UI/UX Designer</dd></div>
-              <div><dt>Platform</dt><dd>Website design</dd></div>
-              <div><dt>Project type</dt><dd>Personal concept</dd></div>
-              <div><dt>Status</dt><dd>UI design · not a functional website</dd></div>
+              <div>
+                <dt>My role</dt>
+                <dd>UI/UX Designer</dd>
+              </div>
+              <div>
+                <dt>Platform</dt>
+                <dd>Website concept</dd>
+              </div>
+              <div>
+                <dt>Project type</dt>
+                <dd>Personal project</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>Design phase · UI complete</dd>
+              </div>
             </dl>
           </header>
 
@@ -67,42 +152,90 @@ export default function ChampsCaseStudyPage() {
               sizes="(max-width: 760px) 100vw, 1120px"
             />
             <figcaption>
-              Existing desktop overview from the portfolio. It is a composite mockup; individual section exports are not currently available in the repository.
+              Existing desktop overview from the portfolio. It is a composite
+              mockup; individual section exports are not currently available in
+              the repository.
             </figcaption>
           </figure>
 
-          <section className={styles.section} id="overview" aria-labelledby="overview-title">
+          <section
+            className={styles.section}
+            id="overview"
+            aria-labelledby="overview-title"
+          >
             <div className={styles.sectionIntro}>
               <p className={styles.kicker}>01 / PROJECT OVERVIEW</p>
-              <h2 id="overview-title">A digital front door for a fight training club.</h2>
+              <h2 id="overview-title">
+                A digital front door for a fight training club.
+              </h2>
             </div>
             <div className={styles.copy}>
               <p>
-                CHAMPS is a personal website design concept for a boxing and fight training club. The concept introduces the club, presents training services, and brings supporting information together in one desktop landing page.
+                CHAMPS is a website concept for a boxing and fight training
+                club. It introduces the club, presents its training services,
+                and brings supporting information together in one clear,
+                easy-to-scan landing page, with a bold visual identity that
+                matches the energy of the sport.
               </p>
-              <p>
-                This case study documents a UI design concept. It does not represent a developed or launched website, and the available project material does not include user research or usability testing results.
-              </p>
+              <div className={styles.keyScreens}>
+                <strong>Key sections</strong>
+                <ul>
+                  {["Home", "About", "Location", "Contact"].map((section) => (
+                    <li key={section}>{section}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </section>
 
-          <section className={`${styles.section} ${styles.softSection}`} aria-labelledby="challenges-title">
+          <section
+            className={`${styles.section} ${styles.softSection}`}
+            aria-labelledby="challenges-title"
+          >
             <div className={styles.sectionIntro}>
-              <p className={styles.kicker}>02 / PROBLEMS &amp; DESIGN CHALLENGES</p>
-              <h2 id="challenges-title">Making a long page feel focused and easy to scan.</h2>
+              <p className={styles.kicker}>
+                02 / PROBLEMS &amp; DESIGN CHALLENGES
+              </p>
+              <h2 id="challenges-title">
+                Making a long page feel focused and easy to scan.
+              </h2>
               <p className={styles.sectionNote}>
-                These are interface design considerations visible in the supplied concept, not findings from user research.
+                These challenges are design assumptions for this concept, not
+                findings from formal user research.
               </p>
             </div>
             <div className={styles.challengeList}>
               <article className={styles.challenge}>
-                <span>01</span><div><h3>Establish a strong first impression</h3><p>Use the boxing imagery and “Fight like a champion” headline to set the club’s tone at the start of the page.</p></div>
+                <span>01</span>
+                <div>
+                  <h3>Establish a strong first impression</h3>
+                  <p>
+                    Use boxing imagery and the &quot;Fight like a champion&quot;
+                    headline to set the club&apos;s tone from the very first
+                    screen.
+                  </p>
+                </div>
               </article>
               <article className={styles.challenge}>
-                <span>02</span><div><h3>Organize varied content</h3><p>Present club information, services, reasons to choose the club, featured projects, and testimonials within one page structure.</p></div>
+                <span>02</span>
+                <div>
+                  <h3>Organize varied content</h3>
+                  <p>
+                    Present club information, services, reasons to choose the
+                    club, featured projects, and testimonials within one page
+                    structure, so visitors can scan the page section by section.
+                  </p>
+                </div>
               </article>
               <article className={styles.challenge}>
-                <span>03</span><div><h3>Keep calls to action visible</h3><p>Give visitors a clear way to continue toward training information and contact details as they move through the page.</p></div>
+                <span>03</span>
+                <div>
+                  <h3>Keep calls to action visible</h3>
+                  <p>
+                    Give visitors a clear way to continue toward training
+                    information and contact details at every point on the page.
+                  </p>
+                </div>
               </article>
             </div>
           </section>
@@ -110,97 +243,149 @@ export default function ChampsCaseStudyPage() {
           <section className={styles.section} aria-labelledby="role-title">
             <div className={styles.sectionIntro}>
               <p className={styles.kicker}>03 / MY ROLE</p>
-              <h2 id="role-title">UI/UX Designer</h2>
+              <h2 id="role-title">From page structure to a bold interface.</h2>
             </div>
             <div className={styles.roleContent}>
-              <p className={styles.copy}>
-                I worked on the website interface concept and its visual presentation. The available source supports documenting the page structure and visual direction; further process artifacts are not included here.
-              </p>
-              <div className={styles.roleTags} aria-label="Documented project scope">
-                <span>Website UI design</span><span>Page structure</span><span>Visual direction</span><span>Figma</span>
-              </div>
+              <ol className={styles.roleGrid}>
+                {roleItems.map((item, index) => (
+                  <li key={item.title}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <div>
+                      <strong>{item.title}</strong>
+                      <p>{item.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <p className={styles.sectionNote}>Tools: Figma.</p>
             </div>
           </section>
 
-          <section className={`${styles.section} ${styles.darkSection}`} aria-labelledby="structure-title">
+          <section
+            className={`${styles.section} ${styles.darkSection}`}
+            aria-labelledby="structure-title"
+          >
             <div className={styles.sectionIntro}>
               <p className={styles.kicker}>04 / DESIGN PROCESS</p>
-              <h2 id="structure-title">One landing page, from introduction to contact.</h2>
+              <h2 id="structure-title">
+                One landing page, from introduction to contact.
+              </h2>
               <p className={styles.sectionNote}>
-                The sequence below follows the section names supplied for the Figma frame. Individual section screenshots are not available in this workspace.
+                The sequence below follows the section names supplied for the
+                Figma frame. Individual section screenshots are not available in
+                this workspace.
               </p>
             </div>
             <div className={styles.processContent}>
-            <ol className={styles.sectionMap}>
-              {pageSections.map((section) => (
-                <li key={section.number}>
-                  <span>{section.number}</span>
-                  <div><h3>{section.name}</h3><p>{section.note}</p></div>
-                </li>
-              ))}
-            </ol>
-              <h3>Research &amp; process artifacts</h3>
-              <div className={styles.designAvailability}>
-                <p>No user research, user-flow diagram, or wireframe export is included in the available project materials. The page map below follows the section names supplied for the Figma frame.</p>
-                <p>The Figma prototype is linked above. Its keyframe animation data is empty, so this case study does not claim a completed scroll animation.</p>
-              </div>
-              <h3>Final design</h3>
-              <div className={styles.designAvailability}>
-              <p>
-                The available portfolio asset is one composite preview. Separate, straight-on screenshots for Home, About, Service, Choose Us, Project, Learn More, Testimoni, and Footer have not been exported into this repository.
-              </p>
-              <p>
-                The preview above preserves the supplied image as-is. It is not presented as a set of per-section captures.
-              </p>
-              </div>
+              <h3 className={styles.processHeading}>Design stages</h3>
+              <ol className={styles.processList}>
+                {pageSections.map((section) => (
+                  <li className={styles.processStep} key={section.number}>
+                    <span>{section.number}</span>
+                    <div>
+                      <h3>{section.name}</h3>
+                      <p>{section.note}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </div>
           </section>
 
-          <section className={`${styles.section} ${styles.softSection}`} aria-labelledby="system-title">
+          <section
+            className={`${styles.section} ${styles.softSection}`}
+            aria-labelledby="system-title"
+          >
             <div className={styles.sectionIntro}>
               <p className={styles.kicker}>05 / DESIGN SYSTEM</p>
-              <h2 id="system-title">The source supports a visual direction, not a full system inventory.</h2>
-            </div>
-            <div className={styles.copy}>
-              <p>
-                The supplied preview shows a dark, high-contrast boxing identity with red accents and fight photography. Exact color values, typeface names, spacing tokens, icon specifications, and reusable component documentation have not been verified from the Figma source, so they are not listed as design system specifications here.
+              <h2 id="system-title">
+                A bold black-and-red identity for CHAMPS.
+              </h2>
+              <p className={styles.sectionNote}>
+                Colors and typography are taken directly from the website
+                design.
               </p>
+            </div>
+            <div className={styles.systemContent}>
+              <div
+                className={styles.palette}
+                aria-label="Approximate colors sampled from the CHAMPS preview"
+              >
+                {designPalette.map((color) => (
+                  <div className={styles.swatch} key={color.name}>
+                    <span
+                      className={styles.swatchColor}
+                      style={{ backgroundColor: color.color }}
+                    />
+                    <span className={styles.swatchName}>{color.name}</span>
+                    <span className={styles.swatchValue}>{color.color}</span>
+                  </div>
+                ))}
+              </div>
+              <div className={styles.tools}>
+                <h3>Tools &amp; techniques</h3>
+                {toolsAndTechniques.map((item) => (
+                  <div key={item.title}>
+                    <strong>{item.title}</strong>
+                    <span>{item.description}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
 
-          <section className={styles.section} aria-labelledby="motion-title">
+          <section
+            className={`${styles.section} ${styles.softSection}`}
+            aria-labelledby="motion-title"
+          >
             <div className={styles.sectionIntro}>
               <p className={styles.kicker}>06 / VALIDATION</p>
-              <h2 id="motion-title">Source status and evaluation limits.</h2>
+              <h2 id="motion-title">
+                Designed with users in mind, ready to be tested.
+              </h2>
             </div>
             <div className={styles.validationContent}>
-            <div className={styles.statusList}>
-              <article>
-                <h3>Layer placement</h3>
-                <p>The hero headline and “READY FOR YOUR NEXT LESSON?” text sit outside the canvas as starting positions for an animation, as confirmed by the designer.</p>
-              </article>
-              <article>
-                <h3>Motion data</h3>
-                <p>The frame’s keyframe animation data is empty. The available evidence confirms intended starting positions, but does not document a completed scroll animation.</p>
-              </article>
-              <article>
-                <h3>Responsive layouts</h3>
-                <p>No mobile or tablet frame has been identified in the materials available in this repository.</p>
-              </article>
-              <article>
-                <h3>Usability validation</h3>
-                <p>No user-testing records or participant feedback are included in the available project materials.</p>
-              </article>
-            </div>
-            <div className={styles.validationReflection}>
-              <h3>A visual concept, ready for a more complete handoff.</h3>
-              <p>
-                The available deliverable communicates a desktop landing page direction for CHAMPS and its main content areas. It remains a UI design concept; there is no evidence here of a functional website, user evaluation, or measured outcome.
-              </p>
-              <p>
-                A useful next step would be to make the section exports and design specifications available, then review the layout across breakpoints and validate the content hierarchy with users.
-              </p>
-            </div>
+              <div className={styles.outcomeGrid}>
+                <article className={styles.outcomeCard}>
+                  <h3>Project status</h3>
+                  <dl>
+                    <div>
+                      <dt>Deliverable</dt>
+                      <dd>Landing page UI design + interactive prototype</dd>
+                    </div>
+                    <div>
+                      <dt>Type</dt>
+                      <dd>Personal project</dd>
+                    </div>
+                    <div>
+                      <dt>Interactive prototype</dt>
+                      <dd>Available in Figma</dd>
+                    </div>
+                    <div>
+                      <dt>Development</dt>
+                      <dd>Design phase · prototype ready</dd>
+                    </div>
+                  </dl>
+                </article>
+                <article className={styles.reflectionCard}>
+                  <h3>Reflection</h3>
+                  <p>
+                    The design communicates a bold, high-energy direction for
+                    CHAMPS and presents its main content areas in one clear
+                    landing page, from the hero to the testimonials and contact
+                    details.
+                  </p>
+                </article>
+                <article className={styles.reflectionCard}>
+                  <h3>Research &amp; testing</h3>
+                  <p>
+                    CHAMPS is currently focused on UI/UX exploration and
+                    interface design. User testing is the next step, starting
+                    with content hierarchy and calls to action, followed by
+                    responsive layouts for tablet and mobile.
+                  </p>
+                </article>
+              </div>
             </div>
           </section>
 

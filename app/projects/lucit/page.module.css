@@ -50,21 +50,24 @@
 .architecture { align-self: start; min-width: 0; border: 1px solid #e8e1eb; border-radius: 18px; padding: clamp(18px, 3vw, 28px); background: linear-gradient(145deg, #fff, #faf6fc); }
 .architectureFlow { display: flex; align-items: center; gap: 11px; }
 .architectureStep { display: flex; flex: 1 1 0; min-width: 0; align-items: center; gap: 10px; }
-.archNode { min-width: 0; flex: 1; border: 1px solid #e6d9ed; border-radius: 12px; padding: 15px 13px; background: #fff; box-shadow: 0 6px 20px rgb(57 30 68 / 5%); }
+.archNode { min-width: 0; flex: 1; border: 1px solid #e6d9ed; border-radius: 12px; padding: 17px 15px; background: #fff; box-shadow: 0 6px 20px rgb(57 30 68 / 5%); }
 .archNode > span { color: var(--lucit-purple); font-size: 10px; font-weight: 800; letter-spacing: .1em; }
-.archNode h3 { margin: 9px 0 0; color: #2d2531; font-size: 15px; }
-.archNode p { margin: 6px 0 0; color: #716879; font-size: 11px; line-height: 1.5; }
+.archNode h3 { margin: 9px 0 0; color: #2d2531; font-size: 16px; line-height: 1.3; }
+.archNode p { margin: 7px 0 0; color: #5c5362; font-size: 12px; line-height: 1.5; }
 .api { border-color: #efc8d8; }
 .api > span { color: var(--lucit-pink-text); }
 .models { border-color: #d8c5e3; background: #fdfaff; }
 .flowArrow { flex: 0 0 auto; color: #76578d; font-size: 18px; }
-.serviceConnectors { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 14px; margin: 18px 0 0 34%; border-top: 1px dashed #cdb6d7; padding-top: 14px; }
-.serviceHeading { grid-column: 1 / -1; margin: 0; color: #665071; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-.serviceNode { display: grid; gap: 5px; border: 1px solid #eadfeb; border-radius: 11px; padding: 13px; background: #fff; }
-.serviceNode span { color: var(--lucit-pink-text); font-size: 9px; font-weight: 800; letter-spacing: .1em; }
-.serviceNode strong { color: #382a3f; font-size: 14px; }
-.serviceNode small { color: #706878; font-size: 11px; line-height: 1.45; }
-.architectureCaption { margin: 16px 0 0; color: #716a75; font-size: 11px; line-height: 1.55; }
+.serviceConnectors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 14px; margin: 22px 0 0; border-top: 1px dashed #cdb6d7; padding-top: 18px; }
+.serviceHeading { grid-column: 1 / -1; margin: 0; color: #51405d; font-size: 13px; font-weight: 750; }
+.serviceNode { display: grid; align-content: start; gap: 8px; min-width: 0; border: 1px solid #e5dce9; border-radius: 13px; padding: 17px; background: #fff; }
+.serviceNode span { width: fit-content; border-radius: 999px; padding: 6px 9px; color: #9e1748; background: #fbe8ef; font-size: 10px; font-weight: 800; letter-spacing: .09em; }
+.serviceNode strong { color: #302536; font-size: 17px; line-height: 1.3; }
+.serviceNode small { color: #554c5b; font-size: 13px; line-height: 1.55; }
+.generativeService { border-top: 3px solid var(--lucit-pink); }
+.storageService { border-top: 3px solid var(--lucit-purple); }
+.storageService span { color: #5b3180; background: #f1e9f7; }
+.architectureCaption { margin: 16px 0 0; border-left: 3px solid #cbb2d7; padding: 4px 0 4px 13px; color: #5f5664; font-size: 13px; line-height: 1.6; }
 
 .darkSection { margin-inline: calc(0px - var(--section-bleed)); padding-inline: var(--section-bleed); background: #271d2d; }
 .darkSection .sectionIntro h2 { color: #fff; }
@@ -151,7 +154,7 @@
   .architectureFlow { align-items: stretch; flex-direction: column; }
   .architectureStep { flex-direction: column; align-items: stretch; }
   .flowArrow { align-self: center; transform: rotate(90deg); }
-  .serviceConnectors { grid-template-columns: 1fr; margin-left: 0; }
+  .serviceConnectors { grid-template-columns: 1fr; }
   .datasetCard, .modelGrid, .featureGroups, .aiLayers, .historyContent ul, .metricColumns { grid-template-columns: 1fr; }
   .featureGroup:last-child { grid-column: auto; }
   .footer { align-items: flex-start; flex-direction: column; }

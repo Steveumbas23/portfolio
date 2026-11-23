@@ -31,43 +31,45 @@ const screenGroups = [
 const designProcess = [
   {
     step: "01",
-    title: "Understanding",
+    title: "Design Direction",
     description:
-      "Set the design direction around activity tracking, food nutrition information, and building awareness of healthy habits. These are project goals, not user research findings.",
+      "Set the direction around activity tracking, food nutrition, and building awareness of healthy habits.",
   },
   {
     step: "02",
     title: "User Flow",
     description:
-      "Organize the main navigation between the dashboard, activity, nutrition, progress, and profile areas, with a focused path for checking food information.",
+      "Organized the main navigation between the dashboard, activity, nutrition, progress, and profile areas, with a focused path from food scanning to nutrition details.",
   },
   {
     step: "03",
-    title: "Wireframing",
+    title: "Screen Layout Planning",
     description:
-      "Arrange information and controls for the mobile screens, keeping activity summaries and nutrition details easy to scan.",
+      "Arranged information and controls for each mobile screen, keeping activity summaries and nutrition details easy to scan.",
   },
   {
     step: "04",
     title: "UI Design",
     description:
-      "Apply the VITAE visual direction through a bright green accent, rounded cards, clear type hierarchy, and simple progress visuals.",
+      "Applied the VITAE visual identity through a bright green accent, rounded cards, a clear type hierarchy, and simple progress visuals.",
   },
   {
     step: "05",
     title: "Prototyping",
     description:
-      "An interactive Figma prototype is available. It demonstrates the design flow and can be opened from the case study controls.",
+      "Built an interactive prototype in Figma with Smart Animate transitions and component states.",
   },
 ];
 
 const palette = [
-  { name: "Leaf green", color: "#8DBB2E" },
-  { name: "Deep green", color: "#315B28" },
-  { name: "Soft green", color: "#EAF2D9" },
-  { name: "White", color: "#FFFFFF" },
-  { name: "Warm gray", color: "#F3F3F1" },
-  { name: "Charcoal", color: "#252821" },
+  { name: "Primary green", role: "Primary", color: "#9ED02E" },
+  { name: "Deep green", role: "Secondary", color: "#394B11" },
+  { name: "Soft green", role: "Accent tint", color: "#E4F2C4" },
+  { name: "Soft background", role: "Background", color: "#F4F2F5" },
+  { name: "White", role: "Surface", color: "#FFFFFF" },
+  { name: "Black", role: "Primary text", color: "#000000" },
+  { name: "Gray text", role: "Secondary text", color: "#7F7E7F" },
+  { name: "Border gray", role: "Border", color: "#CDCBCE" },
 ];
 
 const roleItems = [
@@ -100,6 +102,28 @@ const roleItems = [
     title: "Interactive prototyping",
     description:
       "Created an interactive prototype in Figma using Smart Animate.",
+  },
+];
+
+const toolsAndTechniques = [
+  {
+    title: "Figma",
+    description: "UI/UX design and interactive prototyping.",
+  },
+  {
+    title: "Auto Layout",
+    description:
+      "Structured flexible interface groups with consistent spacing.",
+  },
+  {
+    title: "Component variants",
+    description:
+      "Organized reusable UI components with default and active states.",
+  },
+  {
+    title: "Interactive prototyping",
+    description:
+      "Linked the mobile screens into a clickable prototype to show the main user flow.",
   },
 ];
 
@@ -287,10 +311,6 @@ export default function VitaeCaseStudyPage() {
                   </li>
                 ))}
               </ol>
-              <p className={styles.sectionNote}>
-                Tools: Figma, Auto Layout, Components, Variants, Interactive
-                Prototyping, Stitch AI.
-              </p>
             </div>
           </section>
 
@@ -371,29 +391,15 @@ export default function VitaeCaseStudyPage() {
                 ))}
               </div>
               <div className={styles.systemNotes}>
-                <article>
-                  <h3>Typography</h3>
-                  <p>
-                    Bold, high-contrast headings pair with compact labels and
-                    readable supporting text. The original font specification
-                    was not included.
-                  </p>
-                </article>
-                <article>
-                  <h3>Spacing &amp; components</h3>
-                  <p>
-                    Rounded cards, clear content grouping, prominent action
-                    buttons, and ring-style activity summaries are visible in
-                    the supplied mockup.
-                  </p>
-                </article>
-                <article>
-                  <h3>Tools</h3>
-                  <p>
-                    Figma for interface design and components; Stitch AI for
-                    AI-assisted design exploration.
-                  </p>
-                </article>
+                <h3 className={styles.toolsHeading}>Tools &amp; techniques</h3>
+                <div className={styles.techniqueGrid}>
+                  {toolsAndTechniques.map((item) => (
+                    <article className={styles.techniqueItem} key={item.title}>
+                      <h4>{item.title}</h4>
+                      <p>{item.description}</p>
+                    </article>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
@@ -405,7 +411,7 @@ export default function VitaeCaseStudyPage() {
             <div className={styles.sectionIntro}>
               <p className={styles.kicker}>06 / VALIDATION</p>
               <h2 id="outcome-title">
-                A design concept ready for further validation.
+                Designed with users in mind, ready to be tested.
               </h2>
             </div>
             <div className={styles.validationContent}>
@@ -414,20 +420,16 @@ export default function VitaeCaseStudyPage() {
                   <h3>Project status</h3>
                   <dl>
                     <div>
-                      <dt>Type</dt>
-                      <dd>Personal mobile app design concept</dd>
-                    </div>
-                    <div>
                       <dt>Deliverable</dt>
-                      <dd>Mobile UI screens and Figma design file</dd>
+                      <dd>Mobile UI screens and interactive prototype</dd>
                     </div>
                     <div>
-                      <dt>Release</dt>
-                      <dd>Not released as a commercial application</dd>
+                      <dt>Type</dt>
+                      <dd>Personal project</dd>
                     </div>
                     <div>
-                      <dt>Interactive prototype</dt>
-                      <dd>Available in Figma</dd>
+                      <dt>Development</dt>
+                      <dd>Design phase · prototype ready</dd>
                     </div>
                   </dl>
                 </article>
@@ -435,17 +437,22 @@ export default function VitaeCaseStudyPage() {
                   <h3>Reflection</h3>
                   <p>
                     VITAE brings activity, nutrition, and progress into a single
-                    visual direction. A next step would be to validate the
-                    navigation and information clarity with users, then refine
-                    the design based on observed feedback.
+                    visual direction. Designing the home dashboard, food
+                    scanner, and progress screens together showed how much clear
+                    summaries and a consistent green accent help everyday health
+                    information feel simple and approachable.
+                  </p>
+                </article>
+                <article className={styles.reflectionCard}>
+                  <h3>Research & testing</h3>
+                  <p>
+                    VITAE is currently focused on UI/UX exploration and
+                    interface design. User testing is the next step, starting
+                    with navigation clarity and the food scanning flow, then
+                    refining the design based on the feedback.
                   </p>
                 </article>
               </div>
-              <p className={styles.testingNote}>
-                User testing and validation have not yet been conducted. The
-                current project focuses on UI/UX exploration and interface
-                design.
-              </p>
             </div>
           </section>
 
