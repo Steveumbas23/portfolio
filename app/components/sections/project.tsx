@@ -259,7 +259,7 @@ const projects: Project[] = [
   },
   {
     id: "pertamina",
-    name: "Pertamina Offshore — Website Redesign",
+    name: "Pertamina Offshore — Website UI/UX Design",
     category: "UI/UX Design",
     description:
       "A corporate website redesign concept for Pertamina's offshore energy operations.",

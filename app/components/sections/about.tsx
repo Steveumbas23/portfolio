@@ -189,8 +189,8 @@ export default function AboutSection() {
             <a
               id="resume"
               className={styles.resume}
-              href="/CV_Steve_Umbas.pdf"
-              download="CV_Steve_Umbas.pdf"
+              href="/CV_Steve_Umbas_UIUX_Design_Internship.pdf"
+              download="CV_Steve_Umbas_UIUX_Design_Internship.pdf"
             >
               DOWNLOAD CV
               <span className={styles.arrow} aria-hidden="true">
