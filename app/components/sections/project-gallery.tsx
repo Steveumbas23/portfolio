@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { createPortal } from "react-dom";
-import ProjectModal from "./project-modal";
 import type { Project } from "./project";
 import styles from "./project.module.css";
+
+const ProjectModal = dynamic(() => import("./project-modal"));
 
 export default function ProjectGallery({
   projects,

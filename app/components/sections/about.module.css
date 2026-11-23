@@ -83,7 +83,7 @@
   transition: background-color 160ms ease, color 160ms ease;
 }
 
-.resume:global(.resume-highlight) {
+.resume:target {
   animation: resume-highlight 1.8s ease-out;
 }
 
@@ -101,7 +101,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .resume:global(.resume-highlight) {
+  .resume:target {
     animation: none;
     outline: 2px solid #fff;
     outline-offset: 5px;

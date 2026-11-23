@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { Archivo_Narrow, Lexend } from "next/font/google";
+import { Lexend } from "next/font/google";
 import styles from "./home.module.css";
 
 const lexend = Lexend({
@@ -9,32 +7,14 @@ const lexend = Lexend({
   variable: "--font-lexend",
 });
 
-const archivoNarrow = Archivo_Narrow({
-  subsets: ["latin"],
-  variable: "--font-archivo-narrow",
-});
-
 export default function HomeSection() {
-  function handleResumeClick(event: React.MouseEvent<HTMLAnchorElement>) {
-    event.preventDefault();
-
-    const resumeButton = document.getElementById("resume");
-    if (!resumeButton) return;
-
-    resumeButton.classList.remove("resume-highlight");
-    void resumeButton.offsetWidth;
-    resumeButton.classList.add("resume-highlight");
-    resumeButton.scrollIntoView({ behavior: "smooth", block: "center" });
-    window.history.replaceState(null, "", "#resume");
-  }
-
   return (
     <section
       id="home"
-      className={`${styles.home} ${lexend.variable} ${archivoNarrow.variable}`}
+      className={`${styles.home} ${lexend.variable}`}
       aria-labelledby="home-heading"
     >
-      <div className={`${styles.content} home-content-enter`}>
+      <div className={styles.content}>
         <p className={styles.eyebrow}>PORTFOLIO</p>
         <h1 className={styles.heading} id="home-heading">
           <span>I’M STEVE,</span>
@@ -54,24 +34,20 @@ export default function HomeSection() {
           <a className={styles.button} href="#projects">
             VIEW WORK
           </a>
-          <a
-            className={styles.button}
-            href="#resume"
-            onClick={handleResumeClick}
-          >
+          <a className={styles.button} href="#resume">
             RESUME
           </a>
         </div>
       </div>
 
-      <div className={`${styles.portrait} home-portrait-enter`}>
+      <div className={styles.portrait}>
         <Image
           className={styles.image}
-          src="/images/steve.webp"
+          src="/images/steve-hero.webp"
           alt="Steve Umbas"
-          width={3180}
-          height={3156}
-          priority
+          width={1200}
+          height={1191}
+          preload
           sizes="(max-width: 700px) 92vw, (max-width: 1024px) 48vw, 43vw"
         />
       </div>
