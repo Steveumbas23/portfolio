@@ -95,6 +95,34 @@ const projects: Project[] = [
     },
   },
   {
+    id: "lapor-jalan",
+    name: "LaporJalan — Road Damage Reporting System",
+    modalTitle: "LaporJalan — Road Damage Reporting and Management System",
+    category: "Full Stack Development / GIS / DevOps",
+    description:
+      "A full-stack road reporting system with map-selected locations and an admin dashboard for managing report status and follow-up.",
+    image: "/images/laporjalan.png",
+    imageAlt: "Lapor Jalan road reporting application displayed on a laptop",
+    caseStudyUrl: "/projects/lapor-jalan",
+    technologies: ["React", "TypeScript", "Vite", "Laravel", "PHP", "MySQL", "Leaflet"],
+    details: {
+      category: "Road Reporting & Management",
+      summary: "A public reporting website paired with a desktop dashboard for reviewing and managing road damage reports.",
+      overview:
+        "LaporJalan connects the public with administrators. Residents submit road damage reports through a public website, while administrators review submissions and follow up through a desktop dashboard.",
+      technologies: ["React", "TypeScript", "Vite", "Laravel", "PHP", "MySQL", "React-Leaflet", "OpenStreetMap"],
+      features: [
+        "Public landing page introducing the road reporting platform.",
+        "Road reporting form accepts a photo, damage description, and map-selected location for administrator review.",
+        "Desktop admin dashboard displays submitted reports with their photos, descriptions, and locations.",
+        "Administrators can review reports, update their status, and keep records for monitoring follow-up.",
+      ],
+      technicalDetails: [
+        "Workflow: a user submits a report with a photo, description, and location; an administrator reviews it, marks it as being processed, then marks it complete after the road is repaired.",
+      ],
+    },
+  },
+  {
     id: "openmile",
     name: "OpenMile — Travel Booking App UI/UX Concept",
     category: "UI/UX Design",
@@ -302,34 +330,6 @@ const projects: Project[] = [
     },
   },
   {
-    id: "lapor-jalan",
-    name: "LaporJalan — Road Damage Reporting System",
-    modalTitle: "LaporJalan — Road Damage Reporting and Management System",
-    category: "Full Stack Development / GIS / DevOps",
-    description:
-      "A full-stack road reporting system with map-selected locations and an admin dashboard for managing report status and follow-up.",
-    image: "/images/laporjalan.png",
-    imageAlt: "Lapor Jalan road reporting application displayed on a laptop",
-    caseStudyUrl: "/projects/lapor-jalan",
-    technologies: ["React", "TypeScript", "Vite", "Laravel", "PHP", "MySQL", "Leaflet"],
-    details: {
-      category: "Road Reporting & Management",
-      summary: "A public reporting website paired with a desktop dashboard for reviewing and managing road damage reports.",
-      overview:
-        "LaporJalan connects the public with administrators. Residents submit road damage reports through a public website, while administrators review submissions and follow up through a desktop dashboard.",
-      technologies: ["React", "TypeScript", "Vite", "Laravel", "PHP", "MySQL", "React-Leaflet", "OpenStreetMap"],
-      features: [
-        "Public landing page introducing the road reporting platform.",
-        "Road reporting form accepts a photo, damage description, and map-selected location for administrator review.",
-        "Desktop admin dashboard displays submitted reports with their photos, descriptions, and locations.",
-        "Administrators can review reports, update their status, and keep records for monitoring follow-up.",
-      ],
-      technicalDetails: [
-        "Workflow: a user submits a report with a photo, description, and location; an administrator reviews it, marks it as being processed, then marks it complete after the road is repaired.",
-      ],
-    },
-  },
-  {
     id: "vitae",
     name: "Vitae — Health & Wellness App UI/UX Concept",
     category: "UI/UX Design",
@@ -450,6 +450,9 @@ const projects: Project[] = [
 ];
 
 const projectOrder = [
+  "lucit",
+  "dayone",
+  "lapor-jalan",
   "openmile",
   "aprilia",
   "pertamina",
@@ -458,9 +461,6 @@ const projectOrder = [
   "champs",
   "adventist-paal-2-library",
   "poster",
-  "lucit",
-  "dayone",
-  "lapor-jalan",
 ];
 
 const orderedProjects = [...projects].sort(
